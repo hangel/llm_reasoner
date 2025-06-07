@@ -1,0 +1,508 @@
+<li class="ng-star-inserted">
+<search-filter>
+<div class="ng-star-inserted">
+<div class="uk-flex uk-flex-middle uk-margin-bottom">
+<h6 class="uk-margin-right uk-margin-remove-bottom" title="Research community">
+Research community (26)</h6>
+</div>
+<div>
+<div class="uk-animation-fade uk-text-small uk-margin-small-bottom ng-star-inserted">
+<div title="Digital Humanities and Cultural Heritage">
+<a class="uk-link-muted uk-display-inline-block ng-star-inserted uk-link-text" href="/search/find?community=%22dh-ch%257C%257CDigital%2520Humanities%2520and%2520Cultural%2520Heritage%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-star-inserted ng-valid">
+<span class="uk-margin-small-left">
+ Digital Humanities an... <span class="ng-star-inserted">
+(5,048,400)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div class="uk-animation-fade uk-text-small uk-margin-small-bottom ng-star-inserted">
+<div title="Social Science and Humanities">
+<a class="uk-link-muted uk-display-inline-block ng-star-inserted uk-link-text" href="/search/find?community=%22gotriple%257C%257CSocial%2520Science%2520and%2520Humanities%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-star-inserted ng-valid">
+<span class="uk-margin-small-left">
+ Social Science and Hu... <span class="ng-star-inserted">
+(4,680,763)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div class="uk-animation-fade uk-text-small uk-margin-small-bottom ng-star-inserted">
+<div title="Energy Research">
+<a class="uk-link-muted uk-display-inline-block ng-star-inserted uk-link-text" href="/search/find?community=%22enermaps%257C%257CEnergy%2520Research%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-star-inserted ng-valid">
+<span class="uk-margin-small-left">
+ Energy Research <span class="ng-star-inserted">
+(2,666,712)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div class="uk-animation-fade uk-text-small uk-margin-small-bottom ng-star-inserted">
+<div title="Rural Digital Europe">
+<a class="uk-link-muted uk-display-inline-block ng-star-inserted uk-link-text" href="/search/find?community=%22rural-digital-europe%257C%257CRural%2520Digital%2520Europe%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-star-inserted ng-valid">
+<span class="uk-margin-small-left">
+ Rural Digital Europe <span class="ng-star-inserted">
+(1,349,503)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div class="uk-animation-fade uk-text-small uk-margin-small-bottom ng-star-inserted">
+<div title="Aurora Universities Network">
+<a class="uk-link-muted uk-display-inline-block ng-star-inserted uk-link-text" href="/search/find?community=%22aurora%257C%257CAurora%2520Universities%2520Network%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-star-inserted ng-valid">
+<span class="uk-margin-small-left">
+ Aurora Universities Ne... <span class="ng-star-inserted">
+(869,753)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div class="uk-animation-fade uk-text-small uk-margin-small-bottom ng-star-inserted">
+<div title="COVID-19">
+<a class="uk-link-muted uk-display-inline-block ng-star-inserted uk-link-text" href="/search/find?community=%22covid-19%257C%257CCOVID-19%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-star-inserted ng-valid">
+<span class="uk-margin-small-left">
+ COVID-19 <span class="ng-star-inserted">
+(753,646)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div class="ng-star-inserted">
+<a class="uk-text-small view-more-less-link uk-margin-small-top ng-star-inserted">
+<span class="ng-star-inserted">
+View less </span>
+</a>
+<div class="uk-text-small uk-margin-small-top uk-margin-small-bottom ng-star-inserted">
+<div class="uk-margin-small-left">
+<div class="uk-text-meta">
+Top 100 values are shown in the filters</div>
+<div class="uk-flex uk-flex-bottom uk-margin-top">
+<div input="" inputclass="inner small" class="uk-width-1-2@m uk-margin-right">
+<div id="input-9" class="ng-star-inserted">
+<div class="input-wrapper inner small">
+<div click-outside-or-esc="" class="input-box static">
+<div class="uk-flex uk-flex-middle">
+<input class="input uk-text-truncate ng-untouched ng-pristine ng-valid ng-star-inserted" placeholder="Search">
+</div>
+<div class="tools">
+</div>
+</div>
+</div>
+</div>
+<span class="uk-text-danger uk-text-small">
+</span>
+<span class="uk-text-warning uk-text-small ng-star-inserted">
+</span>
+<span class="uk-text-small">
+</span>
+</div>
+<div input="" type="select" placeholder="Sort by" inputclass="border-bottom" class="uk-width-expand ng-star-inserted">
+<div id="input-10" class="ng-star-inserted">
+<div class="input-wrapper active border-bottom">
+<div click-outside-or-esc="" class="input-box select">
+<div class="placeholder ng-star-inserted">
+<label>
+Sort by </label>
+</div>
+<div class="uk-flex uk-flex-middle" uk-tooltip="title: Name; delay: 500; pos: bottom-left" title="" aria-expanded="false" tabindex="0">
+<div class="input uk-text-truncate ng-star-inserted">
+Name</div>
+<div class="uk-margin-small-left icon ng-star-inserted">
+<icon class="ng-star-inserted">
+<span class="uk-flex">
+<span class="material-icons ng-star-inserted" style="font-size: 20px;">
+arrow_drop_down</span>
+</span>
+</icon>
+</div>
+</div>
+<div class="tools">
+</div>
+</div>
+</div>
+</div>
+<span class="uk-text-danger uk-text-small">
+</span>
+<span class="uk-text-warning uk-text-small ng-star-inserted">
+</span>
+<span class="uk-text-small">
+</span>
+</div>
+</div>
+</div>
+<div class="uk-overflow-auto uk-height-max-small uk-margin-small-left uk-margin-small-right uk-margin-top">
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Aurora Universities Network">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22aurora%257C%257CAurora%2520Universities%2520Network%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Aurora Universities Ne... <span class="ng-star-inserted">
+(869,753)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="CLARIN">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22clarin%257C%257CCLARIN%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ CLARIN <span class="ng-star-inserted">
+(398)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="COVID-19">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22covid-19%257C%257CCOVID-19%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ COVID-19 <span class="ng-star-inserted">
+(753,646)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="DARIAH EU">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22dariah%257C%257CDARIAH%2520EU%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ DARIAH EU <span class="ng-star-inserted">
+(53,256)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Digital Humanities and Cultural Heritage">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22dh-ch%257C%257CDigital%2520Humanities%2520and%2520Cultural%2520Heritage%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Digital Humanities an... <span class="ng-star-inserted">
+(5,048,400)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="EBRAINS">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22ebrains%257C%257CEBRAINS%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ EBRAINS <span class="ng-star-inserted">
+(233,238)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="EGI Federation">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22egi%257C%257CEGI%2520Federation%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ EGI Federation <span class="ng-star-inserted">
+(98,662)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="ELIXIR GR">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22elixir-gr%257C%257CELIXIR%2520GR%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ ELIXIR GR <span class="ng-star-inserted">
+(162)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="EMBRC">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22embrc%257C%257CEMBRC%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ EMBRC <span class="ng-star-inserted">
+(566)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Energy Research">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22enermaps%257C%257CEnergy%2520Research%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Energy Research <span class="ng-star-inserted">
+(2,666,712)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="EPOS">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22epos%257C%257CEPOS%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ EPOS <span class="ng-star-inserted">
+(257)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="European Marine Science">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22mes%257C%257CEuropean%2520Marine%2520Science%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ European Marine Science <span class="ng-star-inserted">
+(209,412)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="European University of Technology">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22eut%257C%257CEuropean%2520University%2520of%2520Technology%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ European University of ... <span class="ng-star-inserted">
+(82,526)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="FET FP7">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22fet-fp7%257C%257CFET%2520FP7%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ FET FP7 <span class="ng-star-inserted">
+(11,524)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="FET H2020">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22fet-h2020%257C%257CFET%2520H2020%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ FET H2020 <span class="ng-star-inserted">
+(21,683)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Instruct-ERIC">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22instruct%257C%257CInstruct-ERIC%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Instruct-ERIC <span class="ng-star-inserted">
+(2,147)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="NEANIAS Underwater Research Community">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22neanias-underwater%257C%257CNEANIAS%2520Underwater%2520Research%2520Community%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ NEANIAS Underwater Rese... <span class="ng-star-inserted">
+(90,489)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Neuroinformatics">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22ni%257C%257CNeuroinformatics%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Neuroinformatics <span class="ng-star-inserted">
+(237,015)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Research Data Alliance">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22rda%257C%257CResearch%2520Data%2520Alliance%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Research Data Alliance <span class="ng-star-inserted">
+(362)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="RISIS">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22risis%257C%257CRISIS%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ RISIS <span class="ng-star-inserted">
+(321)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Rural Digital Europe">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22rural-digital-europe%257C%257CRural%2520Digital%2520Europe%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Rural Digital Europe <span class="ng-star-inserted">
+(1,349,503)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Science and Innovation Policy Studies">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22science-innovation-policy%257C%257CScience%2520and%2520Innovation%2520Policy%2520Studies%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Science and Innovation... <span class="ng-star-inserted">
+(180,513)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="SDSN - Greece">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22sdsn-gr%257C%257CSDSN%2520-%2520Greece%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ SDSN - Greece <span class="ng-star-inserted">
+(21,801)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="SoBigData">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22sobigdata%257C%257CSoBigData%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ SoBigData <span class="ng-star-inserted">
+(1,301)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Social Science and Humanities">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22gotriple%257C%257CSocial%2520Science%2520and%2520Humanities%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Social Science and Hu... <span class="ng-star-inserted">
+(4,680,763)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div class="uk-animation-fade uk-text-small ng-star-inserted" title="Transport Research">
+<a class="uk-link-muted uk-display-inline-block uk-link-text ng-star-inserted" href="/search/find?community=%22beopen%257C%257CTransport%2520Research%22">
+<span class="uk-flex uk-flex-middle ng-star-inserted">
+<label>
+<input type="checkbox" class="uk-checkbox ng-untouched ng-pristine ng-valid ng-star-inserted">
+<span class="uk-margin-small-left">
+ Transport Research <span class="ng-star-inserted">
+(192,800)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+

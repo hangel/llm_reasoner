@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oa_result_fields xmlns="http://namespace.openaire.eu/sygma">
+	<refactor_item type="oa_result_field" name="n" weight="0"/>
+	<refactor_item type="oa_result_field" name="title" weight="10"/>
+	<refactor_item type="oa_result_field" name="webresource" weight="11"/>
+	<refactor_item type="oa_result_field" name="doi" weight="13"/>
+	<refactor_item type="oa_result_field" name="openaireid" weight="14"/>
+	<refactor_item type="oa_result_field" name="authors" weight="15"/>
+	<refactor_item type="oa_result_field" name="sourcejournal" weight="16"/>
+	<refactor_item type="oa_result_field" name="publicationtype" weight="20"/>
+	<refactor_item type="oa_result_field" name="bestlicense" weight="30"/>
+	<refactor_item type="oa_result_field" name="dateofacceptance" weight="40"/>
+	<refactor_item type="oa_result_field" name="description" weight="90"/>
+</oa_result_fields>

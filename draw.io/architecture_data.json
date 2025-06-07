@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    { "id": "A", "label": "Client Portal", "group": "client", "position": [0, 0, 0] },
+    { "id": "B", "label": "Service Requests", "group": "client", "position": [2, 0, 0] },
+    { "id": "C", "label": "Documentation Access", "group": "client", "position": [2, 1, 0] },
+    { "id": "D", "label": "Project Tracking", "group": "client", "position": [2, 2, 0] },
+
+    { "id": "E", "label": "Knowledge Management System", "group": "core", "position": [4, 0, 0] },
+    { "id": "F", "label": "Legacy Code Analysis Engine", "group": "core", "position": [4, 1, 0] },
+    { "id": "G", "label": "AI Documentation Generator", "group": "core", "position": [4, 2, 0] },
+    { "id": "H", "label": "Code Transpilation Service", "group": "core", "position": [4, 3, 0] },
+    { "id": "I", "label": "Integration Middleware", "group": "core", "position": [6, 0, 0] },
+    { "id": "J", "label": "Project Management", "group": "core", "position": [6, 1, 0] },
+
+    { "id": "K", "label": "Client Data Lake", "group": "data", "position": [8, 0, 0] },
+    { "id": "L", "label": "Performance Analytics", "group": "data", "position": [10, 0, 0] },
+    { "id": "M", "label": "Resource Optimization", "group": "data", "position": [10, 1, 0] },
+    { "id": "N", "label": "ROI Calculation Engine", "group": "data", "position": [10, 2, 0] },
+
+    { "id": "O", "label": "zSeries/iSeries Connectors", "group": "legacy", "position": [6, 3, 0] },
+    { "id": "P", "label": "Secure Transport Layer", "group": "legacy", "position": [8, 3, 0] },
+    { "id": "Q", "label": "Legacy Data Extraction", "group": "legacy", "position": [10, 3, 0] },
+
+    { "id": "R", "label": "Region-Specific Data Storage", "group": "international", "position": [8, -2, 0] },
+    { "id": "S", "label": "Compliance Management", "group": "international", "position": [10, -2, 0] },
+    { "id": "T", "label": "Multi-entity Resource Allocation", "group": "international", "position": [12, 0, 0] },
+    { "id": "U", "label": "Cross-border Payment Processing", "group": "international", "position": [12, 2, 0] },
+    { "id": "V", "label": "Entity-specific Reporting", "group": "international", "position": [12, -2, 0] },
+
+    { "id": "W", "label": "US Operations - Delaware/Wyoming", "group": "regional", "position": [14, 0, 0] },
+    { "id": "X", "label": "EU Operations - Ireland", "group": "regional", "position": [14, 1, 0] },
+    { "id": "Y", "label": "UK Operations", "group": "regional", "position": [14, 2, 0] },
+    { "id": "Z", "label": "Multi-currency Billing", "group": "regional", "position": [14, -1, 0] }
+  ],
+  "edges": [
+    { "source": "A", "target": "B", "type": "directed" },
+    { "source": "A", "target": "C", "type": "directed" },
+    { "source": "A", "target": "D", "type": "directed" },
+    { "source": "B", "target": "E", "type": "directed" },
+    { "source": "B", "target": "F", "type": "directed" },
+    { "source": "B", "target": "J", "type": "directed" },
+    { "source": "F", "target": "G", "type": "directed" },
+    { "source": "F", "target": "H", "type": "directed" },
+    { "source": "E", "target": "I", "type": "directed" },
+    { "source": "G", "target": "K", "type": "directed" },
+    { "source": "H", "target": "K", "type": "directed" },
+    { "source": "I", "target": "O", "type": "directed" },
+    { "source": "O", "target": "P", "type": "directed" },
+    { "source": "P", "target": "Q", "type": "directed" },
+    { "source": "Q", "target": "K", "type": "directed" },
+    { "source": "K", "target": "L", "type": "directed" },
+    { "source": "L", "target": "M", "type": "directed" },
+    { "source": "L", "target": "N", "type": "directed" },
+    { "source": "M", "target": "J", "type": "directed" },
+    { "source": "N", "target": "A", "type": "directed" },
+
+    { "source": "K", "target": "R", "type": "directed" },
+    { "source": "R", "target": "S", "type": "directed" },
+    { "source": "J", "target": "T", "type": "directed" },
+    { "source": "T", "target": "W", "type": "directed" },
+    { "source": "T", "target": "X", "type": "directed" },
+    { "source": "T", "target": "Y", "type": "directed" },
+    { "source": "W", "target": "U", "type": "directed" },
+    { "source": "X", "target": "U", "type": "directed" },
+    { "source": "Y", "target": "U", "type": "directed" },
+    { "source": "U", "target": "Z", "type": "directed" },
+    { "source": "Z", "target": "A", "type": "directed" },
+    { "source": "S", "target": "V", "type": "directed" },
+    { "source": "V", "target": "A", "type": "directed" },
+
+    { "source": "R", "target": "W", "type": "data_residency", "label": "US data in US region" },
+    { "source": "R", "target": "X", "type": "data_residency", "label": "EU data in EU region" },
+    { "source": "R", "target": "Y", "type": "data_residency", "label": "UK data in UK region" },
+
+    { "source": "J", "target": "W", "type": "entity_op" },
+    { "source": "J", "target": "X", "type": "entity_op" },
+    { "source": "J", "target": "Y", "type": "entity_op" }
+  ],
+  "groups": [
+    { "id": "client", "color": "#5470c6", "name": "Client Interfaces" },
+    { "id": "core", "color": "#91cc75", "name": "Core Platform" },
+    { "id": "data", "color": "#fac858", "name": "Data Services" },
+    { "id": "legacy", "color": "#ee6666", "name": "Legacy Systems Connection" },
+    { "id": "international", "color": "#73c0de", "name": "International Infrastructure" },
+    { "id": "regional", "color": "#3ba272", "name": "Regional Operations" }
+  ],
+  "edgeTypes": [
+    { "id": "directed", "color": "#333333", "width": 1, "arrow": true },
+    { "id": "data_residency", "color": "#0099cc", "width": 1, "style": "dashed", "arrow": true },
+    { "id": "entity_op", "color": "#ff9900", "width": 1, "arrow": true }
+  ],
+  "settings": {
+    "backgroundColor": "#ffffff",
+    "nodeSize": 10,
+    "nodeLabelSize": 12,
+    "edgeLabelSize": 10,
+    "defaultZoom": 0.8
+  }
+}
+

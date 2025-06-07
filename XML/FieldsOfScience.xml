@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc name="FieldsOfScience" date="2022/10/15 12:31:14 pm GMT-05:00 " ID="ID_1548525242" LINK="https://explore.openaire.eu/fields-of-science" TEXT="FieldsOfScience">
+	<node text="01 natural sciences" ID="ID_393162901" TEXT="01 natural sciences">
+		<node text="0101 mathematics" ID="ID_532677900" TEXT="0101 mathematics">
+			<node text="010101 applied mathematics" ID="ID_788069470" TEXT="010101 applied mathematics"/>
+			<node text="010102 general mathematics" ID="ID_167358871" TEXT="010102 general mathematics"/>
+			<node text="010103 numerical &amp; computational mathematics" ID="ID_1102152630" TEXT="010103 numerical &amp; computational mathematics"/>
+			<node text="010104 statistics &amp; probability" ID="ID_1273978405" TEXT="010104 statistics &amp; probability"/>
+		</node>
+		<node text="0102 computer and information sciences" ID="ID_1884940646" TEXT="0102 computer and information sciences">
+			<node text="010201 computation theory &amp; mathematics" ID="ID_1081715256" TEXT="010201 computation theory &amp; mathematics"/>
+		</node>
+		<node text="0103 physical sciences" ID="ID_1282939209" TEXT="0103 physical sciences">
+			<node text="010301 acoustics" ID="ID_1141673279" TEXT="010301 acoustics"/>
+			<node text="010302 applied physics" ID="ID_79261823" TEXT="010302 applied physics"/>
+			<node text="010303 astronomy &amp; astrophysics" ID="ID_1863099405" TEXT="010303 astronomy &amp; astrophysics"/>
+			<node text="010304 chemical physics" ID="ID_1185747183" TEXT="010304 chemical physics"/>
+			<node text="010305 fluids &amp; plasmas" ID="ID_24872438" TEXT="010305 fluids &amp; plasmas"/>
+			<node text="010306 general physics" ID="ID_1457005882" TEXT="010306 general physics"/>
+			<node text="010307 mathematical physics" ID="ID_1810543374" TEXT="010307 mathematical physics"/>
+			<node text="010308 nuclear &amp; particles physics" ID="ID_1390914276" TEXT="010308 nuclear &amp; particles physics"/>
+			<node text="010309 optics" ID="ID_17058270" TEXT="010309 optics"/>
+		</node>
+		<node text="0104 chemical sciences" ID="ID_587317220" TEXT="0104 chemical sciences">
+			<node text="010401 analytical chemistry" ID="ID_1518060144" TEXT="010401 analytical chemistry"/>
+			<node text="010402 general chemistry" ID="ID_308541107" TEXT="010402 general chemistry"/>
+			<node text="010403 inorganic &amp; nuclear chemistry" ID="ID_310318200" TEXT="010403 inorganic &amp; nuclear chemistry"/>
+			<node text="010404 medicinal &amp; biomolecular chemistry" ID="ID_1980411238" TEXT="010404 medicinal &amp; biomolecular chemistry"/>
+			<node text="010405 organic chemistry" ID="ID_1198718465" TEXT="010405 organic chemistry"/>
+			<node text="010406 physical chemistry" ID="ID_400063308" TEXT="010406 physical chemistry"/>
+			<node text="010407 polymers" ID="ID_1264092377" TEXT="010407 polymers"/>
+		</node>
+		<node text="0105 earth and related environmental sciences" ID="ID_599256738" TEXT="0105 earth and related environmental sciences">
+			<node text="010501 environmental sciences" ID="ID_1405224554" TEXT="010501 environmental sciences"/>
+			<node text="010502 geochemistry &amp; geophysics" ID="ID_1866054496" TEXT="010502 geochemistry &amp; geophysics"/>
+			<node text="010503 geology" ID="ID_1925551186" TEXT="010503 geology"/>
+			<node text="010504 meteorology &amp; atmospheric sciences" ID="ID_1157674365" TEXT="010504 meteorology &amp; atmospheric sciences"/>
+			<node text="010505 oceanography" ID="ID_652011095" TEXT="010505 oceanography"/>
+			<node text="010506 paleontology" ID="ID_1762723720" TEXT="010506 paleontology"/>
+		</node>
+		<node text="0106 biological sciences" ID="ID_162239869" TEXT="0106 biological sciences">
+			<node text="010601 ecology" ID="ID_996678741" TEXT="010601 ecology"/>
+			<node text="010602 entomology" ID="ID_970327574" TEXT="010602 entomology"/>
+			<node text="010603 evolutionary biology" ID="ID_678834154" TEXT="010603 evolutionary biology"/>
+			<node text="010604 marine biology &amp; hydrobiology" ID="ID_983942070" TEXT="010604 marine biology &amp; hydrobiology"/>
+			<node text="010605 ornithology" ID="ID_1822488181" TEXT="010605 ornithology"/>
+			<node text="010606 plant biology &amp; botany" ID="ID_551083412" TEXT="010606 plant biology &amp; botany"/>
+			<node text="010607 zoology" ID="ID_1494595854" TEXT="010607 zoology"/>
+			<node text="010608 biotechnology" ID="ID_1674074391" TEXT="010608 biotechnology"/>
+		</node>
+	</node>
+	<node text="02 engineering and technology" ID="ID_1253878657" TEXT="02 engineering and technology">
+		<node text="0201 civil engineering" ID="ID_1982012504" TEXT="0201 civil engineering">
+			<node text="020101 civil engineering" ID="ID_206894746" TEXT="020101 civil engineering"/>
+		</node>
+		<node text="0202 electrical engineering, electronic engineering, information engineering" ID="ID_343357978" TEXT="0202 electrical engineering, electronic engineering, information engineering">
+			<node text="020201 artificial intelligence &amp; image processing" ID="ID_873555822" TEXT="020201 artificial intelligence &amp; image processing"/>
+			<node text="020202 computer hardware &amp; architecture" ID="ID_498959059" TEXT="020202 computer hardware &amp; architecture"/>
+			<node text="020203 distributed computing" ID="ID_641498188" TEXT="020203 distributed computing"/>
+			<node text="020204 information systems" ID="ID_1382499120" TEXT="020204 information systems"/>
+			<node text="020205 medical informatics" ID="ID_342673557" TEXT="020205 medical informatics"/>
+			<node text="020206 networking &amp; telecommunications" ID="ID_1808114281" TEXT="020206 networking &amp; telecommunications"/>
+			<node text="020207 software engineering" ID="ID_314900684" TEXT="020207 software engineering"/>
+			<node text="020208 electrical &amp; electronic engineering" ID="ID_435359588" TEXT="020208 electrical &amp; electronic engineering"/>
+			<node text="020209 energy" ID="ID_54362591" TEXT="020209 energy"/>
+			<node text="020210 optoelectronics &amp; photonics" ID="ID_1795609196" TEXT="020210 optoelectronics &amp; photonics"/>
+		</node>
+		<node text="0203 mechanical engineering" ID="ID_1281604347" TEXT="0203 mechanical engineering">
+			<node text="020301 aerospace &amp; aeronautics" ID="ID_972860590" TEXT="020301 aerospace &amp; aeronautics"/>
+			<node text="020302 automobile design &amp; engineering" ID="ID_1308012382" TEXT="020302 automobile design &amp; engineering"/>
+			<node text="020303 mechanical engineering &amp; transports" ID="ID_634429023" TEXT="020303 mechanical engineering &amp; transports"/>
+		</node>
+		<node text="0204 chemical engineering" ID="ID_421093750" TEXT="0204 chemical engineering">
+			<node text="020401 chemical engineering" ID="ID_1453036767" TEXT="020401 chemical engineering"/>
+		</node>
+		<node text="0205 materials engineering" ID="ID_988794656" TEXT="0205 materials engineering">
+			<node text="020501 mining &amp; metallurgy" ID="ID_1535738058" TEXT="020501 mining &amp; metallurgy"/>
+			<node text="020502 materials" ID="ID_1852041196" TEXT="020502 materials"/>
+		</node>
+		<node text="0206 medical engineering" ID="ID_1786850075" TEXT="0206 medical engineering">
+			<node text="020601 biomedical engineering" ID="ID_1891046445" TEXT="020601 biomedical engineering"/>
+			<node text="020602 bioinformatics" ID="ID_156035962" TEXT="020602 bioinformatics"/>
+		</node>
+		<node text="0207 environmental engineering" ID="ID_916048960" TEXT="0207 environmental engineering">
+			<node text="020701 environmental engineering" ID="ID_984096979" TEXT="020701 environmental engineering"/>
+		</node>
+		<node text="0208 environmental biotechnology" ID="ID_77400444" TEXT="0208 environmental biotechnology">
+			<node text="020801 environmental engineering" ID="ID_1807389666" TEXT="020801 environmental engineering"/>
+		</node>
+		<node text="0209 industrial biotechnology" ID="ID_1769807593" TEXT="0209 industrial biotechnology">
+			<node text="020901 industrial engineering &amp; automation" ID="ID_3357703" TEXT="020901 industrial engineering &amp; automation"/>
+		</node>
+		<node text="0210 nano-technology" ID="ID_670692462" TEXT="0210 nano-technology">
+			<node text="021001 nanoscience &amp; nanotechnology" ID="ID_923363152" TEXT="021001 nanoscience &amp; nanotechnology"/>
+		</node>
+		<node text="0211 other engineering and technologies" ID="ID_439672182" TEXT="0211 other engineering and technologies">
+			<node text="021101 geological &amp; geomatics engineering" ID="ID_541887293" TEXT="021101 geological &amp; geomatics engineering"/>
+			<node text="021102 mining &amp; metallurgy" ID="ID_1327381584" TEXT="021102 mining &amp; metallurgy"/>
+			<node text="021103 operations research" ID="ID_989751641" TEXT="021103 operations research"/>
+			<node text="021104 architecture" ID="ID_1141713042" TEXT="021104 architecture"/>
+			<node text="021105 building &amp; construction" ID="ID_1826662654" TEXT="021105 building &amp; construction"/>
+			<node text="021106 design practice &amp; management" ID="ID_1142614742" TEXT="021106 design practice &amp; management"/>
+			<node text="021107 urban &amp; regional planning" ID="ID_721504370" TEXT="021107 urban &amp; regional planning"/>
+			<node text="021108 energy" ID="ID_1109830050" TEXT="021108 energy"/>
+			<node text="021109 optoelectronics &amp; photonics" ID="ID_1594685055" TEXT="021109 optoelectronics &amp; photonics"/>
+			<node text="021110 strategic, defence &amp; security studies" ID="ID_1042564711" TEXT="021110 strategic, defence &amp; security studies"/>
+		</node>
+	</node>
+	<node text="03 medical and health sciences" ID="ID_466527956" TEXT="03 medical and health sciences">
+		<node text="0301 basic medicine" ID="ID_1175930811" TEXT="0301 basic medicine">
+			<node text="030101 anatomy &amp; morphology" ID="ID_260769178" TEXT="030101 anatomy &amp; morphology"/>
+			<node text="030102 biochemistry &amp; molecular biology" ID="ID_1273736482" TEXT="030102 biochemistry &amp; molecular biology"/>
+			<node text="030103 biophysics" ID="ID_883445139" TEXT="030103 biophysics"/>
+			<node text="030104 developmental biology" ID="ID_837515640" TEXT="030104 developmental biology"/>
+			<node text="030105 genetics &amp; heredity" ID="ID_1533733759" TEXT="030105 genetics &amp; heredity"/>
+			<node text="030106 microbiology" ID="ID_349578424" TEXT="030106 microbiology"/>
+			<node text="030107 microscopy" ID="ID_155893522" TEXT="030107 microscopy"/>
+			<node text="030108 mycology &amp; parasitology" ID="ID_558707651" TEXT="030108 mycology &amp; parasitology"/>
+			<node text="030109 nutrition &amp; dietetics" ID="ID_248066860" TEXT="030109 nutrition &amp; dietetics"/>
+			<node text="030110 physiology" ID="ID_1793081677" TEXT="030110 physiology"/>
+			<node text="030111 toxicology" ID="ID_1501935642" TEXT="030111 toxicology"/>
+			<node text="030112 virology" ID="ID_1787851935" TEXT="030112 virology"/>
+		</node>
+		<node text="0302 clinical medicine" ID="ID_542745321" TEXT="0302 clinical medicine">
+			<node text="030201 allergy" ID="ID_46262277" TEXT="030201 allergy"/>
+			<node text="030202 anesthesiology" ID="ID_325407169" TEXT="030202 anesthesiology"/>
+			<node text="030203 arthritis &amp; rheumatology" ID="ID_861782672" TEXT="030203 arthritis &amp; rheumatology"/>
+			<node text="030204 cardiovascular system &amp; hematology" ID="ID_1035852884" TEXT="030204 cardiovascular system &amp; hematology"/>
+			<node text="030205 complementary &amp; alternative medicine" ID="ID_741270399" TEXT="030205 complementary &amp; alternative medicine"/>
+			<node text="030206 dentistry" ID="ID_616653742" TEXT="030206 dentistry"/>
+			<node text="030207 dermatology &amp; venereal diseases" ID="ID_1595733061" TEXT="030207 dermatology &amp; venereal diseases"/>
+			<node text="030208 emergency &amp; critical care medicine" ID="ID_1575752747" TEXT="030208 emergency &amp; critical care medicine"/>
+			<node text="030209 endocrinology &amp; metabolism" ID="ID_61433927" TEXT="030209 endocrinology &amp; metabolism"/>
+			<node text="030210 environmental &amp; occupational health" ID="ID_147377949" TEXT="030210 environmental &amp; occupational health"/>
+			<node text="030211 gastroenterology &amp; hepatology" ID="ID_378159191" TEXT="030211 gastroenterology &amp; hepatology"/>
+			<node text="030212 general &amp; internal medicine" ID="ID_1956521295" TEXT="030212 general &amp; internal medicine"/>
+			<node text="030213 general clinical medicine" ID="ID_1616077138" TEXT="030213 general clinical medicine"/>
+			<node text="030214 geriatrics" ID="ID_1581427518" TEXT="030214 geriatrics"/>
+			<node text="030215 immunology" ID="ID_1248282805" TEXT="030215 immunology"/>
+			<node text="030216 legal &amp; forensic medicine" ID="ID_758290913" TEXT="030216 legal &amp; forensic medicine"/>
+			<node text="030217 neurology &amp; neurosurgery" ID="ID_1017553601" TEXT="030217 neurology &amp; neurosurgery"/>
+			<node text="030218 nuclear medicine &amp; medical imaging" ID="ID_1920713531" TEXT="030218 nuclear medicine &amp; medical imaging"/>
+			<node text="030219 obstetrics &amp; reproductive medicine" ID="ID_1039917541" TEXT="030219 obstetrics &amp; reproductive medicine"/>
+			<node text="030220 oncology &amp; carcinogenesis" ID="ID_1115770863" TEXT="030220 oncology &amp; carcinogenesis"/>
+			<node text="030221 ophthalmology &amp; optometry" ID="ID_1571757978" TEXT="030221 ophthalmology &amp; optometry"/>
+			<node text="030222 orthopedics" ID="ID_1206987162" TEXT="030222 orthopedics"/>
+			<node text="030223 otorhinolaryngology" ID="ID_1461873341" TEXT="030223 otorhinolaryngology"/>
+			<node text="030224 pathology" ID="ID_53024470" TEXT="030224 pathology"/>
+			<node text="030225 pediatrics" ID="ID_1180069715" TEXT="030225 pediatrics"/>
+			<node text="030226 pharmacology &amp; pharmacy" ID="ID_659699032" TEXT="030226 pharmacology &amp; pharmacy"/>
+			<node text="030227 psychiatry" ID="ID_390772634" TEXT="030227 psychiatry"/>
+			<node text="030228 respiratory system" ID="ID_1175521489" TEXT="030228 respiratory system"/>
+			<node text="030229 sport sciences" ID="ID_699453438" TEXT="030229 sport sciences"/>
+			<node text="030230 surgery" ID="ID_57058188" TEXT="030230 surgery"/>
+			<node text="030231 tropical medicine" ID="ID_170638097" TEXT="030231 tropical medicine"/>
+			<node text="030232 urology &amp; nephrology" ID="ID_900092480" TEXT="030232 urology &amp; nephrology"/>
+		</node>
+		<node text="0303 health sciences" ID="ID_1466710715" TEXT="0303 health sciences">
+			<node text="030301 anatomy &amp; morphology" ID="ID_761608758" TEXT="030301 anatomy &amp; morphology"/>
+			<node text="030302 biochemistry &amp; molecular biology" ID="ID_585406701" TEXT="030302 biochemistry &amp; molecular biology"/>
+			<node text="030303 biophysics" ID="ID_710272919" TEXT="030303 biophysics"/>
+			<node text="030304 developmental biology" ID="ID_986387542" TEXT="030304 developmental biology"/>
+			<node text="030305 genetics &amp; heredity" ID="ID_1908050232" TEXT="030305 genetics &amp; heredity"/>
+			<node text="030306 microbiology" ID="ID_1081437348" TEXT="030306 microbiology"/>
+			<node text="030307 microscopy" ID="ID_1633382377" TEXT="030307 microscopy"/>
+			<node text="030308 mycology &amp; parasitology" ID="ID_600867061" TEXT="030308 mycology &amp; parasitology"/>
+			<node text="030309 nutrition &amp; dietetics" ID="ID_1694549227" TEXT="030309 nutrition &amp; dietetics"/>
+			<node text="030310 physiology" ID="ID_1598033421" TEXT="030310 physiology"/>
+			<node text="030311 toxicology" ID="ID_822304878" TEXT="030311 toxicology"/>
+			<node text="030312 virology" ID="ID_1873451141" TEXT="030312 virology"/>
+		</node>
+		<node text="0304 medical biotechnology" ID="ID_1226311269" TEXT="0304 medical biotechnology"/>
+		<node text="0305 other medical science" ID="ID_380979745" TEXT="0305 other medical science">
+			<node text="030501 epidemiology" ID="ID_539251306" TEXT="030501 epidemiology"/>
+			<node text="030502 gerontology" ID="ID_1064033682" TEXT="030502 gerontology"/>
+			<node text="030503 health policy &amp; services" ID="ID_822478710" TEXT="030503 health policy &amp; services"/>
+			<node text="030504 nursing" ID="ID_840646501" TEXT="030504 nursing"/>
+			<node text="030505 public health" ID="ID_1217914834" TEXT="030505 public health"/>
+			<node text="030506 rehabilitation" ID="ID_749623095" TEXT="030506 rehabilitation"/>
+			<node text="030507 speech-language pathology &amp; audiology" ID="ID_1141959267" TEXT="030507 speech-language pathology &amp; audiology"/>
+			<node text="030508 substance abuse" ID="ID_1981773578" TEXT="030508 substance abuse"/>
+		</node>
+	</node>
+	<node text="04 agricultural and veterinary sciences" ID="ID_1615643010" TEXT="04 agricultural and veterinary sciences">
+		<node text="0401 agriculture, forestry, and fisheries" ID="ID_1172125673" TEXT="0401 agriculture, forestry, and fisheries">
+			<node text="040101 forestry" ID="ID_211149693" TEXT="040101 forestry"/>
+			<node text="040102 fisheries" ID="ID_1854967811" TEXT="040102 fisheries"/>
+			<node text="040103 agronomy &amp; agriculture" ID="ID_243776314" TEXT="040103 agronomy &amp; agriculture"/>
+		</node>
+		<node text="0402 animal and dairy science" ID="ID_1880174016" TEXT="0402 animal and dairy science">
+			<node text="040201 dairy &amp; animal science" ID="ID_805425169" TEXT="040201 dairy &amp; animal science"/>
+		</node>
+		<node text="0403 veterinary science" ID="ID_1434564946" TEXT="0403 veterinary science">
+			<node text="040301 veterinary sciences" ID="ID_669856285" TEXT="040301 veterinary sciences"/>
+		</node>
+		<node text="0404 agricultural biotechnology" ID="ID_857127620" TEXT="0404 agricultural biotechnology">
+			<node text="040401 food science" ID="ID_150061521" TEXT="040401 food science"/>
+		</node>
+		<node text="0405 other agricultural sciences" ID="ID_1094701772" TEXT="0405 other agricultural sciences">
+			<node text="040501 horticulture" ID="ID_284210932" TEXT="040501 horticulture"/>
+			<node text="040502 food science" ID="ID_1786069913" TEXT="040502 food science"/>
+		</node>
+	</node>
+	<node text="05 social sciences" ID="ID_753555821" TEXT="05 social sciences">
+		<node text="0501 psychology and cognitive sciences" ID="ID_1692503784" TEXT="0501 psychology and cognitive sciences">
+			<node text="050101 languages &amp; linguistics" ID="ID_620409535" TEXT="050101 languages &amp; linguistics"/>
+			<node text="050102 behavioral science &amp; comparative psychology" ID="ID_347833911" TEXT="050102 behavioral science &amp; comparative psychology"/>
+			<node text="050103 clinical psychology" ID="ID_527194192" TEXT="050103 clinical psychology"/>
+			<node text="050104 developmental &amp; child psychology" ID="ID_799062757" TEXT="050104 developmental &amp; child psychology"/>
+			<node text="050105 experimental psychology" ID="ID_32443454" TEXT="050105 experimental psychology"/>
+			<node text="050106 general psychology &amp; cognitive sciences" ID="ID_450359735" TEXT="050106 general psychology &amp; cognitive sciences"/>
+			<node text="050107 human factors" ID="ID_325963633" TEXT="050107 human factors"/>
+			<node text="050108 psychoanalysis" ID="ID_713414951" TEXT="050108 psychoanalysis"/>
+			<node text="050109 social psychology" ID="ID_713720639" TEXT="050109 social psychology"/>
+		</node>
+		<node text="0502 economics and business" ID="ID_1571901150" TEXT="0502 economics and business">
+			<node text="050201 accounting" ID="ID_1472649508" TEXT="050201 accounting"/>
+			<node text="050202 agricultural economics &amp; policy" ID="ID_1941881101" TEXT="050202 agricultural economics &amp; policy"/>
+			<node text="050203 business &amp; management" ID="ID_1489331699" TEXT="050203 business &amp; management"/>
+			<node text="050204 development studies" ID="ID_887505163" TEXT="050204 development studies"/>
+			<node text="050205 econometrics" ID="ID_656706146" TEXT="050205 econometrics"/>
+			<node text="050206 economic theory" ID="ID_636535253" TEXT="050206 economic theory"/>
+			<node text="050207 economics" ID="ID_1718358660" TEXT="050207 economics"/>
+			<node text="050208 finance" ID="ID_1053865540" TEXT="050208 finance"/>
+			<node text="050209 industrial relations" ID="ID_1749934502" TEXT="050209 industrial relations"/>
+			<node text="050210 logistics &amp; transportation" ID="ID_1841984650" TEXT="050210 logistics &amp; transportation"/>
+			<node text="050211 marketing" ID="ID_330267790" TEXT="050211 marketing"/>
+			<node text="050212 sport, leisure &amp; tourism" ID="ID_81725956" TEXT="050212 sport, leisure &amp; tourism"/>
+		</node>
+		<node text="0503 education" ID="ID_1266490416" TEXT="0503 education">
+			<node text="050301 education" ID="ID_940300601" TEXT="050301 education"/>
+		</node>
+		<node text="0504 sociology" ID="ID_424445139" TEXT="0504 sociology">
+			<node text="050401 social sciences methods" ID="ID_1875086927" TEXT="050401 social sciences methods"/>
+			<node text="050402 sociology" ID="ID_913657094" TEXT="050402 sociology"/>
+		</node>
+		<node text="0505 law" ID="ID_1091119111" TEXT="0505 law">
+			<node text="050501 criminology" ID="ID_770082858" TEXT="050501 criminology"/>
+			<node text="050502 law" ID="ID_1809122537" TEXT="050502 law"/>
+		</node>
+		<node text="0506 political science" ID="ID_1037748689" TEXT="0506 political science">
+			<node text="050601 international relations" ID="ID_1423449132" TEXT="050601 international relations"/>
+			<node text="050602 political science &amp; public administration" ID="ID_1727394400" TEXT="050602 political science &amp; public administration"/>
+		</node>
+		<node text="0507 social and economic geography" ID="ID_495306200" TEXT="0507 social and economic geography">
+			<node text="050701 cultural studies" ID="ID_1549947627" TEXT="050701 cultural studies"/>
+			<node text="050702 demography" ID="ID_299224949" TEXT="050702 demography"/>
+			<node text="050703 geography" ID="ID_1602292406" TEXT="050703 geography"/>
+		</node>
+		<node text="0508 media and communications" ID="ID_910957046" TEXT="0508 media and communications">
+			<node text="050801 communication &amp; media studies" ID="ID_1512923480" TEXT="050801 communication &amp; media studies"/>
+		</node>
+		<node text="0509 other social sciences" ID="ID_1443979653" TEXT="0509 other social sciences">
+			<node text="050901 criminology" ID="ID_832062002" TEXT="050901 criminology"/>
+			<node text="050902 family studies" ID="ID_594092290" TEXT="050902 family studies"/>
+			<node text="050903 gender studies" ID="ID_516311143" TEXT="050903 gender studies"/>
+			<node text="050904 information &amp; library sciences" ID="ID_580716857" TEXT="050904 information &amp; library sciences"/>
+			<node text="050905 science studies" ID="ID_399550040" TEXT="050905 science studies"/>
+			<node text="050906 social work" ID="ID_1637271249" TEXT="050906 social work"/>
+		</node>
+	</node>
+	<node text="06 humanities and the arts" ID="ID_43288578" TEXT="06 humanities and the arts">
+		<node text="0601 history and archaeology" ID="ID_1817269203" TEXT="0601 history and archaeology">
+			<node text="060101 anthropology" ID="ID_1413192237" TEXT="060101 anthropology"/>
+			<node text="060102 archaeology" ID="ID_1156613512" TEXT="060102 archaeology"/>
+			<node text="060103 classics" ID="ID_1826077074" TEXT="060103 classics"/>
+			<node text="060104 history" ID="ID_734634072" TEXT="060104 history"/>
+			<node text="060105 history of science, technology &amp; medicine" ID="ID_1557905139" TEXT="060105 history of science, technology &amp; medicine"/>
+			<node text="060106 history of social sciences" ID="ID_1611035534" TEXT="060106 history of social sciences"/>
+		</node>
+		<node text="0602 languages and literature" ID="ID_1836327313" TEXT="0602 languages and literature">
+			<node text="060201 languages &amp; linguistics" ID="ID_585816123" TEXT="060201 languages &amp; linguistics"/>
+			<node text="060202 literary studies" ID="ID_1242368286" TEXT="060202 literary studies"/>
+		</node>
+		<node text="0603 philosophy, ethics and religion" ID="ID_121802669" TEXT="0603 philosophy, ethics and religion">
+			<node text="060301 applied ethics" ID="ID_1428866743" TEXT="060301 applied ethics"/>
+			<node text="060302 philosophy" ID="ID_724538023" TEXT="060302 philosophy"/>
+			<node text="060303 religions &amp; theology" ID="ID_1021284087" TEXT="060303 religions &amp; theology"/>
+		</node>
+		<node text="0604 arts" ID="ID_1355143062" TEXT="0604 arts">
+			<node text="060401 art practice, history &amp; theory" ID="ID_536727331" TEXT="060401 art practice, history &amp; theory"/>
+			<node text="060402 drama &amp; theater" ID="ID_794515967" TEXT="060402 drama &amp; theater"/>
+			<node text="060403 folklore" ID="ID_1804257456" TEXT="060403 folklore"/>
+			<node text="060404 music" ID="ID_549637221" TEXT="060404 music"/>
+		</node>
+	</node>
+</doc>

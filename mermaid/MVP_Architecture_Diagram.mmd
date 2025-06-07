@@ -1,0 +1,37 @@
+graph TD
+    A[Users] --> B(Frontend: Streamlit on GCP Cloud Run);
+    B -->|HTTP API Calls| C{Backend: FastAPI on GCP Cloud Run};
+    C -->|CRUD Ops & Auth| D[DBaaS: Supabase];
+    C -->|AI Tasks| E[AI: Google Gemini API];
+    C -->|Config| F[Config: Env Vars / GCP Secret Manager];
+    C -->|Logging| G[Logging: GCP Cloud Logging];
+
+    subgraph FastAPI_Backend_GCP_Cloud_Run [FastAPI Backend GCP Cloud Run]
+        H[API Routers: /books, /users, /ai]
+        I[Services/Use Cases: Business Logic]
+        J[AI Integration Layer: Gemini Service]
+        K[Auth Module: JWT Validation, Role Checks]
+        L[Pydantic Models: Schemas & Validation]
+        M[Database Client: Supabase Client]
+        N[Configuration Loading: Pydantic BaseSettings]
+        O[Logging Middleware]
+    end
+
+    C --> H; 
+    H --> I; 
+    H --> K;
+    I --> J; 
+    I --> M; 
+    I --> K;
+    J --> E;
+    K -->|Reads User Roles| D;
+    C -->|Reads Config| N; 
+    N -->|Reads Secrets| F;
+    C -->|Writes Logs| O; 
+    O -->|Sends to Logging| G;
+
+    style D fill:#d6f5d6,stroke:#333,stroke-width:2px
+    style E fill:#cce6ff,stroke:#333,stroke-width:2px
+    style F fill:#fff0cc,stroke:#333,stroke-width:2px
+    style G fill:#ffe6cc,stroke:#333,stroke-width:2px
+    style B fill:#f0e6ff,stroke:#333,stroke-width:2px

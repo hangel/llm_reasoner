@@ -1,0 +1,98 @@
+graph TB
+    subgraph Client
+        CR[Client Requests]
+    end
+
+    subgraph Server
+        ASGI[ASGI Server - Uvicorn]
+    end
+
+    subgraph FastAPI
+        APP["FastAPI Application"]:::core
+        click APP "https://github.com/fastapi/fastapi/blob/master/fastapi/applications.py"
+
+        subgraph RequestProcessing
+            RH["Request Handler"]:::handler
+            click RH "https://github.com/fastapi/fastapi/blob/master/fastapi/requests.py"
+            
+            MW["Middleware Layer"]:::middleware
+            click MW "https://github.com/fastapi/fastapi/tree/master/fastapi/middleware/"
+            
+            RT["Router"]:::routing
+            click RT "https://github.com/fastapi/fastapi/blob/master/fastapi/routing.py"
+        end
+
+        subgraph CoreComponents
+            DI["Dependency Injection"]:::core
+            click DI "https://github.com/fastapi/fastapi/tree/master/fastapi/dependencies/"
+            
+            SEC["Security"]:::security
+            click SEC "https://github.com/fastapi/fastapi/tree/master/fastapi/security/"
+            
+            VAL["Data Validation"]:::validation
+            
+            BT["Background Tasks"]:::utility
+            click BT "https://github.com/fastapi/fastapi/blob/master/fastapi/background.py"
+            
+            WS["WebSocket Support"]:::utility
+            click WS "https://github.com/fastapi/fastapi/blob/master/fastapi/websockets.py"
+        end
+
+        subgraph Documentation
+            OAS["OpenAPI Schema"]:::docs
+            click OAS "https://github.com/fastapi/fastapi/tree/master/fastapi/openapi/"
+            
+            SW["Swagger UI"]:::docs
+            RD["ReDoc"]:::docs
+        end
+
+        subgraph ResponseHandling
+            RESP["Response Handler"]:::handler
+            click RESP "https://github.com/fastapi/fastapi/blob/master/fastapi/responses.py"
+            
+            ENC["Data Encoder"]:::utility
+            click ENC "https://github.com/fastapi/fastapi/blob/master/fastapi/encoders.py"
+            
+            EH["Exception Handler"]:::utility
+            click EH "https://github.com/fastapi/fastapi/blob/master/fastapi/exception_handlers.py"
+        end
+
+        subgraph Utilities
+            SF["Static Files"]:::utility
+            click SF "https://github.com/fastapi/fastapi/blob/master/fastapi/staticfiles.py"
+            
+            TEST["Test Client"]:::utility
+            click TEST "https://github.com/fastapi/fastapi/blob/master/fastapi/testclient.py"
+        end
+    end
+
+    %% Connections
+    CR --> ASGI
+    ASGI --> APP
+    APP --> RH
+    RH --> MW
+    MW --> RT
+    RT --> DI
+    DI --> SEC
+    DI --> VAL
+    RT --> BT
+    RT --> WS
+    APP --> OAS
+    OAS --> SW
+    OAS --> RD
+    RT --> RESP
+    RESP --> ENC
+    RESP --> EH
+    APP --> SF
+    APP --> TEST
+
+    %% Styles
+    classDef core fill:#2196F3,stroke:#1565C0,color:white
+    classDef middleware fill:#90A4AE,stroke:#546E7A,color:white
+    classDef routing fill:#4CAF50,stroke:#2E7D32,color:white
+    classDef security fill:#FDD835,stroke:#F9A825,color:black
+    classDef validation fill:#FF9800,stroke:#F57C00,color:white
+    classDef docs fill:#9C27B0,stroke:#6A1B9A,color:white
+    classDef handler fill:#00BCD4,stroke:#00838F,color:white
+    classDef utility fill:#78909C,stroke:#546E7A,color:white
+

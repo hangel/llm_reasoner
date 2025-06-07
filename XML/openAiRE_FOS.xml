@@ -1,0 +1,287 @@
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by s0315 (s0315) -->
+<doc base="https://explore.openaire.eu/search/find/research-outcomes?fos=" fos_link_template="$n%2520$text">
+	<node level="1" n="01" text="natural sciences">
+		<node level="02" n="0101" text="mathematics">
+			<node level="03" n="010101" text="applied mathematics"/>
+			<node level="03" n="010102" text="general mathematics"/>
+			<node level="03" n="010103" text="numerical &amp; computational mathematics"/>
+			<node level="03" n="010104" text="statistics &amp; probability"/>
+		</node>
+		<node level="02" n="0102" text="computer and information sciences">
+			<node level="03" n="010201" text="computation theory &amp; mathematics"/>
+		</node>
+		<node level="02" n="0103" text="physical sciences">
+			<node level="03" n="010301" text="acoustics"/>
+			<node level="03" n="010302" text="applied physics"/>
+			<node level="03" n="010303" text="astronomy &amp; astrophysics"/>
+			<node level="03" n="010304" text="chemical physics"/>
+			<node level="03" n="010305" text="fluids &amp; plasmas"/>
+			<node level="03" n="010306" text="general physics"/>
+			<node level="03" n="010307" text="mathematical physics"/>
+			<node level="03" n="010308" text="nuclear &amp; particles physics"/>
+			<node level="03" n="010309" text="optics"/>
+		</node>
+		<node level="02" n="0104" text="chemical sciences">
+			<node level="03" n="010401" text="analytical chemistry"/>
+			<node level="03" n="010402" text="general chemistry"/>
+			<node level="03" n="010403" text="inorganic &amp; nuclear chemistry"/>
+			<node level="03" n="010404" text="medicinal &amp; biomolecular chemistry"/>
+			<node level="03" n="010405" text="organic chemistry"/>
+			<node level="03" n="010406" text="physical chemistry"/>
+			<node level="03" n="010407" text="polymers"/>
+		</node>
+		<node level="02" n="0105" text="earth and related environmental sciences">
+			<node level="03" n="010501" text="environmental sciences"/>
+			<node level="03" n="010502" text="geochemistry &amp; geophysics"/>
+			<node level="03" n="010503" text="geology"/>
+			<node level="03" n="010504" text="meteorology &amp; atmospheric sciences"/>
+			<node level="03" n="010505" text="oceanography"/>
+			<node level="03" n="010506" text="paleontology"/>
+		</node>
+		<node level="02" n="0106" text="biological sciences">
+			<node level="03" n="010601" text="ecology"/>
+			<node level="03" n="010602" text="entomology"/>
+			<node level="03" n="010603" text="evolutionary biology"/>
+			<node level="03" n="010604" text="marine biology &amp; hydrobiology"/>
+			<node level="03" n="010605" text="ornithology"/>
+			<node level="03" n="010606" text="plant biology &amp; botany"/>
+			<node level="03" n="010607" text="zoology"/>
+			<node level="03" n="010608" text="biotechnology"/>
+		</node>
+	</node>
+	<node level="1" n="02" text="engineering and technology">
+		<node level="02" n="0201" text="civil engineering">
+			<node level="03" n="020101" text="civil engineering"/>
+		</node>
+		<node level="02" n="0202" text="electrical engineering, electronic engineering, information engineering">
+			<node level="03" n="020201" text="artificial intelligence &amp; image processing"/>
+			<node level="03" n="020202" text="computer hardware &amp; architecture"/>
+			<node level="03" n="020203" text="distributed computing"/>
+			<node level="03" n="020204" text="information systems"/>
+			<node level="03" n="020205" text="medical informatics"/>
+			<node level="03" n="020206" text="networking &amp; telecommunications"/>
+			<node level="03" n="020207" text="software engineering"/>
+			<node level="03" n="020208" text="electrical &amp; electronic engineering"/>
+			<node level="03" n="020209" text="energy"/>
+			<node level="03" n="020210" text="optoelectronics &amp; photonics"/>
+		</node>
+		<node level="02" n="0203" text="mechanical engineering">
+			<node level="03" n="020301" text="aerospace &amp; aeronautics"/>
+			<node level="03" n="020302" text="automobile design &amp; engineering"/>
+			<node level="03" n="020303" text="mechanical engineering &amp; transports"/>
+		</node>
+		<node level="02" n="0204" text="chemical engineering">
+			<node level="03" n="020401" text="chemical engineering"/>
+		</node>
+		<node level="02" n="0205" text="materials engineering">
+			<node level="03" n="020501" text="mining &amp; metallurgy"/>
+			<node level="03" n="020502" text="materials"/>
+		</node>
+		<node level="02" n="0206" text="medical engineering">
+			<node level="03" n="020601" text="biomedical engineering"/>
+			<node level="03" n="020602" text="bioinformatics"/>
+		</node>
+		<node level="02" n="0207" text="environmental engineering">
+			<node level="03" n="020701" text="environmental engineering"/>
+		</node>
+		<node level="02" n="0208" text="environmental biotechnology">
+			<node level="03" n="020801" text="environmental engineering"/>
+		</node>
+		<node level="02" n="0209" text="industrial biotechnology">
+			<node level="03" n="020901" text="industrial engineering &amp; automation"/>
+		</node>
+		<node level="02" n="0210" text="nano-technology">
+			<node level="03" n="021001" text="nanoscience &amp; nanotechnology"/>
+		</node>
+		<node level="02" n="0211" text="other engineering and technologies">
+			<node level="03" n="021101" text="geological &amp; geomatics engineering"/>
+			<node level="03" n="021102" text="mining &amp; metallurgy"/>
+			<node level="03" n="021103" text="operations research"/>
+			<node level="03" n="021104" text="architecture"/>
+			<node level="03" n="021105" text="building &amp; construction"/>
+			<node level="03" n="021106" text="design practice &amp; management"/>
+			<node level="03" n="021107" text="urban &amp; regional planning"/>
+			<node level="03" n="021108" text="energy"/>
+			<node level="03" n="021109" text="optoelectronics &amp; photonics"/>
+			<node level="03" n="021110" text="strategic, defence &amp; security studies"/>
+		</node>
+	</node>
+	<node level="1" n="03" text="medical and health sciences">
+		<node level="02" n="0301" text="basic medicine">
+			<node level="03" n="030101" text="anatomy &amp; morphology"/>
+			<node level="03" n="030102" text="biochemistry &amp; molecular biology"/>
+			<node level="03" n="030103" text="biophysics"/>
+			<node level="03" n="030104" text="developmental biology"/>
+			<node level="03" n="030105" text="genetics &amp; heredity"/>
+			<node level="03" n="030106" text="microbiology"/>
+			<node level="03" n="030107" text="microscopy"/>
+			<node level="03" n="030108" text="mycology &amp; parasitology"/>
+			<node level="03" n="030109" text="nutrition &amp; dietetics"/>
+			<node level="03" n="030110" text="physiology"/>
+			<node level="03" n="030111" text="toxicology"/>
+			<node level="03" n="030112" text="virology"/>
+		</node>
+		<node level="02" n="0302" text="clinical medicine">
+			<node level="03" n="030201" text="allergy"/>
+			<node level="03" n="030202" text="anesthesiology"/>
+			<node level="03" n="030203" text="arthritis &amp; rheumatology"/>
+			<node level="03" n="030204" text="cardiovascular system &amp; hematology"/>
+			<node level="03" n="030205" text="complementary &amp; alternative medicine"/>
+			<node level="03" n="030206" text="dentistry"/>
+			<node level="03" n="030207" text="dermatology &amp; venereal diseases"/>
+			<node level="03" n="030208" text="emergency &amp; critical care medicine"/>
+			<node level="03" n="030209" text="endocrinology &amp; metabolism"/>
+			<node level="03" n="030210" text="environmental &amp; occupational health"/>
+			<node level="03" n="030211" text="gastroenterology &amp; hepatology"/>
+			<node level="03" n="030212" text="general &amp; internal medicine"/>
+			<node level="03" n="030213" text="general clinical medicine"/>
+			<node level="03" n="030214" text="geriatrics"/>
+			<node level="03" n="030215" text="immunology"/>
+			<node level="03" n="030216" text="legal &amp; forensic medicine"/>
+			<node level="03" n="030217" text="neurology &amp; neurosurgery"/>
+			<node level="03" n="030218" text="nuclear medicine &amp; medical imaging"/>
+			<node level="03" n="030219" text="obstetrics &amp; reproductive medicine"/>
+			<node level="03" n="030220" text="oncology &amp; carcinogenesis"/>
+			<node level="03" n="030221" text="ophthalmology &amp; optometry"/>
+			<node level="03" n="030222" text="orthopedics"/>
+			<node level="03" n="030223" text="otorhinolaryngology"/>
+			<node level="03" n="030224" text="pathology"/>
+			<node level="03" n="030225" text="pediatrics"/>
+			<node level="03" n="030226" text="pharmacology &amp; pharmacy"/>
+			<node level="03" n="030227" text="psychiatry"/>
+			<node level="03" n="030228" text="respiratory system"/>
+			<node level="03" n="030229" text="sport sciences"/>
+			<node level="03" n="030230" text="surgery"/>
+			<node level="03" n="030231" text="tropical medicine"/>
+			<node level="03" n="030232" text="urology &amp; nephrology"/>
+		</node>
+		<node level="02" n="0303" text="health sciences">
+			<node level="03" n="030301" text="anatomy &amp; morphology"/>
+			<node level="03" n="030302" text="biochemistry &amp; molecular biology"/>
+			<node level="03" n="030303" text="biophysics"/>
+			<node level="03" n="030304" text="developmental biology"/>
+			<node level="03" n="030305" text="genetics &amp; heredity"/>
+			<node level="03" n="030306" text="microbiology"/>
+			<node level="03" n="030307" text="microscopy"/>
+			<node level="03" n="030308" text="mycology &amp; parasitology"/>
+			<node level="03" n="030309" text="nutrition &amp; dietetics"/>
+			<node level="03" n="030310" text="physiology"/>
+			<node level="03" n="030311" text="toxicology"/>
+			<node level="03" n="030312" text="virology"/>
+		</node>
+		<node level="02" n="0304" text="medical biotechnology"/>
+		<node level="02" n="0305" text="other medical science">
+			<node level="03" n="030501" text="epidemiology"/>
+			<node level="03" n="030502" text="gerontology"/>
+			<node level="03" n="030503" text="health policy &amp; services"/>
+			<node level="03" n="030504" text="nursing"/>
+			<node level="03" n="030505" text="public health"/>
+			<node level="03" n="030506" text="rehabilitation"/>
+			<node level="03" n="030507" text="speech-language pathology &amp; audiology"/>
+			<node level="03" n="030508" text="substance abuse"/>
+		</node>
+	</node>
+	<node level="1" n="04" text="agricultural and veterinary sciences">
+		<node level="02" n="0401" text="agriculture, forestry, and fisheries">
+			<node level="03" n="040101" text="forestry"/>
+			<node level="03" n="040102" text="fisheries"/>
+			<node level="03" n="040103" text="agronomy &amp; agriculture"/>
+		</node>
+		<node level="02" n="0402" text="animal and dairy science">
+			<node level="03" n="040201" text="dairy &amp; animal science"/>
+		</node>
+		<node level="02" n="0403" text="veterinary science">
+			<node level="03" n="040301" text="veterinary sciences"/>
+		</node>
+		<node level="02" n="0404" text="agricultural biotechnology">
+			<node level="03" n="040401" text="food science"/>
+		</node>
+		<node level="02" n="0405" text="other agricultural sciences">
+			<node level="03" n="040501" text="horticulture"/>
+			<node level="03" n="040502" text="food science"/>
+		</node>
+	</node>
+	<node level="1" n="05" text="social sciences">
+		<node level="02" n="0501" text="psychology and cognitive sciences">
+			<node level="03" n="050101" text="languages &amp; linguistics"/>
+			<node level="03" n="050102" text="behavioral science &amp; comparative psychology"/>
+			<node level="03" n="050103" text="clinical psychology"/>
+			<node level="03" n="050104" text="developmental &amp; child psychology"/>
+			<node level="03" n="050105" text="experimental psychology"/>
+			<node level="03" n="050106" text="general psychology &amp; cognitive sciences"/>
+			<node level="03" n="050107" text="human factors"/>
+			<node level="03" n="050108" text="psychoanalysis"/>
+			<node level="03" n="050109" text="social psychology"/>
+		</node>
+		<node level="02" n="0502" text="economics and business">
+			<node level="03" n="050201" text="accounting"/>
+			<node level="03" n="050202" text="agricultural economics &amp; policy"/>
+			<node level="03" n="050203" text="business &amp; management"/>
+			<node level="03" n="050204" text="development studies"/>
+			<node level="03" n="050205" text="econometrics"/>
+			<node level="03" n="050206" text="economic theory"/>
+			<node level="03" n="050207" text="economics"/>
+			<node level="03" n="050208" text="finance"/>
+			<node level="03" n="050209" text="industrial relations"/>
+			<node level="03" n="050210" text="logistics &amp; transportation"/>
+			<node level="03" n="050211" text="marketing"/>
+			<node level="03" n="050212" text="sport, leisure &amp; tourism"/>
+		</node>
+		<node level="02" n="0503" text="education">
+			<node level="03" n="050301" text="education"/>
+		</node>
+		<node level="02" n="0504" text="sociology">
+			<node level="03" n="050401" text="social sciences methods"/>
+			<node level="03" n="050402" text="sociology"/>
+		</node>
+		<node level="02" n="0505" text="law">
+			<node level="03" n="050501" text="criminology"/>
+			<node level="03" n="050502" text="law"/>
+		</node>
+		<node level="02" n="0506" text="political science">
+			<node level="03" n="050601" text="international relations"/>
+			<node level="03" n="050602" text="political science &amp; public administration"/>
+		</node>
+		<node level="02" n="0507" text="social and economic geography">
+			<node level="03" n="050701" text="cultural studies"/>
+			<node level="03" n="050702" text="demography"/>
+			<node level="03" n="050703" text="geography"/>
+		</node>
+		<node level="02" n="0508" text="media and communications">
+			<node level="03" n="050801" text="communication &amp; media studies"/>
+		</node>
+		<node level="02" n="0509" text="other social sciences">
+			<node level="03" n="050901" text="criminology"/>
+			<node level="03" n="050902" text="family studies"/>
+			<node level="03" n="050903" text="gender studies"/>
+			<node level="03" n="050904" text="information &amp; library sciences"/>
+			<node level="03" n="050905" text="science studies"/>
+			<node level="03" n="050906" text="social work"/>
+		</node>
+	</node>
+	<node level="1" n="06" text="humanities and the arts">
+		<node level="02" n="0601" text="history and archaeology">
+			<node level="03" n="060101" text="anthropology"/>
+			<node level="03" n="060102" text="archaeology"/>
+			<node level="03" n="060103" text="classics"/>
+			<node level="03" n="060104" text="history"/>
+			<node level="03" n="060105" text="history of science, technology &amp; medicine"/>
+			<node level="03" n="060106" text="history of social sciences"/>
+		</node>
+		<node level="02" n="0602" text="languages and literature">
+			<node level="03" n="060201" text="languages &amp; linguistics"/>
+			<node level="03" n="060202" text="literary studies"/>
+		</node>
+		<node level="02" n="0603" text="philosophy, ethics and religion">
+			<node level="03" n="060301" text="applied ethics"/>
+			<node level="03" n="060302" text="philosophy"/>
+			<node level="03" n="060303" text="religions &amp; theology"/>
+		</node>
+		<node level="02" n="0604" text="arts">
+			<node level="03" n="060401" text="art practice, history &amp; theory"/>
+			<node level="03" n="060402" text="drama &amp; theater"/>
+			<node level="03" n="060403" text="folklore"/>
+			<node level="03" n="060404" text="music"/>
+		</node>
+	</node>
+</doc>

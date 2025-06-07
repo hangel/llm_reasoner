@@ -1,0 +1,1945 @@
+<doc class="sideBar_Container sideBar_ClosedNav sideBar_CollapsedNav sideBar_WindowStickyNav" src="https://docs.streamlit.io/library/api-reference/data/st.dataframe">
+<nav>
+<ul class="sideBar_NavList">
+<li class="navItem_NavItem" id="get-started">
+<a class="not-link" href="/get-started">
+<section class="navItem_HeadingContainer">
+<div class="navItem_HeadingIconContainer navItem_OrangeBackground">
+<i class="navItem_Icon">rocket_launch</i>
+</div>
+<p class="navItem_CategoryName">Get started</p>
+</section>
+</a>
+<ul class="navItem_SubNav navItem_ExpandedSubNav">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/installation">
+<span class="navChild_PageName">Installation</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/installation/command-line">
+<span class="navChild_PageName">Use command line</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/installation/anaconda-distribution">
+<span class="navChild_PageName">Use Anaconda Distribution</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/installation/community-cloud">
+<span class="navChild_PageName">Use GitHub Codespaces</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/installation/streamlit-in-snowflake">
+<span class="navChild_PageName">Use Snowflake</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/fundamentals">
+<span class="navChild_PageName">Fundamentals</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/fundamentals/main-concepts">
+<span class="navChild_PageName">Main concepts</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/fundamentals/advanced-concepts">
+<span class="navChild_PageName">Advanced concepts</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/fundamentals/additional-features">
+<span class="navChild_PageName">Additional features</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/fundamentals/summary">
+<span class="navChild_PageName">Summary</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/tutorials">
+<span class="navChild_PageName">Tutorials</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/tutorials/create-an-app">
+<span class="navChild_PageName">Create an app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/get-started/tutorials/create-a-multipage-app">
+<span class="navChild_PageName">Create a multipage app</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="navItem_NavItem" id="streamlit-library">
+<a href="/library" class="not-link">
+<section class="navItem_HeadingContainer">
+<div class="navItem_HeadingIconContainer navItem_IndigoBackground">
+<i class="navItem_Icon">description</i>
+</div>
+<p class="navItem_CategoryName navItem_IndigoForeground">Streamlit library</p>
+</section>
+</a>
+<ul class="navItem_SubNav navItem_ExpandedSubNav">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference">
+<span class="navChild_PageName">API reference</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/write-magic">
+<span class="navChild_PageName">Write and magic</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/write-magic/st.write">
+<span class="navChild_PageName">st.write</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/write-magic/st.write_stream">
+<span class="navChild_PageName">st.write_stream</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/write-magic/magic">
+<span class="navChild_PageName">magic</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text">
+<span class="navChild_PageName">Text elements</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.markdown">
+<span class="navChild_PageName">st.markdown</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.title">
+<span class="navChild_PageName">st.title</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.header">
+<span class="navChild_PageName">st.header</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.subheader">
+<span class="navChild_PageName">st.subheader</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.caption">
+<span class="navChild_PageName">st.caption</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.code">
+<span class="navChild_PageName">st.code</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.text">
+<span class="navChild_PageName">st.text</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.latex">
+<span class="navChild_PageName">st.latex</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/text/st.divider">
+<span class="navChild_PageName">st.divider</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data">
+<span class="navChild_PageName">Data elements</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.dataframe">
+<span class="navChild_PageName navChild_ActivePage">st.dataframe</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.data_editor">
+<span class="navChild_PageName">st.data_editor</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config">
+<span class="navChild_PageName">st.column_config</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.column">
+<span class="navChild_PageName">Column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.textcolumn">
+<span class="navChild_PageName">Text column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.numbercolumn">
+<span class="navChild_PageName">Number column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.checkboxcolumn">
+<span class="navChild_PageName">Checkbox column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.selectboxcolumn">
+<span class="navChild_PageName">Selectbox column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.datetimecolumn">
+<span class="navChild_PageName">Datetime column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.datecolumn">
+<span class="navChild_PageName">Date column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.timecolumn">
+<span class="navChild_PageName">Time column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.listcolumn">
+<span class="navChild_PageName">List column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.linkcolumn">
+<span class="navChild_PageName">Link column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.imagecolumn">
+<span class="navChild_PageName">Image column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.linechartcolumn">
+<span class="navChild_PageName">Line chart column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.barchartcolumn">
+<span class="navChild_PageName">Bar chart column</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.column_config/st.column_config.progresscolumn">
+<span class="navChild_PageName">Progress column</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.table">
+<span class="navChild_PageName">st.table</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.metric">
+<span class="navChild_PageName">st.metric</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.json">
+<span class="navChild_PageName">st.json</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/data/st.experimental_data_editor">
+<span class="navChild_PageName">st.experimental_data_editor</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts">
+<span class="navChild_PageName">Chart elements</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.area_chart">
+<span class="navChild_PageName">st.area_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.bar_chart">
+<span class="navChild_PageName">st.bar_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.line_chart">
+<span class="navChild_PageName">st.line_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.scatter_chart">
+<span class="navChild_PageName">st.scatter_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.pyplot">
+<span class="navChild_PageName">st.pyplot</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.altair_chart">
+<span class="navChild_PageName">st.altair_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.vega_lite_chart">
+<span class="navChild_PageName">st.vega_lite_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.plotly_chart">
+<span class="navChild_PageName">st.plotly_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.bokeh_chart">
+<span class="navChild_PageName">st.bokeh_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.pydeck_chart">
+<span class="navChild_PageName">st.pydeck_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.graphviz_chart">
+<span class="navChild_PageName">st.graphviz_chart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/charts/st.map">
+<span class="navChild_PageName">st.map</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets">
+<span class="navChild_PageName">Input widgets</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.button">
+<span class="navChild_PageName">st.button</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.download_button">
+<span class="navChild_PageName">st.download_button</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.link_button">
+<span class="navChild_PageName">st.link_button</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.page_link">
+<span class="navChild_PageName">st.page_link</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.checkbox">
+<span class="navChild_PageName">st.checkbox</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.toggle">
+<span class="navChild_PageName">st.toggle</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.radio">
+<span class="navChild_PageName">st.radio</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.selectbox">
+<span class="navChild_PageName">st.selectbox</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.multiselect">
+<span class="navChild_PageName">st.multiselect</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.slider">
+<span class="navChild_PageName">st.slider</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.select_slider">
+<span class="navChild_PageName">st.select_slider</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.text_input">
+<span class="navChild_PageName">st.text_input</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.number_input">
+<span class="navChild_PageName">st.number_input</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.text_area">
+<span class="navChild_PageName">st.text_area</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.date_input">
+<span class="navChild_PageName">st.date_input</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.time_input">
+<span class="navChild_PageName">st.time_input</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.file_uploader">
+<span class="navChild_PageName">st.file_uploader</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.camera_input">
+<span class="navChild_PageName">st.camera_input</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.color_picker">
+<span class="navChild_PageName">st.color_picker</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/media">
+<span class="navChild_PageName">Media elements</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/media/st.image">
+<span class="navChild_PageName">st.image</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/media/st.audio">
+<span class="navChild_PageName">st.audio</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/media/st.video">
+<span class="navChild_PageName">st.video</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout">
+<span class="navChild_PageName">Layouts and containers</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout/st.sidebar">
+<span class="navChild_PageName">st.sidebar</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout/st.columns">
+<span class="navChild_PageName">st.columns</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout/st.tabs">
+<span class="navChild_PageName">st.tabs</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout/st.expander">
+<span class="navChild_PageName">st.expander</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout/st.container">
+<span class="navChild_PageName">st.container</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/layout/st.empty">
+<span class="navChild_PageName">st.empty</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/chat">
+<span class="navChild_PageName">Chat elements</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/chat/st.chat_input">
+<span class="navChild_PageName">st.chat_input</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/chat/st.chat_message">
+<span class="navChild_PageName">st.chat_message</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.status">
+<span class="navChild_PageName">st.status</span>
+<i class="navChild_CrossLinkedIcon">link</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/write-magic/st.write_stream">
+<span class="navChild_PageName">st.write_stream</span>
+<i class="navChild_CrossLinkedIcon">link</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status">
+<span class="navChild_PageName">Status elements</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.progress">
+<span class="navChild_PageName">st.progress</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.spinner">
+<span class="navChild_PageName">st.spinner</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.status">
+<span class="navChild_PageName">st.status</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.toast">
+<span class="navChild_PageName">st.toast</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.balloons">
+<span class="navChild_PageName">st.balloons</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.snow">
+<span class="navChild_PageName">st.snow</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.error">
+<span class="navChild_PageName">st.error</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.warning">
+<span class="navChild_PageName">st.warning</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.info">
+<span class="navChild_PageName">st.info</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.success">
+<span class="navChild_PageName">st.success</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/status/st.exception">
+<span class="navChild_PageName">st.exception</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow">
+<span class="navChild_PageName">Control flow</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow/st.form">
+<span class="navChild_PageName">st.form</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow/st.form_submit_button">
+<span class="navChild_PageName">st.form_submit_button</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/widgets/st.page_link">
+<span class="navChild_PageName">st.page_link</span>
+<i class="navChild_CrossLinkedIcon">link</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow/st.rerun">
+<span class="navChild_PageName">st.rerun</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow/st.stop">
+<span class="navChild_PageName">st.stop</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow/st.switch_page">
+<span class="navChild_PageName">st.switch_page</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/control-flow/st.experimental_rerun">
+<span class="navChild_PageName">st.experimental_rerun</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities">
+<span class="navChild_PageName">Utilities</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities/st.set_page_config">
+<span class="navChild_PageName">st.set_page_config</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities/st.echo">
+<span class="navChild_PageName">st.echo</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities/st.help">
+<span class="navChild_PageName">st.help</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities/st.query_params">
+<span class="navChild_PageName">st.query_params</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities/st.experimental_get_query_params">
+<span class="navChild_PageName">st.experimental_get_query_params</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/utilities/st.experimental_set_query_params">
+<span class="navChild_PageName">st.experimental_set_query_params</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/mutate">
+<span class="navChild_PageName">Mutate charts</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/session-state">
+<span class="navChild_PageName">State management</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/performance">
+<span class="navChild_PageName">Performance</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/performance/st.cache_data">
+<span class="navChild_PageName">st.cache_data</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/performance/st.cache_resource">
+<span class="navChild_PageName">st.cache_resource</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/performance/st.cache">
+<span class="navChild_PageName">st.cache</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/performance/st.experimental_memo">
+<span class="navChild_PageName">st.experimental_memo</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/performance/st.experimental_singleton">
+<span class="navChild_PageName">st.experimental_singleton</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/personalization">
+<span class="navChild_PageName">Personalization</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/personalization/st.experimental_user">
+<span class="navChild_PageName">st.experimental_user</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections">
+<span class="navChild_PageName">Connections and databases</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.connection">
+<span class="navChild_PageName">st.connection</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.connections.snowflakeconnection">
+<span class="navChild_PageName">SnowflakeConnection</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.connections.sqlconnection">
+<span class="navChild_PageName">SQLConnection</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.connections.baseconnection">
+<span class="navChild_PageName">BaseConnection</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.experimental_connection">
+<span class="navChild_PageName">st.experimental_connection</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.connections.snowparkconnection">
+<span class="navChild_PageName">SnowparkConnection</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/connections/st.connections.experimentalbaseconnection">
+<span class="navChild_PageName">ExperimentalBaseConnection</span>
+<i class="material-icons-sharp navChild_Icon">delete</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/app-testing">
+<span class="navChild_PageName">App testing</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/app-testing/st.testing.v1.apptest">
+<span class="navChild_PageName">st.testing.v1.AppTest</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/api-reference/app-testing/testing-element-classes">
+<span class="navChild_PageName">Testing element classes</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features">
+<span class="navChild_PageName">Advanced features</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-menu">
+<span class="navChild_PageName">⋮ App menu</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/button-behavior-and-examples">
+<span class="navChild_PageName">Button behavior and examples</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/caching">
+<span class="navChild_PageName">Caching</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/cli">
+<span class="navChild_PageName">Command-line options</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/configuration">
+<span class="navChild_PageName">Configuration</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/theming">
+<span class="navChild_PageName">Theming</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/connecting-to-data">
+<span class="navChild_PageName">Connecting to data</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/dataframes">
+<span class="navChild_PageName">Dataframes</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/forms">
+<span class="navChild_PageName">Forms</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/multipage-apps">
+<span class="navChild_PageName">Multipage apps</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/multipage-apps/custom-navigation">
+<span class="navChild_PageName">Custom navigation</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/session-state">
+<span class="navChild_PageName">Add statefulness to apps</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/widget-behavior">
+<span class="navChild_PageName">Widget behavior</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/custom-classes">
+<span class="navChild_PageName">Custom classes</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/prerelease">
+<span class="navChild_PageName">Pre-release features</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/timezone-handling">
+<span class="navChild_PageName">Working with timezones</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/static-file-serving">
+<span class="navChild_PageName">Static file serving</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/https-support">
+<span class="navChild_PageName">HTTPS support</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/secrets-management">
+<span class="navChild_PageName">Secrets management</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/security-reminders">
+<span class="navChild_PageName">Security reminders</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-testing">
+<span class="navChild_PageName">App testing</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-testing/get-started">
+<span class="navChild_PageName">Get started</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-testing/beyond-the-basics">
+<span class="navChild_PageName">Beyond the basics</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-testing/automate-tests">
+<span class="navChild_PageName">Automate your tests</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-testing/examples">
+<span class="navChild_PageName">Example</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/advanced-features/app-testing/cheat-sheet">
+<span class="navChild_PageName">Cheat sheet</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/components">
+<span class="navChild_PageName">Components</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/components/components-api">
+<span class="navChild_PageName">Components API</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/components/create">
+<span class="navChild_PageName">Create a Component</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/components/publish">
+<span class="navChild_PageName">Publish a Component</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://streamlit.io/components">
+<span class="navChild_PageName">Component gallery</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://roadmap.streamlit.app">
+<span class="navChild_PageName">Roadmap</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/changelog">
+<span class="navChild_PageName">Changelog</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/library/cheatsheet">
+<span class="navChild_PageName">Cheat sheet</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navItem_NavItem" id="streamlit-community-cloud">
+<a class="not-link" href="/streamlit-community-cloud">
+<section class="navItem_HeadingContainer">
+<div class="navItem_HeadingIconContainer navItem_LightBlueBackground">
+<i class="navItem_Icon">cloud</i>
+</div>
+<p class="navItem_CategoryName">Streamlit Community Cloud</p>
+</section>
+</a>
+<ul class="navItem_SubNav navItem_ExpandedSubNav">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started">
+<span class="navChild_PageName">Get started</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started/quickstart">
+<span class="navChild_PageName">Quickstart</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started/create-your-account">
+<span class="navChild_PageName">Create your account</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started/connect-your-github-account">
+<span class="navChild_PageName">Connect your GitHub account</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started/explore-your-workspace">
+<span class="navChild_PageName">Explore your workspace</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started/fork-and-edit-a-public-app">
+<span class="navChild_PageName">Fork and edit a public app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/get-started/trust-and-security">
+<span class="navChild_PageName">Trust and security</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/deploy-your-app">
+<span class="navChild_PageName">Deploy your app</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/deploy-your-app/app-dependencies">
+<span class="navChild_PageName">App dependencies</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/deploy-your-app/secrets-management">
+<span class="navChild_PageName">Secrets management</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app">
+<span class="navChild_PageName">Manage your app</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app/app-analytics">
+<span class="navChild_PageName">App analytics</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app/app-settings">
+<span class="navChild_PageName">App settings</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app/delete-your-app">
+<span class="navChild_PageName">Delete your app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app/edit-your-app">
+<span class="navChild_PageName">Edit your app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app/favorite-your-app">
+<span class="navChild_PageName">Favorite your app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-app/reboot-your-app">
+<span class="navChild_PageName">Reboot your app</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/share-your-app">
+<span class="navChild_PageName">Share your app</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/share-your-app/embed-your-app">
+<span class="navChild_PageName">Embed your app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/share-your-app/indexability">
+<span class="navChild_PageName">Search indexability</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/share-your-app/share-previews">
+<span class="navChild_PageName">Share previews</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-account">
+<span class="navChild_PageName">Manage your account</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-account/sign-in-sign-out">
+<span class="navChild_PageName">Sign in &amp; sign out</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-account/workspace-settings">
+<span class="navChild_PageName">Workspace settings</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-account/manage-your-github-connection">
+<span class="navChild_PageName">Manage your GitHub connection</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-account/update-your-email">
+<span class="navChild_PageName">Update your email</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/manage-your-account/delete-your-account">
+<span class="navChild_PageName">Delete your account</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/streamlit-community-cloud/troubleshooting">
+<span class="navChild_PageName">Troubleshooting</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navItem_NavItem" id="knowledge-base">
+<a class="not-link" href="/knowledge-base">
+<section class="navItem_HeadingContainer">
+<div class="navItem_HeadingIconContainer navItem_DarkBlueBackground">
+<i class="navItem_Icon">school</i>
+</div>
+<p class="navItem_CategoryName">Knowledge base</p>
+</section>
+</a>
+<ul class="navItem_SubNav navItem_ExpandedSubNav">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials">
+<span class="navChild_PageName">Tutorials</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases">
+<span class="navChild_PageName">Connect to data sources</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/aws-s3">
+<span class="navChild_PageName">AWS S3</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/bigquery">
+<span class="navChild_PageName">BigQuery</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/deta-base">
+<span class="navChild_PageName">Deta Base</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://blog.streamlit.io/streamlit-firestore/">
+<span class="navChild_PageName">Firestore</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/gcs">
+<span class="navChild_PageName">Google Cloud Storage</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/mssql">
+<span class="navChild_PageName">Microsoft SQL Server</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/mongodb">
+<span class="navChild_PageName">MongoDB</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/mysql">
+<span class="navChild_PageName">MySQL</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/postgresql">
+<span class="navChild_PageName">PostgreSQL</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/private-gsheet">
+<span class="navChild_PageName">Private Google Sheet</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/public-gsheet">
+<span class="navChild_PageName">Public Google Sheet</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/snowflake">
+<span class="navChild_PageName">Snowflake</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/supabase">
+<span class="navChild_PageName">Supabase</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/tableau">
+<span class="navChild_PageName">Tableau</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/tidb">
+<span class="navChild_PageName">TiDB</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/databases/tigergraph">
+<span class="navChild_PageName">TigerGraph</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/deploy">
+<span class="navChild_PageName">Deploy Streamlit apps</span>
+</a>
+<div class="navChild_Accordion">
+<i class="navChild_AccordionIcon close">remove</i>
+</div>
+</div>
+<ul class="navChild_List">
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/deploy/docker">
+<span class="navChild_PageName">Docker</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/deploy/kubernetes">
+<span class="navChild_PageName">Kubernetes</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://towardsdatascience.com/how-to-deploy-a-streamlit-app-using-an-amazon-free-ec2-instance-416a41f69dc3">
+<span class="navChild_PageName">Amazon EC2</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://towardsdatascience.com/deploying-a-streamlit-web-app-with-azure-app-service-1f09a2159743">
+<span class="navChild_PageName">Azure</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://dev.to/whitphx/how-to-deploy-streamlit-apps-to-google-app-engine-407o">
+<span class="navChild_PageName">Google App Engine</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83">
+<span class="navChild_PageName">Heroku</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://docs.cloud.ploomber.io/en/latest/apps/streamlit.html">
+<span class="navChild_PageName">Ploomber Cloud</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://www.21yunbox.com/docs/#/deploy-streamlit">
+<span class="navChild_PageName">21YunBox</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" target="_blank" href="https://discuss.streamlit.io/t/streamlit-deployment-guide-wiki/5099">
+<span class="navChild_PageName">Community-built guides</span>
+<i class="navChild_ExternalIcon">open_in_new</i>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/build-conversational-apps">
+<span class="navChild_PageName">Build a basic LLM chat app</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/tutorials/llm-quickstart">
+<span class="navChild_PageName">Build an LLM app using LangChain</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/using-streamlit">
+<span class="navChild_PageName">Using Streamlit</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/components">
+<span class="navChild_PageName">Streamlit Components</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/dependencies">
+<span class="navChild_PageName">Installing dependencies</span>
+</a>
+</div>
+</li>
+<li class="navChild_Container">
+<div class="navChild_LinkContainer">
+<a class="navChild_Link" href="/knowledge-base/deploy">
+<span class="navChild_PageName">Deployment issues</span>
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</doc>

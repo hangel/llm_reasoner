@@ -1,0 +1,70 @@
+<node level="h1" fos_link="&quot;03%2520medical%2520and%2520health%2520sciences&quot;" text="03 medical and health sciences" />
+<node level="h2" fos_link="&quot;0301%2520basic%2520medicine&quot;" text="0301 basic medicine" />
+<node level="h3" fos_link="&quot;030101%2520anatomy%2520%2526%2520morphology&quot;" text="030101 anatomy &amp; morphology" />
+<node level="h3" fos_link="&quot;030102%2520biochemistry%2520%2526%2520molecular%2520biology&quot;" text="030102 biochemistry &amp; molecular biology" />
+<node level="h3" fos_link="&quot;030103%2520biophysics&quot;" text="030103 biophysics" />
+<node level="h3" fos_link="&quot;030104%2520developmental%2520biology&quot;" text="030104 developmental biology" />
+<node level="h3" fos_link="&quot;030105%2520genetics%2520%2526%2520heredity&quot;" text="030105 genetics &amp; heredity" />
+<node level="h3" fos_link="&quot;030106%2520microbiology&quot;" text="030106 microbiology" />
+<node level="h3" fos_link="&quot;030107%2520microscopy&quot;" text="030107 microscopy" />
+<node level="h3" fos_link="&quot;030108%2520mycology%2520%2526%2520parasitology&quot;" text="030108 mycology &amp; parasitology" />
+<node level="h3" fos_link="&quot;030109%2520nutrition%2520%2526%2520dietetics&quot;" text="030109 nutrition &amp; dietetics" />
+<node level="h3" fos_link="&quot;030110%2520physiology&quot;" text="030110 physiology" />
+<node level="h3" fos_link="&quot;030111%2520toxicology&quot;" text="030111 toxicology" />
+<node level="h3" fos_link="&quot;030112%2520virology&quot;" text="030112 virology" />
+<node level="h2" fos_link="&quot;0302%2520clinical%2520medicine&quot;" text="0302 clinical medicine" />
+<node level="h3" fos_link="&quot;030201%2520allergy&quot;" text="030201 allergy" />
+<node level="h3" fos_link="&quot;030202%2520anesthesiology&quot;" text="030202 anesthesiology" />
+<node level="h3" fos_link="&quot;030203%2520arthritis%2520%2526%2520rheumatology&quot;" text="030203 arthritis &amp; rheumatology" />
+<node level="h3" fos_link="&quot;030204%2520cardiovascular%2520system%2520%2526%2520hematology&quot;" text="030204 cardiovascular system &amp; hematology" />
+<node level="h3" fos_link="&quot;030205%2520complementary%2520%2526%2520alternative%2520medicine&quot;" text="030205 complementary &amp; alternative medicine" />
+<node level="h3" fos_link="&quot;030206%2520dentistry&quot;" text="030206 dentistry" />
+<node level="h3" fos_link="&quot;030207%2520dermatology%2520%2526%2520venereal%2520diseases&quot;" text="030207 dermatology &amp; venereal diseases" />
+<node level="h3" fos_link="&quot;030208%2520emergency%2520%2526%2520critical%2520care%2520medicine&quot;" text="030208 emergency &amp; critical care medicine" />
+<node level="h3" fos_link="&quot;030209%2520endocrinology%2520%2526%2520metabolism&quot;" text="030209 endocrinology &amp; metabolism" />
+<node level="h3" fos_link="&quot;030210%2520environmental%2520%2526%2520occupational%2520health&quot;" text="030210 environmental &amp; occupational health" />
+<node level="h3" fos_link="&quot;030211%2520gastroenterology%2520%2526%2520hepatology&quot;" text="030211 gastroenterology &amp; hepatology" />
+<node level="h3" fos_link="&quot;030212%2520general%2520%2526%2520internal%2520medicine&quot;" text="030212 general &amp; internal medicine" />
+<node level="h3" fos_link="&quot;030213%2520general%2520clinical%2520medicine&quot;" text="030213 general clinical medicine" />
+<node level="h3" fos_link="&quot;030214%2520geriatrics&quot;" text="030214 geriatrics" />
+<node level="h3" fos_link="&quot;030215%2520immunology&quot;" text="030215 immunology" />
+<node level="h3" fos_link="&quot;030216%2520legal%2520%2526%2520forensic%2520medicine&quot;" text="030216 legal &amp; forensic medicine" />
+<node level="h3" fos_link="&quot;030217%2520neurology%2520%2526%2520neurosurgery&quot;" text="030217 neurology &amp; neurosurgery" />
+<node level="h3" fos_link="&quot;030218%2520nuclear%2520medicine%2520%2526%2520medical%2520imaging&quot;" text="030218 nuclear medicine &amp; medical imaging" />
+<node level="h3" fos_link="&quot;030219%2520obstetrics%2520%2526%2520reproductive%2520medicine&quot;" text="030219 obstetrics &amp; reproductive medicine" />
+<node level="h3" fos_link="&quot;030220%2520oncology%2520%2526%2520carcinogenesis&quot;" text="030220 oncology &amp; carcinogenesis" />
+<node level="h3" fos_link="&quot;030221%2520ophthalmology%2520%2526%2520optometry&quot;" text="030221 ophthalmology &amp; optometry" />
+<node level="h3" fos_link="&quot;030222%2520orthopedics&quot;" text="030222 orthopedics" />
+<node level="h3" fos_link="&quot;030223%2520otorhinolaryngology&quot;" text="030223 otorhinolaryngology" />
+<node level="h3" fos_link="&quot;030224%2520pathology&quot;" text="030224 pathology" />
+<node level="h3" fos_link="&quot;030225%2520pediatrics&quot;" text="030225 pediatrics" />
+<node level="h3" fos_link="&quot;030226%2520pharmacology%2520%2526%2520pharmacy&quot;" text="030226 pharmacology &amp; pharmacy" />
+<node level="h3" fos_link="&quot;030227%2520psychiatry&quot;" text="030227 psychiatry" />
+<node level="h3" fos_link="&quot;030228%2520respiratory%2520system&quot;" text="030228 respiratory system" />
+<node level="h3" fos_link="&quot;030229%2520sport%2520sciences&quot;" text="030229 sport sciences" />
+<node level="h3" fos_link="&quot;030230%2520surgery&quot;" text="030230 surgery" />
+<node level="h3" fos_link="&quot;030231%2520tropical%2520medicine&quot;" text="030231 tropical medicine" />
+<node level="h3" fos_link="&quot;030232%2520urology%2520%2526%2520nephrology&quot;" text="030232 urology &amp; nephrology" />
+<node level="h2" fos_link="&quot;0303%2520health%2520sciences&quot;" text="0303 health sciences" />
+<node level="h3" fos_link="&quot;030301%2520anatomy%2520%2526%2520morphology&quot;" text="030301 anatomy &amp; morphology" />
+<node level="h3" fos_link="&quot;030302%2520biochemistry%2520%2526%2520molecular%2520biology&quot;" text="030302 biochemistry &amp; molecular biology" />
+<node level="h3" fos_link="&quot;030303%2520biophysics&quot;" text="030303 biophysics" />
+<node level="h3" fos_link="&quot;030304%2520developmental%2520biology&quot;" text="030304 developmental biology" />
+<node level="h3" fos_link="&quot;030305%2520genetics%2520%2526%2520heredity&quot;" text="030305 genetics &amp; heredity" />
+<node level="h3" fos_link="&quot;030306%2520microbiology&quot;" text="030306 microbiology" />
+<node level="h3" fos_link="&quot;030307%2520microscopy&quot;" text="030307 microscopy" />
+<node level="h3" fos_link="&quot;030308%2520mycology%2520%2526%2520parasitology&quot;" text="030308 mycology &amp; parasitology" />
+<node level="h3" fos_link="&quot;030309%2520nutrition%2520%2526%2520dietetics&quot;" text="030309 nutrition &amp; dietetics" />
+<node level="h3" fos_link="&quot;030310%2520physiology&quot;" text="030310 physiology" />
+<node level="h3" fos_link="&quot;030311%2520toxicology&quot;" text="030311 toxicology" />
+<node level="h3" fos_link="&quot;030312%2520virology&quot;" text="030312 virology" />
+<node level="h2" fos_link="&quot;0304%2520medical%2520biotechnology&quot;" text="0304 medical biotechnology" />
+<node level="h2" fos_link="&quot;0305%2520other%2520medical%2520science&quot;" text="0305 other medical science" />
+<node level="h3" fos_link="&quot;030501%2520epidemiology&quot;" text="030501 epidemiology" />
+<node level="h3" fos_link="&quot;030502%2520gerontology&quot;" text="030502 gerontology" />
+<node level="h3" fos_link="&quot;030503%2520health%2520policy%2520%2526%2520services&quot;" text="030503 health policy &amp; services" />
+<node level="h3" fos_link="&quot;030504%2520nursing&quot;" text="030504 nursing" />
+<node level="h3" fos_link="&quot;030505%2520public%2520health&quot;" text="030505 public health" />
+<node level="h3" fos_link="&quot;030506%2520rehabilitation&quot;" text="030506 rehabilitation" />
+<node level="h3" fos_link="&quot;030507%2520speech-language%2520pathology%2520%2526%2520audiology&quot;" text="030507 speech-language pathology &amp; audiology" />
+<node level="h3" fos_link="&quot;030508%2520substance%2520abuse&quot;" text="030508 substance abuse" />

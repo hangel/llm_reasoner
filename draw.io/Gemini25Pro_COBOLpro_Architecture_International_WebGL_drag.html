@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Draggable Nodes (Three.js)</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            z-index: 100; /* Ensure info text is visible */
+        }
+    </style>
+</head>
+<body>
+    <div id="info">Click and drag the spheres</div>
+    <div id="container"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        let scene, camera, renderer, controls;
+        let raycaster, mouse, plane, offset, intersection;
+        let selectedObject = null;
+        let isDragging = false;
+        const draggableObjects = []; // Array to hold objects that can be dragged
+
+        function init() {
+            // === Basic Scene Setup ===
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x222222);
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 15;
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('container').appendChild(renderer.domElement);
+
+            // === Lights ===
+            const ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(1, 1, 0.5).normalize();
+            scene.add(directionalLight);
+
+            // === Controls ===
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true; // Optional damping for smoother control
+
+            // === Raycasting Setup ===
+            raycaster = new THREE.Raycaster();
+            mouse = new THREE.Vector2(); // Stores Normalized Device Coordinates (-1 to +1)
+            plane = new THREE.Plane();   // The virtual plane for dragging
+            offset = new THREE.Vector3(); // Offset from object center to intersection point
+            intersection = new THREE.Vector3(); // Point of intersection with the plane
+
+            // === Create Draggable Nodes (Spheres) ===
+            const geometry = new THREE.SphereGeometry(1, 32, 32);
+            const colors = [0xff0000, 0x00ff00, 0x0000ff, 0xffff00, 0xff00ff];
+
+            for (let i = 0; i < 5; i++) {
+                const material = new THREE.MeshStandardMaterial({
+                    color: colors[i % colors.length],
+                    roughness: 0.5,
+                    metalness: 0.1
+                 });
+                const sphere = new THREE.Mesh(geometry, material);
+                sphere.position.set(
+                    (Math.random() - 0.5) * 10,
+                    (Math.random() - 0.5) * 10,
+                    (Math.random() - 0.5) * 10
+                );
+                sphere.userData.isDraggable = true; // Custom flag
+                sphere.userData.originalColor = material.color.getHex(); // Store original color
+                scene.add(sphere);
+                draggableObjects.push(sphere); // Add to our list for raycasting
+            }
+
+            // === Event Listeners ===
+            renderer.domElement.addEventListener('pointerdown', onPointerDown);
+            renderer.domElement.addEventListener('pointermove', onPointerMove);
+            renderer.domElement.addEventListener('pointerup', onPointerUp);
+            window.addEventListener('resize', onWindowResize);
+
+            animate();
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function updateMouseCoords(event, vec) {
+            vec.x = (event.clientX / window.innerWidth) * 2 - 1;
+            vec.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+
+        function onPointerDown(event) {
+            if (isDragging) return; // Prevent starting a new drag if already dragging
+
+            updateMouseCoords(event, mouse);
+            raycaster.setFromCamera(mouse, camera);
+
+            const intersects = raycaster.intersectObjects(draggableObjects, false); // Don't check children
+
+            if (intersects.length > 0) {
+                const firstIntersect = intersects[0];
+
+                // Check if the intersected object is meant to be draggable
+                if (firstIntersect.object.userData.isDraggable) {
+                    isDragging = true;
+                    selectedObject = firstIntersect.object;
+
+                    // Calculate the intersection point in world space
+                    const intersectionPoint = firstIntersect.point;
+
+                    // Create a plane perpendicular to the camera view direction, passing through the intersection point
+                    camera.getWorldDirection(plane.normal); // Plane normal faces the camera
+                    plane.setFromNormalAndCoplanarPoint(plane.normal, intersectionPoint);
+
+                    // Calculate the offset between the intersection point and the object's center
+                    offset.copy(intersectionPoint).sub(selectedObject.position);
+
+                    // Disable OrbitControls during drag
+                    controls.enabled = false;
+
+                    // Optional: Visual feedback (e.g., change color)
+                    selectedObject.material.color.setHex(0xaaaaaa); // Dim color while dragging
+
+                    // Bring selected object slightly forward to avoid z-fighting if overlapping
+                    // selectedObject.position.z += 0.01; // Or adjust based on camera direction
+
+                    console.log("Selected:", selectedObject.uuid);
+                }
+            }
+        }
+
+        function onPointerMove(event) {
+            if (!isDragging || !selectedObject) return;
+
+            updateMouseCoords(event, mouse);
+            raycaster.setFromCamera(mouse, camera);
+
+            // Find intersection of the ray with the drag plane
+            if (raycaster.ray.intersectPlane(plane, intersection)) {
+                 // Move the object to the intersection point, minus the calculated offset
+                selectedObject.position.copy(intersection.sub(offset));
+            } else {
+                // Fallback or handling if ray doesn't intersect plane (unlikely with this setup)
+                console.warn("Ray did not intersect drag plane.");
+            }
+        }
+
+        function onPointerUp(event) {
+            if (isDragging && selectedObject) {
+                 // Optional: Restore original color
+                 selectedObject.material.color.setHex(selectedObject.userData.originalColor);
+                 console.log("Released:", selectedObject.uuid);
+            }
+
+            isDragging = false;
+            selectedObject = null;
+
+            // Re-enable OrbitControls
+            controls.enabled = true;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Update controls ONLY if not dragging
+            if (!isDragging) {
+                 controls.update(); // Required if enableDamping is true
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // --- Start ---
+        init();
+
+    </script>
+</body>
+</html>

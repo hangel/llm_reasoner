@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Graph Viewer (Three.js)</title>
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack elements vertically */
+            height: 100vh; /* Full viewport height */
+        }
+        #controls-container {
+            padding: 8px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+            z-index: 10; /* Ensure controls are above canvas */
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between elements */
+        }
+        #controls-container button {
+            padding: 5px 10px;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid #bbb;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        #controls-container button:hover {
+            background-color: #eee;
+        }
+        #fileInput {
+            display: none; /* Hide the actual file input */
+        }
+        #message-area {
+            color: #cc0000; /* Red for errors */
+            font-size: 0.9em;
+            margin-left: auto; /* Push message to the right */
+            padding-right: 10px;
+        }
+         #info {
+            /* Removed absolute positioning, now part of controls */
+            color: #333;
+            font-size: 0.9em;
+            pointer-events: none;
+        }
+        #canvas-container {
+            flex-grow: 1; /* Canvas takes remaining space */
+            position: relative; /* For loading indicator positioning */
+            background-color: #f8f8f8; /* Set on container */
+        }
+        canvas {
+            display: block; /* Remove extra space below canvas */
+            width: 100%;
+            height: 100%;
+        }
+        /* Simple loading indicator */
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: #555;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 100; /* Above canvas */
+            display: none; /* Hidden initially */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="controls-container">
+        <button id="loadButton">Load Graph JSON</button>
+        <input type="file" id="fileInput" accept=".json">
+        <span id="info">Click and drag nodes</span>
+        <span id="message-area"></span> </div>
+
+    <div id="canvas-container">
+        <div id="loading">Loading...</div>
+        <div id="container"></div> </div>
+
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        // Import necessary Three.js modules
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { LineMaterial } from 'three/addons/lines/LineMaterial.js';
+        import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
+        import { Line2 } from 'three/addons/lines/Line2.js';
+
+        // === Default Graph Data (Fallback/Initial) ===
+        const defaultGraphData = {
+          "nodes": [ /* ... (Your original JSON nodes here) ... */
+            { "id": "A", "label": "Client Portal", "group": "client", "position": [0, 0, 0] }, { "id": "B", "label": "Service Requests", "group": "client", "position": [2, 0, 0] }, { "id": "C", "label": "Documentation Access", "group": "client", "position": [2, 1, 0] }, { "id": "D", "label": "Project Tracking", "group": "client", "position": [2, 2, 0] }, { "id": "E", "label": "Knowledge Management System", "group": "core", "position": [4, 0, 0] }, { "id": "F", "label": "Legacy Code Analysis Engine", "group": "core", "position": [4, 1, 0] }, { "id": "G", "label": "AI Documentation Generator", "group": "core", "position": [4, 2, 0] }, { "id": "H", "label": "Code Transpilation Service", "group": "core", "position": [4, 3, 0] }, { "id": "I", "label": "Integration Middleware", "group": "core", "position": [6, 0, 0] }, { "id": "J", "label": "Project Management", "group": "core", "position": [6, 1, 0] }, { "id": "K", "label": "Client Data Lake", "group": "data", "position": [8, 0, 0] }, { "id": "L", "label": "Performance Analytics", "group": "data", "position": [10, 0, 0] }, { "id": "M", "label": "Resource Optimization", "group": "data", "position": [10, 1, 0] }, { "id": "N", "label": "ROI Calculation Engine", "group": "data", "position": [10, 2, 0] }, { "id": "O", "label": "zSeries/iSeries Connectors", "group": "legacy", "position": [6, 3, 0] }, { "id": "P", "label": "Secure Transport Layer", "group": "legacy", "position": [8, 3, 0] }, { "id": "Q", "label": "Legacy Data Extraction", "group": "legacy", "position": [10, 3, 0] }, { "id": "R", "label": "Region-Specific Data Storage", "group": "international", "position": [8, -2, 0] }, { "id": "S", "label": "Compliance Management", "group": "international", "position": [10, -2, 0] }, { "id": "T", "label": "Multi-entity Resource Allocation", "group": "international", "position": [12, 0, 0] }, { "id": "U", "label": "Cross-border Payment Processing", "group": "international", "position": [12, 2, 0] }, { "id": "V", "label": "Entity-specific Reporting", "group": "international", "position": [12, -2, 0] }, { "id": "W", "label": "US Operations - Delaware/Wyoming", "group": "regional", "position": [14, 0, 0] }, { "id": "X", "label": "EU Operations - Ireland", "group": "regional", "position": [14, 1, 0] }, { "id": "Y", "label": "UK Operations", "group": "regional", "position": [14, 2, 0] }, { "id": "Z", "label": "Multi-currency Billing", "group": "regional", "position": [14, -1, 0] }
+           ],
+          "edges": [ /* ... (Your original JSON edges here) ... */
+             { "source": "A", "target": "B", "type": "directed" }, { "source": "A", "target": "C", "type": "directed" }, { "source": "A", "target": "D", "type": "directed" }, { "source": "B", "target": "E", "type": "directed" }, { "source": "B", "target": "F", "type": "directed" }, { "source": "B", "target": "J", "type": "directed" }, { "source": "F", "target": "G", "type": "directed" }, { "source": "F", "target": "H", "type": "directed" }, { "source": "E", "target": "I", "type": "directed" }, { "source": "G", "target": "K", "type": "directed" }, { "source": "H", "target": "K", "type": "directed" }, { "source": "I", "target": "O", "type": "directed" }, { "source": "O", "target": "P", "type": "directed" }, { "source": "P", "target": "Q", "type": "directed" }, { "source": "Q", "target": "K", "type": "directed" }, { "source": "K", "target": "L", "type": "directed" }, { "source": "L", "target": "M", "type": "directed" }, { "source": "L", "target": "N", "type": "directed" }, { "source": "M", "target": "J", "type": "directed" }, { "source": "N", "target": "A", "type": "directed" }, { "source": "K", "target": "R", "type": "directed" }, { "source": "R", "target": "S", "type": "directed" }, { "source": "J", "target": "T", "type": "directed" }, { "source": "T", "target": "W", "type": "directed" }, { "source": "T", "target": "X", "type": "directed" }, { "source": "T", "target": "Y", "type": "directed" }, { "source": "W", "target": "U", "type": "directed" }, { "source": "X", "target": "U", "type": "directed" }, { "source": "Y", "target": "U", "type": "directed" }, { "source": "U", "target": "Z", "type": "directed" }, { "source": "Z", "target": "A", "type": "directed" }, { "source": "S", "target": "V", "type": "directed" }, { "source": "V", "target": "A", "type": "directed" }, { "source": "R", "target": "W", "type": "data_residency", "label": "US data in US region" }, { "source": "R", "target": "X", "type": "data_residency", "label": "EU data in EU region" }, { "source": "R", "target": "Y", "type": "data_residency", "label": "UK data in UK region" }, { "source": "J", "target": "W", "type": "entity_op" }, { "source": "J", "target": "X", "type": "entity_op" }, { "source": "J", "target": "Y", "type": "entity_op" }
+           ],
+          "groups": [ /* ... (Your original JSON groups here) ... */
+            { "id": "client", "color": "#5470c6", "name": "Client Interfaces" }, { "id": "core", "color": "#91cc75", "name": "Core Platform" }, { "id": "data", "color": "#fac858", "name": "Data Services" }, { "id": "legacy", "color": "#ee6666", "name": "Legacy Systems Connection" }, { "id": "international", "color": "#73c0de", "name": "International Infrastructure" }, { "id": "regional", "color": "#3ba272", "name": "Regional Operations" }
+           ],
+          "edgeTypes": [ /* ... (Your original JSON edgeTypes here) ... */
+            { "id": "directed", "color": "#666666", "width": 1, "arrow": true }, { "id": "data_residency", "color": "#0099cc", "width": 1.5, "style": "dashed", "arrow": false }, { "id": "entity_op", "color": "#ff9900", "width": 1, "arrow": true }
+           ],
+          "settings": { /* ... (Your original JSON settings here) ... */
+            "backgroundColor": "#f8f8f8", "nodeSize": 0.8, "nodeLabelSize": 14, "edgeLabelSize": 10, "defaultZoom": 1.0
+           }
+        };
+
+        // === Global Variables ===
+        let scene, camera, renderer, controls;
+        let raycaster, pointer, plane, offset, intersection; // Dragging
+        let selectedObject = null, isDragging = false;
+        const draggableObjects = []; // Holds node spheres
+        const nodeMap = new Map(); // node ID -> THREE.Mesh
+        const labelMap = new Map(); // node ID -> THREE.Sprite (label)
+        const edgeObjects = []; // Holds edge lines/arrows { type, line/helper, source, target }
+
+        // DOM Elements
+        const container = document.getElementById('container');
+        const canvasContainer = document.getElementById('canvas-container');
+        const loadingIndicator = document.getElementById('loading');
+        const messageArea = document.getElementById('message-area');
+        const loadButton = document.getElementById('loadButton');
+        const fileInput = document.getElementById('fileInput');
+
+        // Lookups (populated by buildGraph)
+        let groupMap = new Map();
+        let edgeTypeMap = new Map();
+        let currentSettings = {};
+
+        // === Initialization ===
+        function init() {
+            // --- Basic Scene Setup ---
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 2000);
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement); // Append renderer to its container
+
+            // --- Lights ---
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight.position.set(0.5, 1, 1).normalize();
+            scene.add(directionalLight);
+
+            // --- Controls ---
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+            controls.screenSpacePanning = false;
+            controls.maxPolarAngle = Math.PI;
+
+            // --- Raycasting and Dragging Setup ---
+            raycaster = new THREE.Raycaster();
+            raycaster.params.Points.threshold = 0.5;
+            raycaster.params.Line.threshold = 0.5;
+            pointer = new THREE.Vector2();
+            plane = new THREE.Plane();
+            offset = new THREE.Vector3();
+            intersection = new THREE.Vector3();
+
+            // --- Initial Graph Load ---
+            buildGraph(defaultGraphData); // Load default data initially
+
+            // --- Event Listeners ---
+            loadButton.addEventListener('click', () => fileInput.click()); // Trigger hidden file input
+            fileInput.addEventListener('change', handleFileSelect);
+            renderer.domElement.addEventListener('pointerdown', onPointerDown);
+            renderer.domElement.addEventListener('pointermove', onPointerMove);
+            renderer.domElement.addEventListener('pointerup', onPointerUp);
+            renderer.domElement.addEventListener('pointercancel', onPointerUp);
+            window.addEventListener('resize', onWindowResize);
+
+            // Start animation loop
+            animate();
+        }
+
+        // === Graph Building and Clearing ===
+
+        /**
+         * Clears all nodes, labels, and edges from the scene.
+         */
+        function clearScene() {
+            // Remove nodes and labels
+            draggableObjects.forEach(obj => {
+                scene.remove(obj);
+                if (obj.userData.labelSprite) {
+                    scene.remove(obj.userData.labelSprite);
+                    // Dispose label texture and material? Maybe overkill unless memory is issue
+                }
+                // Dispose geometry and material? Maybe overkill
+            });
+            draggableObjects.length = 0; // Clear array
+            nodeMap.clear();
+            labelMap.clear();
+
+            // Remove edges
+            edgeObjects.forEach(edge => {
+                if (edge.type === 'arrow' && edge.helper) {
+                    scene.remove(edge.helper);
+                    // ArrowHelper internals might need disposal if complex
+                } else if (edge.type === 'line' && edge.line) {
+                    scene.remove(edge.line);
+                    edge.line.geometry.dispose();
+                    edge.line.material.dispose();
+                }
+            });
+            edgeObjects.length = 0; // Clear array
+
+             // Reset potentially selected object
+             selectedObject = null;
+             isDragging = false;
+        }
+
+        /**
+         * Builds the graph visualization from the provided data object.
+         * @param {object} graphData - The parsed graph data JSON object.
+         */
+        function buildGraph(graphData) {
+            loadingIndicator.style.display = 'block'; // Show loading indicator
+            messageArea.textContent = ''; // Clear previous messages
+
+            try {
+                // --- Validate Data Structure ---
+                if (!graphData || typeof graphData !== 'object') throw new Error("Invalid data format.");
+                if (!Array.isArray(graphData.nodes)) throw new Error("Missing or invalid 'nodes' array.");
+                if (!Array.isArray(graphData.edges)) throw new Error("Missing or invalid 'edges' array.");
+                // Add more checks as needed (groups, edgeTypes, settings format)
+
+                // --- Process Settings and Lookups ---
+                currentSettings = graphData.settings || { backgroundColor: "#f8f8f8", nodeSize: 0.8, nodeLabelSize: 14 };
+                groupMap = new Map((graphData.groups || []).map(g => [g.id, g]));
+                edgeTypeMap = new Map((graphData.edgeTypes || []).map(et => [et.id, et]));
+
+                // --- Update Scene Appearance ---
+                scene.background = new THREE.Color(currentSettings.backgroundColor || 0xeeeeee);
+                document.body.style.backgroundColor = scene.background.getStyle(); // Match body background
+
+                // --- Create Graph Elements ---
+                createNodes(graphData.nodes);
+                createEdges(graphData.edges);
+
+                // --- Update Camera and Controls ---
+                const { center, size } = calculateGraphBounds(graphData.nodes);
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const cameraDist = maxDim * 1.5 / Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+
+                camera.position.copy(center).add(new THREE.Vector3(0, maxDim * 0.5, Math.max(cameraDist, 20)));
+                camera.lookAt(center);
+                controls.target.copy(center);
+                controls.minDistance = 2;
+                controls.maxDistance = maxDim * 5;
+                controls.update();
+
+            } catch (error) {
+                console.error("Error building graph:", error);
+                handleLoadError(`Error building graph: ${error.message}`);
+            } finally {
+                 loadingIndicator.style.display = 'none'; // Hide loading indicator
+                 // Reset file input value so the same file can be selected again
+                 fileInput.value = '';
+            }
+        }
+
+        /**
+         * Creates random spheres as a fallback visualization.
+         * @param {number} count - Number of spheres to create.
+         */
+        function createRandomSpheres(count = 20) {
+             const nodeSize = currentSettings.nodeSize || 0.8;
+             const geometry = new THREE.SphereGeometry(nodeSize, 32, 16);
+
+             for (let i = 0; i < count; i++) {
+                 const material = new THREE.MeshStandardMaterial({
+                     color: Math.random() * 0xffffff, // Random color
+                     roughness: 0.6,
+                     metalness: 0.1
+                 });
+                 const sphere = new THREE.Mesh(geometry, material);
+                 sphere.position.set(
+                     (Math.random() - 0.5) * 20,
+                     (Math.random() - 0.5) * 20,
+                     (Math.random() - 0.5) * 20
+                 );
+                 // Add minimal user data for dragging
+                 sphere.userData.id = `random_${i}`;
+                 sphere.userData.isDraggable = true;
+                 sphere.userData.originalColor = material.color.clone();
+                 sphere.userData.originalEmissive = material.emissive.clone();
+
+                 scene.add(sphere);
+                 draggableObjects.push(sphere);
+                 nodeMap.set(sphere.userData.id, sphere); // Add to map for consistency if needed elsewhere
+             }
+
+             // Update camera for random spheres
+             const { center, size } = calculateGraphBounds(draggableObjects.map(s => ({ position: [s.position.x, s.position.y, s.position.z] })));
+             const maxDim = Math.max(size.x, size.y, size.z);
+             const cameraDist = maxDim * 1.5 / Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+             camera.position.copy(center).add(new THREE.Vector3(0, maxDim * 0.5, Math.max(cameraDist, 20)));
+             camera.lookAt(center);
+             controls.target.copy(center);
+             controls.minDistance = 2;
+             controls.maxDistance = maxDim * 5;
+             controls.update();
+        }
+
+
+        // === File Handling ===
+
+        /**
+         * Handles the file selection event.
+         * @param {Event} event - The file input change event.
+         */
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) {
+                return; // No file selected
+            }
+
+            if (!file.type || file.type !== 'application/json') {
+                 handleLoadError("Invalid file type. Please select a JSON file.");
+                 fileInput.value = ''; // Reset input
+                 return;
+            }
+
+            loadingIndicator.style.display = 'block'; // Show loading
+            messageArea.textContent = `Loading ${file.name}...`;
+
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                try {
+                    const fileContent = e.target.result;
+                    const parsedData = JSON.parse(fileContent);
+                    // --- Successfully Parsed ---
+                    clearScene(); // Clear previous graph/spheres
+                    buildGraph(parsedData); // Build the new graph
+                } catch (parseError) {
+                    console.error("JSON Parsing Error:", parseError);
+                    handleLoadError(`Error parsing JSON file: ${parseError.message}`);
+                }
+            };
+
+            reader.onerror = function(e) {
+                console.error("File Reading Error:", e);
+                handleLoadError("Error reading the selected file.");
+            };
+
+            reader.readAsText(file); // Read the file as text
+        }
+
+        /**
+         * Handles errors during file loading/parsing and displays fallback spheres.
+         * @param {string} message - The error message to display.
+         */
+        function handleLoadError(message) {
+             messageArea.textContent = message; // Display error message
+             clearScene(); // Clear any existing graph elements
+             createRandomSpheres(15); // Show random spheres as fallback
+             loadingIndicator.style.display = 'none'; // Hide loading indicator
+             fileInput.value = ''; // Reset input
+        }
+
+
+        // === Helper Functions (createNodes, createEdges, createLabelSprite, calculateGraphBounds - mostly unchanged) ===
+
+        function calculateGraphBounds(nodes) { /* ... as before ... */
+            const box = new THREE.Box3();
+            nodes.forEach(nodeData => {
+                // Check if nodeData or nodeData.position exists and is valid
+                if (nodeData && nodeData.position && Array.isArray(nodeData.position) && nodeData.position.length === 3) {
+                    box.expandByPoint(new THREE.Vector3(...nodeData.position));
+                } else if (nodeData && nodeData instanceof THREE.Vector3) { // Handle case where nodes might be Vector3 directly (e.g., random spheres)
+                     box.expandByPoint(nodeData);
+                } else {
+                    console.warn("Skipping node with invalid position data for bounds calculation:", nodeData);
+                }
+            });
+             // If box is empty (no valid nodes), set a default box
+            if (box.isEmpty()) {
+                box.setFromCenterAndSize(new THREE.Vector3(0, 0, 0), new THREE.Vector3(1, 1, 1));
+            }
+            const center = new THREE.Vector3();
+            const size = new THREE.Vector3();
+            box.getCenter(center);
+            box.getSize(size);
+            if (size.lengthSq() === 0) size.set(1, 1, 1); // Prevent zero size
+            return { center, size };
+        }
+
+        function createLabelSprite(text, fontSize = 14, color = '#000000') { /* ... as before ... */
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            const fontFace = 'Inter, sans-serif';
+            context.font = `${fontSize}px ${fontFace}`;
+            const metrics = context.measureText(text);
+            const textWidth = metrics.width;
+            const canvasWidth = THREE.MathUtils.ceilPowerOfTwo(textWidth + fontSize);
+            const canvasHeight = THREE.MathUtils.ceilPowerOfTwo(fontSize * 1.5);
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+            context.font = `${fontSize}px ${fontFace}`; // Re-set font after resize
+            context.fillStyle = color;
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.fillText(text, canvasWidth / 2, canvasHeight / 2);
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.needsUpdate = true;
+            const material = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false });
+            const sprite = new THREE.Sprite(material);
+            sprite.scale.set(canvasWidth * 0.03, canvasHeight * 0.03, 1.0);
+            return sprite;
+        }
+
+        function createNodes(nodesData) { /* ... mostly as before, uses currentSettings ... */
+            const nodeSize = currentSettings.nodeSize || 1.0;
+            const geometry = new THREE.SphereGeometry(nodeSize, 32, 16);
+
+            nodesData.forEach(nodeData => {
+                if (!nodeData || typeof nodeData.id === 'undefined' || !nodeData.position) {
+                     console.warn("Skipping invalid node data:", nodeData);
+                     return; // Skip malformed node entries
+                }
+                const groupInfo = groupMap.get(nodeData.group) || { color: '#cccccc' };
+                const material = new THREE.MeshStandardMaterial({
+                    color: groupInfo.color,
+                    roughness: 0.6, metalness: 0.1
+                });
+                const sphere = new THREE.Mesh(geometry, material);
+                sphere.position.set(...nodeData.position);
+                sphere.userData = { // Assign userData in one go
+                    id: nodeData.id,
+                    label: nodeData.label || nodeData.id, // Default label to ID if missing
+                    isDraggable: true,
+                    originalColor: material.color.clone(),
+                    originalEmissive: material.emissive.clone(),
+                    nodeInfo: nodeData,
+                    labelSprite: null // Initialize labelSprite property
+                };
+                scene.add(sphere);
+                draggableObjects.push(sphere);
+                nodeMap.set(nodeData.id, sphere);
+
+                // Create and add label
+                const labelSprite = createLabelSprite(sphere.userData.label, currentSettings.nodeLabelSize || 14, '#111111');
+                labelSprite.position.set(sphere.position.x, sphere.position.y + nodeSize * 1.5, sphere.position.z);
+                labelSprite.userData.isLabel = true;
+                sphere.userData.labelSprite = labelSprite; // Link label to sphere
+                scene.add(labelSprite);
+                labelMap.set(nodeData.id, labelSprite);
+            });
+        }
+
+        function createEdges(edgesData) { /* ... mostly as before, uses currentSettings ... */
+             const nodeSize = currentSettings.nodeSize || 1.0; // Get node size from current settings
+
+             edgesData.forEach(edgeData => {
+                 if (!edgeData || !edgeData.source || !edgeData.target) {
+                    console.warn("Skipping invalid edge data:", edgeData);
+                    return; // Skip malformed edge entries
+                 }
+                 const sourceNode = nodeMap.get(edgeData.source);
+                 const targetNode = nodeMap.get(edgeData.target);
+                 const edgeType = edgeTypeMap.get(edgeData.type) || { color: '#888888', width: 1, arrow: false, style: 'solid' };
+
+                 if (!sourceNode || !targetNode) {
+                     console.warn(`Edge source or target node not found for edge: ${edgeData.source} -> ${edgeData.target}`);
+                     return;
+                 }
+
+                 const sourcePos = sourceNode.position;
+                 const targetPos = targetNode.position;
+                 const direction = new THREE.Vector3().subVectors(targetPos, sourcePos);
+                 const length = direction.length();
+                 direction.normalize();
+
+                 if (edgeType.arrow) {
+                     const arrowColor = new THREE.Color(edgeType.color);
+                     const headLength = Math.min(length * 0.2, nodeSize * 2);
+                     const headWidth = headLength * 0.6;
+                     const arrowLength = length - nodeSize; // Adjust length based on current node size
+
+                     if (arrowLength > 0.1) {
+                         const arrowHelper = new THREE.ArrowHelper(direction, sourcePos, arrowLength, arrowColor.getHex(), headLength, headWidth);
+                         scene.add(arrowHelper);
+                         edgeObjects.push({ type: 'arrow', helper: arrowHelper, source: sourceNode, target: targetNode });
+                     } else {
+                          console.warn(`Skipping arrow for overlapping nodes: ${edgeData.source} -> ${edgeData.target}`);
+                     }
+                 } else {
+                     const points = [sourcePos.x, sourcePos.y, sourcePos.z, targetPos.x, targetPos.y, targetPos.z];
+                     const geometry = new LineGeometry();
+                     geometry.setPositions(points);
+                     const material = new LineMaterial({
+                         color: new THREE.Color(edgeType.color).getHex(),
+                         linewidth: (edgeType.width || 1) * 0.003,
+                         dashed: edgeType.style === 'dashed',
+                         dashSize: 0.2, gapSize: 0.1,
+                         resolution: new THREE.Vector2(renderer.domElement.clientWidth, renderer.domElement.clientHeight) // Use current renderer size
+                     });
+                     const line = new Line2(geometry, material);
+                     line.computeLineDistances();
+                     scene.add(line);
+                     edgeObjects.push({ type: 'line', line: line, source: sourceNode, target: targetNode });
+                 }
+             });
+        }
+
+        /**
+         * Updates the positions of edges and labels when a node is dragged.
+         * @param {THREE.Mesh} node - The node that was moved.
+         */
+        function updateConnectedEdges(node) { /* ... mostly as before, uses currentSettings ... */
+            const nodeId = node.userData.id;
+            const nodePos = node.position;
+            const nodeSize = currentSettings.nodeSize || 1.0; // Get node size from current settings
+
+            // Update label position
+            const label = labelMap.get(nodeId);
+            if (label) {
+                label.position.set(nodePos.x, nodePos.y + nodeSize * 1.5, nodePos.z);
+            }
+
+            // Update connected edges
+            edgeObjects.forEach(edge => {
+                if (edge.source.userData.id === nodeId || edge.target.userData.id === nodeId) {
+                    const sourcePos = edge.source.position;
+                    const targetPos = edge.target.position;
+
+                    if (edge.type === 'arrow') {
+                        const direction = new THREE.Vector3().subVectors(targetPos, sourcePos);
+                        const length = direction.length();
+                        direction.normalize();
+                        const arrowLength = Math.max(0.1, length - nodeSize); // Use current node size
+                        const headLength = Math.min(length * 0.2, nodeSize * 2);
+                        const headWidth = headLength * 0.6;
+
+                        edge.helper.position.copy(sourcePos);
+                        edge.helper.setDirection(direction);
+                        edge.helper.setLength(arrowLength, headLength, headWidth);
+
+                    } else if (edge.type === 'line') {
+                        const points = [sourcePos.x, sourcePos.y, sourcePos.z, targetPos.x, targetPos.y, targetPos.z];
+                        edge.line.geometry.setPositions(points);
+                        edge.line.computeLineDistances();
+                    }
+                }
+            });
+        }
+
+
+        // === Event Handlers (onWindowResize, updatePointerCoords, onPointerDown, onPointerMove, onPointerUp - mostly unchanged) ===
+
+        function onWindowResize() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+            // Update line material resolution
+             edgeObjects.forEach(edge => {
+                if (edge.type === 'line' && edge.line.material.resolution) {
+                    edge.line.material.resolution.set(width, height);
+                }
+            });
+        }
+
+        function updatePointerCoords(event, vec) {
+             // Adjust clientX/Y relative to the container's bounding box
+             const rect = container.getBoundingClientRect();
+             vec.x = ((event.clientX - rect.left) / container.clientWidth) * 2 - 1;
+             vec.y = -((event.clientY - rect.top) / container.clientHeight) * 2 + 1;
+        }
+
+        function onPointerDown(event) { /* ... as before ... */
+             if (event.target !== renderer.domElement) return; // Ignore clicks outside canvas
+             if (isDragging) return;
+             updatePointerCoords(event, pointer);
+             raycaster.setFromCamera(pointer, camera);
+             const intersects = raycaster.intersectObjects(draggableObjects, false);
+             if (intersects.length > 0) {
+                 const firstIntersect = intersects[0];
+                  if (firstIntersect.object.userData.isDraggable) {
+                     isDragging = true;
+                     selectedObject = firstIntersect.object;
+                     const intersectionPoint = firstIntersect.point;
+                     camera.getWorldDirection(plane.normal);
+                     plane.setFromNormalAndCoplanarPoint(plane.normal, intersectionPoint);
+                     offset.copy(intersectionPoint).sub(selectedObject.position);
+                     controls.enabled = false;
+                     selectedObject.material.emissive.setHex(0x555555);
+                     canvasContainer.style.cursor = 'grabbing'; // Set cursor on container
+                  }
+             } else {
+                 canvasContainer.style.cursor = 'grab';
+             }
+        }
+
+        function onPointerMove(event) { /* ... as before ... */
+             updatePointerCoords(event, pointer);
+             if (!isDragging || !selectedObject) {
+                  raycaster.setFromCamera(pointer, camera);
+                  const hoverIntersects = raycaster.intersectObjects(draggableObjects, false);
+                  let cursorSet = false;
+                  if (hoverIntersects.length > 0 && hoverIntersects[0].object.userData.isDraggable) {
+                      canvasContainer.style.cursor = 'grab';
+                      cursorSet = true;
+                  }
+                  if (!cursorSet && !isDragging) {
+                     canvasContainer.style.cursor = 'default';
+                  }
+                 return;
+             }
+             raycaster.setFromCamera(pointer, camera);
+             if (raycaster.ray.intersectPlane(plane, intersection)) {
+                 selectedObject.position.copy(intersection.sub(offset));
+                 updateConnectedEdges(selectedObject);
+             }
+        }
+
+        function onPointerUp(event) { /* ... as before ... */
+             if (isDragging && selectedObject) {
+                  selectedObject.material.emissive.copy(selectedObject.userData.originalEmissive);
+             }
+             isDragging = false;
+             selectedObject = null;
+             controls.enabled = true;
+             // Check hover state again
+             updatePointerCoords(event, pointer);
+             raycaster.setFromCamera(pointer, camera);
+             const hoverIntersects = raycaster.intersectObjects(draggableObjects, false);
+             if (hoverIntersects.length > 0 && hoverIntersects[0].object.userData.isDraggable) {
+                 canvasContainer.style.cursor = 'grab';
+             } else {
+                 canvasContainer.style.cursor = 'default';
+             }
+        }
+
+
+        // === Animation Loop ===
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // Required for damping
+            renderer.render(scene, camera);
+        }
+
+        // --- Start the application ---
+        init();
+
+    </script>
+</body>
+</html>
+

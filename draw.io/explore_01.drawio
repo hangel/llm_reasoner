@@ -1,0 +1,29 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="-eXwLQOr8I3ctpCWj47e">
+        <mxGraphModel dx="1150" dy="-127" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <object label="LINK 01" Link_01="LINK 01" id="GiGGJtuJ4P1JExGh8DTA-3">
+                    <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GiGGJtuJ4P1JExGh8DTA-1" target="GiGGJtuJ4P1JExGh8DTA-2" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="GiGGJtuJ4P1JExGh8DTA-4" value="LINK 01 TEXT" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GiGGJtuJ4P1JExGh8DTA-3" vertex="1" connectable="0">
+                    <mxGeometry x="0.0286" y="-4" relative="1" as="geometry">
+                        <mxPoint y="16" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="GiGGJtuJ4P1JExGh8DTA-1" value="BOX A" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="1040" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="GiGGJtuJ4P1JExGh8DTA-2" value="BOX B" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="1040" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="sequenceDiagram&#10;    participant Alice&#10;    participant Bob&#10;    Alice-&gt;&gt;John: Hello John, how are you?&#10;    loop Healthcheck&#10;        John-&gt;&gt;John: Fight against hypochondria&#10;    end&#10;    Note right of John: Rational thoughts &lt;br/&gt;prevail!&#10;    John--&gt;&gt;Alice: Great!&#10;    John-&gt;&gt;Bob: How about you?&#10;    Bob--&gt;&gt;John: Jolly good!" style="shadow=0;dashed=0;align=left;strokeWidth=1;shape=mxgraph.mermaid.abstract.mermaid;labelBackgroundColor=#ffffff;noLabel=1;theme=default;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1250" width="680" height="480" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

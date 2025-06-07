@@ -1,0 +1,46 @@
+graph LR;
+    A((START));
+    B([Open File]);
+    C([Main Loop]);
+    D{Main Menu};
+    E([Create Record]);
+    F([Read Record]);
+    G([Update Record]);
+    H([Delete Record]);
+    I([Save File]);
+    J([Quit Program]);
+    K([Safe Close]);
+    L([Create File]);
+    L1((File Status));
+    Z((STOP))
+    A ==> B;
+    L1 ==o|Normal Start| C;
+    C --> D;
+    D -->|C Pressed| E;
+    D -->|R Pressed| F;
+    D -->|U Pressed| G;
+    D -->|D Pressed| H;
+    E ..-> C;
+    F ..-> C;
+    G ..-> C;
+    H ..-> C;
+    I --> K;
+    D -->|Q Pressed| J;
+    J -->|Safe Exit| I;
+    L1 --> |File Not Found| L;
+    L ..-> B;
+   B ==o L1;
+   K ==> Z;
+
+    subgraph SAFE START
+       B; L1; L;
+    end
+
+    subgraph SAFE CLOSE
+        I; K;
+    end
+    
+    subgraph MAIN MENU
+     C; D; E; F; G; H; J;
+    end
+

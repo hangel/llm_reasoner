@@ -1,0 +1,1282 @@
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by s0315 (s0315) -->
+<div>
+<div>
+<h4>Filters</h4>
+</div>
+<ul>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Access">Access (75)</h6>
+</div>
+<div>
+<div>
+<div title="Open Access">
+<a href="/search/find?resultbestaccessright=%22Open%2520Access%22">
+<span>
+<label>
+<input type="radio"/>
+<span>Open Access<span>(66,888,414)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Closed Access">
+<a href="/search/find?resultbestaccessright=%22Closed%2520Access%22">
+<span>
+<label>
+<input type="radio"/>
+<span>Closed Access<span>(34,041,867)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Restricted">
+<a href="/search/find?resultbestaccessright=%22Restricted%22">
+<span>
+<label>
+<input type="radio"/>
+<span>Restricted<span>(2,047,211)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Open Source">
+<a href="/search/find?resultbestaccessright=%22Open%2520Source%22">
+<span>
+<label>
+<input type="radio"/>
+<span>Open Source<span>(87,286)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Embargo">
+<a href="/search/find?resultbestaccessright=%22Embargo%22">
+<span>
+<label>
+<input type="radio"/>
+<span>Embargo<span>(73,334)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Creative Commons Attribution-ShareAlike (CC-BY-SA)">
+<a href="/search/find?resultbestaccessright=%22Creative%2520Commons%2520Attribution-ShareAlike%2520(CC-BY-SA)%22">
+<span>
+<label>
+<input type="radio"/>
+<span>Creative Commons Attribut...<span>(841)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<range-filter>
+<div>
+<div>
+<h6>Year range</h6>
+</div>
+<div aria-expanded="false">
+<div>
+<div>
+<div>
+<form novalidate="">
+<div input="">
+<div id="input-5">
+<div>
+<div click-outside-or-esc="">
+<div>
+<input placeholder="e.g. 1800"/>
+</div>
+<div>
+</div>
+</div>
+</div>
+</div>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+<span>
+-</span>
+<div input="">
+<div id="input-6">
+<div>
+<div click-outside-or-esc="">
+<div>
+<input placeholder="e.g. 2032"/>
+</div>
+<div>
+</div>
+</div>
+</div>
+</div>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+<button type="submit" disabled="" style="cursor: default;">
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" icon="chevron-right" ratio="1">
+<polyline fill="none" stroke="#000" stroke-width="1.03" points="7 4 13 10 7 16">
+</polyline>
+</svg>
+<span>GO</span>
+</button>
+<div>
+<div>
+<ul>
+<li>
+<a href="/search/find?year=range2022:2022">
+This year</a>
+</li>
+<li>
+<a href="/search/find?year=range2018:2022">
+Last 5 years</a>
+</li>
+<li>
+<a href="/search/find?year=range2013:2022">
+Last 10 years</a>
+</li>
+</ul>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</range-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Document Type">Document Type (42)</h6>
+</div>
+<div>
+<div>
+<div title="Article">
+<a href="/search/find?instancetypename=%22Article%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Article<span>(94,694,196)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Part of book or chapter of book">
+<a href="/search/find?instancetypename=%22Part%2520of%2520book%2520or%2520chapter%2520of%2520book%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Part of book or chap...<span>(13,583,123)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Dataset">
+<a href="/search/find?instancetypename=%22Dataset%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Dataset<span>(13,176,247)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Other literature type">
+<a href="/search/find?instancetypename=%22Other%2520literature%2520type%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Other literature type<span>(10,658,368)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Conference object">
+<a href="/search/find?instancetypename=%22Conference%2520object%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Conference object<span>(10,087,922)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Preprint">
+<a href="/search/find?instancetypename=%22Preprint%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Preprint<span>(3,256,616)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Field of Science [Beta]">Field of Science [B... (100)</h6>
+</div>
+<div>
+<div>
+<div title="03 medical and health sciences">
+<a href="/search/find?fos=%2203%2520medical%2520and%2520health%2520sciences%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>03 medical and health...<span>(5,971,016)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="01 natural sciences">
+<a href="/search/find?fos=%2201%2520natural%2520sciences%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>01 natural sciences<span>(4,808,557)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="02 engineering and technology">
+<a href="/search/find?fos=%2202%2520engineering%2520and%2520technology%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>02 engineering and te...<span>(4,644,194)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="0302 clinical medicine">
+<a href="/search/find?fos=%220302%2520clinical%2520medicine%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>0302 clinical medicine<span>(4,641,351)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="0301 basic medicine">
+<a href="/search/find?fos=%220301%2520basic%2520medicine%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>0301 basic medicine<span>(2,205,792)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="05 social sciences">
+<a href="/search/find?fos=%2205%2520social%2520sciences%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>05 social sciences<span>(1,955,740)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Funder">Funder (24)</h6>
+</div>
+<div>
+<div>
+<div title="European Commission">
+<a href="/search/find?relfunder=%22ec__________%253A%253AEC%257C%257CEuropean%2520Commission%257C%257CEC%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>European Commission<span>(1,252,146)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="National Institutes of Health">
+<a href="/search/find?relfunder=%22nih_________%253A%253ANIH%257C%257CNational%2520Institutes%2520of%2520Health%257C%257CNIH%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>National Institutes of...<span>(349,492)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="National Science Foundation">
+<a href="/search/find?relfunder=%22nsf_________%253A%253ANSF%257C%257CNational%2520Science%2520Foundation%257C%257CNSF%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>National Science Found...<span>(308,224)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Natural Sciences and Engineering Research Council of Canada">
+<a href="/search/find?relfunder=%22nserc_______%253A%253ANSERC%257C%257CNatural%2520Sciences%2520and%2520Engineering%2520Research%2520Council%2520of%2520Canada%257C%257CNSERC%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Natural Sciences and E...<span>(200,744)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Wellcome Trust">
+<a href="/search/find?relfunder=%22wt__________%253A%253AWT%257C%257CWellcome%2520Trust%257C%257CWT%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Wellcome Trust<span>(109,528)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="UK Research and Innovation">
+<a href="/search/find?relfunder=%22ukri________%253A%253AUKRI%257C%257CUK%2520Research%2520and%2520Innovation%257C%257CUKRI%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>UK Research and Innovation<span>(89,205)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="SDG [Beta]">SDG [Beta] (16)</h6>
+</div>
+<div>
+<div>
+<div title="3. Good health">
+<a href="/search/find?sdg=%223.%2520Good%2520health%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>3. Good health<span>(3,060,962)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="13. Climate action">
+<a href="/search/find?sdg=%2213.%2520Climate%2520action%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>13. Climate action<span>(1,415,106)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="2. Zero hunger">
+<a href="/search/find?sdg=%222.%2520Zero%2520hunger%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>2. Zero hunger<span>(1,279,314)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="16. Peace &amp; justice">
+<a href="/search/find?sdg=%2216.%2520Peace%2520%2526%2520justice%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>16. Peace &amp; justice<span>(969,366)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="10. No inequality">
+<a href="/search/find?sdg=%2210.%2520No%2520inequality%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>10. No inequality<span>(627,884)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="7. Clean energy">
+<a href="/search/find?sdg=%227.%2520Clean%2520energy%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>7. Clean energy<span>(626,285)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Country">Country (100)</h6>
+</div>
+<div>
+<div>
+<div title="US">
+<a href="/search/find?country=%22US%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>US<span>(16,859,605)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="GB">
+<a href="/search/find?country=%22GB%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>GB<span>(5,694,860)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="CN">
+<a href="/search/find?country=%22CN%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>CN<span>(5,072,035)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="DE">
+<a href="/search/find?country=%22DE%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>DE<span>(4,321,604)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="FR">
+<a href="/search/find?country=%22FR%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>FR<span>(3,997,498)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="NL">
+<a href="/search/find?country=%22NL%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>NL<span>(3,067,102)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Language">Language (100)</h6>
+</div>
+<div>
+<div>
+<div title="English">
+<a href="/search/find?resultlanguagename=%22English%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>English<span>(26,397,332)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="French">
+<a href="/search/find?resultlanguagename=%22French%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>French<span>(3,300,560)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Russian">
+<a href="/search/find?resultlanguagename=%22Russian%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Russian<span>(2,710,715)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Japanese">
+<a href="/search/find?resultlanguagename=%22Japanese%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Japanese<span>(2,679,647)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="German">
+<a href="/search/find?resultlanguagename=%22German%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>German<span>(2,344,417)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Portuguese">
+<a href="/search/find?resultlanguagename=%22Portuguese%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Portuguese<span>(1,556,739)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Source">Source (100)</h6>
+</div>
+<div>
+<div>
+<div title="Europe PubMed Central">
+<a href="/search/find?resulthostingdatasource=%22opendoar____%253A%253A8b6dd7db9af49e67306feb59a8bdc52c%257C%257CEurope%2520PubMed%2520Central%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Europe PubMed Central<span>(3,642,160)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Hyper Article en Ligne">
+<a href="/search/find?resulthostingdatasource=%22opendoar____%253A%253A7e7757b1e12abcb736ab9a754ffb617a%257C%257CHyper%2520Article%2520en%2520Ligne%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Hyper Article en Ligne<span>(2,777,666)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="ZENODO">
+<a href="/search/find?resulthostingdatasource=%22opendoar____%253A%253A358aee4cc897452c00244351e4d91f69%257C%257CZENODO%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>ZENODO<span>(2,741,802)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Mémoires en Sciences de l'Information et de la Communication">
+<a href="/search/find?resulthostingdatasource=%22opendoar____%253A%253A1534b76d325a8f591b52d302e7181331%257C%257CM%25C3%25A9moires%2520en%2520Sciences%2520de%2520l'Information%2520et%2520de%2520la%2520Communication%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Mémoires en Sciences ...<span>(2,459,675)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Hal-Diderot">
+<a href="/search/find?resulthostingdatasource=%22opendoar____%253A%253A18bb68e2b38e4a8ce7cf4f6b2625768c%257C%257CHal-Diderot%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Hal-Diderot<span>(2,423,857)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="NARCIS">
+<a href="/search/find?resulthostingdatasource=%22openaire____%253A%253Afdb035c8b3e0540a8d9a561a6c44f4de%257C%257CNARCIS%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>NARCIS<span>(2,281,991)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View all</span>
+</a>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+<li>
+<search-filter>
+<div>
+<div>
+<h6 title="Research community">Research community (26)</h6>
+</div>
+<div>
+<div>
+<div title="Digital Humanities and Cultural Heritage">
+<a href="/search/find?community=%22dh-ch%257C%257CDigital%2520Humanities%2520and%2520Cultural%2520Heritage%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Digital Humanities an...<span>(5,048,400)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Social Science and Humanities">
+<a href="/search/find?community=%22gotriple%257C%257CSocial%2520Science%2520and%2520Humanities%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Social Science and Hu...<span>(4,680,763)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Energy Research">
+<a href="/search/find?community=%22enermaps%257C%257CEnergy%2520Research%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Energy Research<span>(2,666,712)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Rural Digital Europe">
+<a href="/search/find?community=%22rural-digital-europe%257C%257CRural%2520Digital%2520Europe%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Rural Digital Europe<span>(1,349,503)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="Aurora Universities Network">
+<a href="/search/find?community=%22aurora%257C%257CAurora%2520Universities%2520Network%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Aurora Universities Ne...<span>(869,753)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<div title="COVID-19">
+<a href="/search/find?community=%22covid-19%257C%257CCOVID-19%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>COVID-19<span>(753,646)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+<div>
+<a>
+<span>View less</span>
+</a>
+<div>
+<div>
+<div>
+Top 100 values are shown in the filters</div>
+<div>
+<div input="">
+<div id="input-9">
+<div>
+<div click-outside-or-esc="">
+<div>
+<input placeholder="Search"/>
+</div>
+<div>
+</div>
+</div>
+</div>
+</div>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+<div input="" type="select" placeholder="Sort by">
+<div id="input-10">
+<div>
+<div click-outside-or-esc="">
+<div class="placeholder">
+<label>Sort by</label>
+</div>
+<div uk-tooltip="title: Name; delay: 500; pos: bottom-left" title="" aria-expanded="false" tabindex="0">
+<div>Name</div>
+<div>
+<icon>
+<span>
+<span style="font-size: 20px;">arrow_drop_down</span>
+</span>
+</icon>
+</div>
+</div>
+<div>
+</div>
+</div>
+</div>
+</div>
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</div>
+</div>
+</div>
+<div>
+<div title="Aurora Universities Network">
+<a href="/search/find?community=%22aurora%257C%257CAurora%2520Universities%2520Network%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Aurora Universities Ne...<span>(869,753)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="CLARIN">
+<a href="/search/find?community=%22clarin%257C%257CCLARIN%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>CLARIN<span>(398)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="COVID-19">
+<a href="/search/find?community=%22covid-19%257C%257CCOVID-19%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>COVID-19<span>(753,646)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="DARIAH EU">
+<a href="/search/find?community=%22dariah%257C%257CDARIAH%2520EU%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>DARIAH EU<span>(53,256)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Digital Humanities and Cultural Heritage">
+<a href="/search/find?community=%22dh-ch%257C%257CDigital%2520Humanities%2520and%2520Cultural%2520Heritage%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Digital Humanities an...<span>(5,048,400)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="EBRAINS">
+<a href="/search/find?community=%22ebrains%257C%257CEBRAINS%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>EBRAINS<span>(233,238)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="EGI Federation">
+<a href="/search/find?community=%22egi%257C%257CEGI%2520Federation%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>EGI Federation<span>(98,662)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="ELIXIR GR">
+<a href="/search/find?community=%22elixir-gr%257C%257CELIXIR%2520GR%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>ELIXIR GR<span>(162)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="EMBRC">
+<a href="/search/find?community=%22embrc%257C%257CEMBRC%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>EMBRC<span>(566)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Energy Research">
+<a href="/search/find?community=%22enermaps%257C%257CEnergy%2520Research%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Energy Research<span>(2,666,712)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="EPOS">
+<a href="/search/find?community=%22epos%257C%257CEPOS%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>EPOS<span>(257)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="European Marine Science">
+<a href="/search/find?community=%22mes%257C%257CEuropean%2520Marine%2520Science%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>European Marine Science<span>(209,412)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="European University of Technology">
+<a href="/search/find?community=%22eut%257C%257CEuropean%2520University%2520of%2520Technology%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>European University of ...<span>(82,526)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="FET FP7">
+<a href="/search/find?community=%22fet-fp7%257C%257CFET%2520FP7%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>FET FP7<span>(11,524)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="FET H2020">
+<a href="/search/find?community=%22fet-h2020%257C%257CFET%2520H2020%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>FET H2020<span>(21,683)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Instruct-ERIC">
+<a href="/search/find?community=%22instruct%257C%257CInstruct-ERIC%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Instruct-ERIC<span>(2,147)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="NEANIAS Underwater Research Community">
+<a href="/search/find?community=%22neanias-underwater%257C%257CNEANIAS%2520Underwater%2520Research%2520Community%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>NEANIAS Underwater Rese...<span>(90,489)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Neuroinformatics">
+<a href="/search/find?community=%22ni%257C%257CNeuroinformatics%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Neuroinformatics<span>(237,015)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Research Data Alliance">
+<a href="/search/find?community=%22rda%257C%257CResearch%2520Data%2520Alliance%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Research Data Alliance<span>(362)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="RISIS">
+<a href="/search/find?community=%22risis%257C%257CRISIS%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>RISIS<span>(321)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Rural Digital Europe">
+<a href="/search/find?community=%22rural-digital-europe%257C%257CRural%2520Digital%2520Europe%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Rural Digital Europe<span>(1,349,503)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Science and Innovation Policy Studies">
+<a href="/search/find?community=%22science-innovation-policy%257C%257CScience%2520and%2520Innovation%2520Policy%2520Studies%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Science and Innovation...<span>(180,513)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="SDSN - Greece">
+<a href="/search/find?community=%22sdsn-gr%257C%257CSDSN%2520-%2520Greece%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>SDSN - Greece<span>(21,801)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="SoBigData">
+<a href="/search/find?community=%22sobigdata%257C%257CSoBigData%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>SoBigData<span>(1,301)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Social Science and Humanities">
+<a href="/search/find?community=%22gotriple%257C%257CSocial%2520Science%2520and%2520Humanities%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Social Science and Hu...<span>(4,680,763)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+<div title="Transport Research">
+<a href="/search/find?community=%22beopen%257C%257CTransport%2520Research%22">
+<span>
+<label>
+<input type="checkbox"/>
+<span>Transport Research<span>(192,800)</span>
+</span>
+</label>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</search-filter>
+</li>
+</ul>
+</div>

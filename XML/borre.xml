@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc name="OKRocket App &amp; Concept" date="2024/03/01 03:59:09 pm GMT-05:00 " ID="ID_1009851641" TEXT="OKRocket App &amp; Concept">
+	<node text="IMAGE" ID="ID_1534248709" TEXT="IMAGE" type="image" caption="OKRocket logo" url="assets/images/OKRoecket_Rocket_Logo.png"/>
+	<node text="INIT " ID="ID_230239865" TEXT="INIT " type="tabs" url=" " caption=" ">
+		<node text="PROPÓSITO GENERAL" ID="ID_138875447" TEXT="PROPÓSITO GENERAL" type="tab">
+			<node text="**PROPÓSITO GENERAL**" ID="ID_244517319" TEXT="**PROPÓSITO GENERAL**" type="expander">
+				<node text="CASO DE USO ESPECÍFICO PARA &#xA;DESARROLLO DE UNA PLATAFORMA GENERAL PARA&#xA;DESARROLLO RÁPIDO DE APLICACIONES:&#xA;* CALIDAD&#xA;* PROTOTIPO ÁGIL&#xA;* VELOCIDAD DE DESARROLLO&#xA;* ESCALABILIDAD&#xA;* DESPLIEGUE CONTINUO EN LA NUBE&#xA;* ALTA DISPOBILIDAD&#xA;* SAAS" ID="ID_998474959" TEXT="CASO DE USO ESPECÍFICO PARA &#xA;DESARROLLO DE UNA PLATAFORMA GENERAL PARA&#xA;DESARROLLO RÁPIDO DE APLICACIONES:&#xA;* CALIDAD&#xA;* PROTOTIPO ÁGIL&#xA;* VELOCIDAD DE DESARROLLO&#xA;* ESCALABILIDAD&#xA;* DESPLIEGUE CONTINUO EN LA NUBE&#xA;* ALTA DISPOBILIDAD&#xA;* SAAS" type="explanation"/>
+			</node>
+		</node>
+		<node text="VISIÓN COMPLETA" ID="ID_571944845" TEXT="VISIÓN COMPLETA" type="tab">
+			<node text="VISIÓN COMPLETA" ID="ID_1568729988" TEXT="VISIÓN COMPLETA" type="md_markdown" params="4"/>
+		</node>
+		<node text="OKRocket  Visión" ID="ID_1784016672" TEXT="OKRocket  Visión" type="tab">
+			<node text="Estrategia" ID="ID_1556660893" TEXT="Estrategia" type="md_markdown" params="4"/>
+			<node text="Producto" ID="ID_601084073" TEXT="Producto" type="md_markdown" params="4">
+				<node text="CONTEXTO" ID="ID_150150017" TEXT="CONTEXTO" type="no">
+					<node text="PERSONAS" ID="ID_331354706" TEXT="PERSONAS" type="no">
+						<node text="Perfiles" ID="ID_1575563814" TEXT="Perfiles" type="no">
+							<node text="Personal" ID="ID_1413642566" TEXT="Personal" type="no">
+								<node text="Familiar" ID="ID_1860764757" TEXT="Familiar" type="no"/>
+							</node>
+							<node text="Laboral" ID="ID_835104558" TEXT="Laboral" type="no"/>
+							<node text="Profesional" ID="ID_1397607401" TEXT="Profesional" type="no"/>
+							<node text="Académico" ID="ID_816822355" TEXT="Académico" type="no"/>
+						</node>
+					</node>
+					<node text="ORGANIZACIÓN" ID="ID_1707883806" TEXT="ORGANIZACIÓN" type="no">
+						<node text="Estrategia" ID="ID_1104916224" TEXT="Estrategia" type="no"/>
+						<node text="Estructura Operativa" ID="ID_680446252" TEXT="Estructura Operativa" type="no"/>
+						<node text="Infraestructura Física" ID="ID_1744069567" TEXT="Infraestructura Física" type="no"/>
+						<node text="Infraestructura Digital" ID="ID_1026853521" TEXT="Infraestructura Digital" type="no"/>
+						<node text="Mercados" ID="ID_347604048" TEXT="Mercados" type="no"/>
+						<node text="Productos y Servicios" ID="ID_1898316015" TEXT="Productos y Servicios" type="no"/>
+						<node text="Insumos" ID="ID_1187447362" TEXT="Insumos" type="no"/>
+					</node>
+					<node text="EJECUCIÓN" ID="ID_59302435" TEXT="EJECUCIÓN" type="no"/>
+					<node text="RESULTADOS" ID="ID_1151174230" TEXT="RESULTADOS" type="no"/>
+					<node text="OTROS" ID="ID_486585635" TEXT="OTROS" type="no"/>
+				</node>
+				<node text="ELEMENTOS OKR's" ID="ID_1180586900" TEXT="ELEMENTOS OKR's" type="no">
+					<node text="Cadencias" ID="ID_187208240" TEXT="Cadencias" type="no"/>
+					<node text="Personas" ID="ID_937677776" TEXT="Personas" type="no"/>
+					<node text="Áreas" ID="ID_1827586466" TEXT="Áreas" type="no"/>
+					<node text="Objetivos" ID="ID_169944476" TEXT="Objetivos" type="no"/>
+					<node text="Key Results" ID="ID_1226057353" TEXT="Key Results" type="no"/>
+					<node text="Iniciativas" ID="ID_748269168" TEXT="Iniciativas" type="no"/>
+					<node text="Communication" ID="ID_293945112" TEXT="Communication" type="no"/>
+					<node text="Feedback" ID="ID_1755656741" TEXT="Feedback" type="no"/>
+					<node text="Rewards" ID="ID_936757752" TEXT="Rewards" type="no"/>
+					<node text="Ceremonias" ID="ID_912533461" TEXT="Ceremonias" type="no"/>
+					<node text="Registro Diario" ID="ID_1624527105" TEXT="Registro Diario" type="no"/>
+					<node text="Reporte" ID="ID_419868407" TEXT="Reporte" type="no"/>
+					<node text="Alertas" ID="ID_312949948" TEXT="Alertas" type="no"/>
+				</node>
+				<node text="MODOS DE USO" ID="ID_739278491" TEXT="MODOS DE USO" type="no">
+					<node text="FORMACIÓN CONTINUA" ID="ID_458948808" TEXT="FORMACIÓN CONTINUA" type="no">
+						<node text="A la Dirección" ID="ID_547431433" TEXT="A la Dirección" type="no"/>
+						<node text="A los Líderes de Equipo" ID="ID_1318024241" TEXT="A los Líderes de Equipo" type="no"/>
+						<node text="A los Equipos" ID="ID_750141034" TEXT="A los Equipos" type="no"/>
+					</node>
+					<node text="ACUERDOS" ID="ID_31862444" TEXT="ACUERDOS" type="no">
+						<node text="Parámetros Estratégicos" ID="ID_1564435553" TEXT="Parámetros Estratégicos" type="no"/>
+						<node text="Etapas de Implantación" ID="ID_1364984093" TEXT="Etapas de Implantación" type="no">
+							<node text="Piloto" ID="ID_1314037874" TEXT="Piloto" type="no"/>
+							<node text="Áreas" ID="ID_111665242" TEXT="Áreas" type="no"/>
+						</node>
+						<node text="Alcances" ID="ID_1709128847" TEXT="Alcances" type="no"/>
+						<node text="Evaluación" ID="ID_664449045" TEXT="Evaluación" type="no"/>
+						<node text="Ampliación de Alcance" ID="ID_177549655" TEXT="Ampliación de Alcance" type="no"/>
+						<node text="Parámetros" ID="ID_1577007562" TEXT="Parámetros" type="no"/>
+					</node>
+					<node text="INICIALIZACIÓN" ID="ID_990938520" TEXT="INICIALIZACIÓN" type="no">
+						<node text="Modelos de Datos" ID="ID_826486787" TEXT="Modelos de Datos" type="no"/>
+						<node text="Fuentas de Información" ID="ID_577505810" TEXT="Fuentas de Información" type="no"/>
+						<node text="Pruebas " ID="ID_26011174" TEXT="Pruebas " type="no"/>
+						<node text="Aprobación" ID="ID_1965835192" TEXT="Aprobación" type="no"/>
+						<node text="Señal de Go" ID="ID_1335404146" TEXT="Señal de Go" type="no"/>
+					</node>
+					<node text="OPERACIÓN" ID="ID_30002950" TEXT="OPERACIÓN" type="no"/>
+					<node text="RESPALDO" ID="ID_379197352" TEXT="RESPALDO" type="no"/>
+					<node text="RESTAURACIÓN" ID="ID_368641631" TEXT="RESTAURACIÓN" type="no"/>
+					<node text="CIERRES" ID="ID_1447561546" TEXT="CIERRES" type="no"/>
+					<node text="ANALISIS DE RESULTADOS" ID="ID_759118349" TEXT="ANALISIS DE RESULTADOS" type="no"/>
+					<node text="PLANEACIÓN" ID="ID_974904059" TEXT="PLANEACIÓN" type="no"/>
+					<node text="PATRONES" ID="ID_1921148310" LINK="https://docs.google.com/document/d/18peWrrnDHzVNipn45hAHuLIQfoc7a2vfj09I7aG7Bjk/edit?usp=sharing" TEXT="PATRONES" link="https://docs.google.com/document/d/18peWrrnDHzVNipn45hAHuLIQfoc7a2vfj09I7aG7Bjk/edit?usp=sharing">
+						<node text="CREACIÓN" ID="ID_319900895" TEXT="CREACIÓN" type="no"/>
+						<node text="ESTRUCTURA" ID="ID_210782988" TEXT="ESTRUCTURA" type="no"/>
+						<node text="COMPORTAMIENTO" ID="ID_312520456" TEXT="COMPORTAMIENTO" type="no"/>
+					</node>
+				</node>
+			</node>
+		</node>
+		<node text="CARACTERÍSTICAS GENERALES DEL FRAMEWORK" ID="ID_96466948" TEXT="CARACTERÍSTICAS GENERALES DEL FRAMEWORK" type="tab">
+			<node text="OPEN SOURCE" ID="ID_568105501" TEXT="OPEN SOURCE" type="md_markdown" params="3">
+				<node text="LENGUAJE" ID="ID_1145597931" TEXT="LENGUAJE" type="md_markdown" params="5">
+					<node text="1. PYTHON" ID="ID_1769752476" TEXT="1. PYTHON" type="no"/>
+					<node text="2. MOJO" ID="ID_1295209040" TEXT="2. MOJO" type="no"/>
+					<node text="3. RUST" ID="ID_1476601817" TEXT="3. RUST" type="no"/>
+				</node>
+				<node text="RAD" ID="ID_1525615678" TEXT="RAD" type="md_markdown" params="5">
+					<node text="BASADO EN DIAGRAMAS FREEMIND" ID="ID_764341187" TEXT="BASADO EN DIAGRAMAS FREEMIND" type="no"/>
+					<node text="* PREFECT\n* BPMN: WORKFLOW" ID="ID_1038660548" TEXT="* PREFECT\n* BPMN: WORKFLOW" type="no"/>
+				</node>
+				<node text="DB" ID="ID_1531548889" TEXT="DB" type="md_markdown" params="5">
+					<node text="* SQLITE" ID="ID_1511784825" TEXT="* SQLITE" type="no"/>
+					<node text="* DUCKDB" ID="ID_1854039861" TEXT="* DUCKDB" type="no"/>
+					<node text="* MONGODB" ID="ID_1777945074" TEXT="* MONGODB" type="no"/>
+					<node text="* MARIADB" ID="ID_1447402268" TEXT="* MARIADB" type="no"/>
+					<node text="* POSTGRES" ID="ID_819066802" TEXT="* POSTGRES" type="no"/>
+				</node>
+				<node text="API" ID="ID_1982020848" TEXT="API" type="md_markdown" params="5">
+					<node text="FASTAPI" ID="ID_1910707035" TEXT="FASTAPI" type="no"/>
+				</node>
+				<node text="FRONT" ID="ID_374093154" TEXT="FRONT" type="md_markdown" params="5">
+					<node text="STREAMLIT" ID="ID_108046126" TEXT="STREAMLIT" type="no"/>
+				</node>
+				<node text="AUTENTICACIÓN" ID="ID_1202848111" TEXT="AUTENTICACIÓN" type="md_markdown" params="5">
+					<node text="* EMAIL" ID="ID_1992021216" TEXT="* EMAIL" type="no"/>
+					<node text="* GOOGLE" ID="ID_1584618082" TEXT="* GOOGLE"/>
+				</node>
+				<node text="AI" ID="ID_1305763609" TEXT="AI" type="md_markdown" params="5">
+					<node text="HuggingFace" ID="ID_1408492862" TEXT="HuggingFace" type="no"/>
+					<node text="Ollama" ID="ID_1564686249" TEXT="Ollama" type="no"/>
+					<node text="LlamaIndex" ID="ID_951684575" LINK="https://cloud.llamaindex.ai/" TEXT="LlamaIndex" type="no" link="https://cloud.llamaindex.ai/"/>
+					<node text="LM-Studio" ID="ID_1179233244" TEXT="LM-Studio" type="no"/>
+					<node text="OpenAI" ID="ID_95005754" TEXT="OpenAI" type="no"/>
+					<node text="CahtGPT Prompts" ID="ID_976686976" TEXT="CahtGPT Prompts" type="no">
+						<node text="XML" ID="ID_474108958" LINK="https://medium.com/@cannon_circuit/10-must-try-xml-chatgpt-prompts-for-every-tech-enthusiast-828ae547e489" TEXT="XML" type="no" link="https://medium.com/@cannon_circuit/10-must-try-xml-chatgpt-prompts-for-every-tech-enthusiast-828ae547e489">
+							<node text="1. Custom XML Schema Validation and Transformation Tool" ID="ID_1279050279" TEXT="1. Custom XML Schema Validation and Transformation Tool" type="no">
+								<node text="Prompt:" ID="ID_611851957" TEXT="Prompt:" type="no">
+									<node text="“Describe the process of building a custom tool for XML schema validation and transformation related to {topic} using {programming_language_or_framework}, including essential features, functionalities, and user interface design.”" ID="ID_1085458652" TEXT="“Describe the process of building a custom tool for XML schema validation and transformation related to {topic} using {programming_language_or_framework}, including essential features, functionalities, and user interface design.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_903763018" TEXT="Formula:" type="no">
+									<node text="Detail the process of building a tool for XML schema validation and transformation related to {topic}, covering {programming_language_or_framework}, and including essential features, functionalities, and user interface design." ID="ID_736794695" TEXT="Detail the process of building a tool for XML schema validation and transformation related to {topic}, covering {programming_language_or_framework}, and including essential features, functionalities, and user interface design." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_768944059" TEXT="Example:" type="no">
+									<node text="Explore the development of a custom XML schema validation and transformation tool for {topic} using Java, incorporating essential features, functionalities, and user-friendly interface design." ID="ID_1701460301" TEXT="Explore the development of a custom XML schema validation and transformation tool for {topic} using Java, incorporating essential features, functionalities, and user-friendly interface design." type="no"/>
+								</node>
+							</node>
+							<node text="2. Custom XML Parsing and Data Extraction Tool" ID="ID_35767934" TEXT="2. Custom XML Parsing and Data Extraction Tool" type="no">
+								<node text="Prompt:" ID="ID_1023231635" TEXT="Prompt:" type="no">
+									<node text="“Explain how to develop a custom tool for XML parsing and data extraction related to {topic}, including support for XPath and XQuery queries, XML namespaces, and data validation.”" ID="ID_1464297245" TEXT="“Explain how to develop a custom tool for XML parsing and data extraction related to {topic}, including support for XPath and XQuery queries, XML namespaces, and data validation.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_88721106" TEXT="Formula:" type="no">
+									<node text="Elaborate on developing a tool for XML parsing and data extraction related to {topic}, covering {programming_language_or_framework}, and including support for XPath and XQuery queries, XML namespaces, and data validation." ID="ID_269967748" TEXT="Elaborate on developing a tool for XML parsing and data extraction related to {topic}, covering {programming_language_or_framework}, and including support for XPath and XQuery queries, XML namespaces, and data validation." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_963445538" TEXT="Example:" type="no">
+									<node text="Explain the development of a custom XML parsing and data extraction tool for {topic} using Python, incorporating support for XPath and XQuery queries, XML namespaces, and data validation." ID="ID_666182084" TEXT="Explain the development of a custom XML parsing and data extraction tool for {topic} using Python, incorporating support for XPath and XQuery queries, XML namespaces, and data validation." type="no"/>
+								</node>
+							</node>
+							<node text="3. XML-Based Data Integration and Transformation Tool" ID="ID_365168528" TEXT="3. XML-Based Data Integration and Transformation Tool" type="no">
+								<node text="Prompt:" ID="ID_1553700599" TEXT="Prompt:" type="no">
+									<node text="“Provide a step-by-step guide for creating a custom tool for XML-based data integration and transformation related to {topic} using {programming_language_or_framework}, covering techniques for XML mapping, data mapping, and schema mapping.”" ID="ID_336573251" TEXT="“Provide a step-by-step guide for creating a custom tool for XML-based data integration and transformation related to {topic} using {programming_language_or_framework}, covering techniques for XML mapping, data mapping, and schema mapping.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_1855101769" TEXT="Formula:" type="no">
+									<node text="Offer a step-by-step guide on creating a tool for XML-based data integration and transformation related to {topic}, covering {programming_language_or_framework}, and including techniques for XML mapping, data mapping, and schema mapping." ID="ID_535966073" TEXT="Offer a step-by-step guide on creating a tool for XML-based data integration and transformation related to {topic}, covering {programming_language_or_framework}, and including techniques for XML mapping, data mapping, and schema mapping." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_684612889" TEXT="Example:" type="no">
+									<node text="Present a guide for creating a custom XML-based data integration and transformation tool for {topic} using C#, covering techniques for XML mapping, data mapping, and schema mapping." ID="ID_1335982652" TEXT="Present a guide for creating a custom XML-based data integration and transformation tool for {topic} using C#, covering techniques for XML mapping, data mapping, and schema mapping." type="no"/>
+								</node>
+							</node>
+							<node text="4. Scalable and Flexible XML Tool Design Considerations" ID="ID_1426706708" TEXT="4. Scalable and Flexible XML Tool Design Considerations" type="no">
+								<node text="Prompt:" ID="ID_642271353" TEXT="Prompt:" type="no">
+									<node text="“Discuss the key considerations when designing a scalable and flexible XML tool for {topic}, including performance optimization, data exchange formats, and interoperability features.”" ID="ID_1881337299" TEXT="“Discuss the key considerations when designing a scalable and flexible XML tool for {topic}, including performance optimization, data exchange formats, and interoperability features.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_1414666433" TEXT="Formula:" type="no">
+									<node text="Explore key considerations in designing a scalable and flexible XML tool for {topic}, covering performance optimization, data exchange formats, and interoperability features." ID="ID_356588119" TEXT="Explore key considerations in designing a scalable and flexible XML tool for {topic}, covering performance optimization, data exchange formats, and interoperability features." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_1685177223" TEXT="Example:" type="no">
+									<node text="Discuss considerations when designing a scalable and flexible XML tool for healthcare data, emphasizing performance optimization, data exchange formats, and interoperability features." ID="ID_754383915" TEXT="Discuss considerations when designing a scalable and flexible XML tool for healthcare data, emphasizing performance optimization, data exchange formats, and interoperability features." type="no"/>
+								</node>
+							</node>
+							<node text="5. XML Security and Compliance Best Practices" ID="ID_283512940" TEXT="5. XML Security and Compliance Best Practices" type="no">
+								<node text="Prompt:" ID="ID_1106452539" TEXT="Prompt:" type="no">
+									<node text="“Describe best practices for ensuring XML security and compliance in a custom XML tool for {topic} developed using {programming_language_or_framework}.”" ID="ID_1602343" TEXT="“Describe best practices for ensuring XML security and compliance in a custom XML tool for {topic} developed using {programming_language_or_framework}.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_1949032210" TEXT="Formula:" type="no">
+									<node text="Detail best practices for ensuring XML security and compliance in a custom tool for {topic}, developed using {programming_language_or_framework}." ID="ID_148526453" TEXT="Detail best practices for ensuring XML security and compliance in a custom tool for {topic}, developed using {programming_language_or_framework}." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_1443874566" TEXT="Example:" type="no">
+									<node text="Explain best practices for ensuring XML security and compliance in a custom XML tool for financial transactions, developed using Java." ID="ID_74644941" TEXT="Explain best practices for ensuring XML security and compliance in a custom XML tool for financial transactions, developed using Java." type="no"/>
+								</node>
+							</node>
+							<node text="6. Integration of Third-Party XML Libraries and Tools" ID="ID_275392710" TEXT="6. Integration of Third-Party XML Libraries and Tools" type="no">
+								<node text="Prompt:" ID="ID_332611337" TEXT="Prompt:" type="no">
+									<node text="“Explain the process of integrating third-party XML libraries and tools into a custom solution for {topic}, focusing on interoperability and seamless workflows.”" ID="ID_1203976249" TEXT="“Explain the process of integrating third-party XML libraries and tools into a custom solution for {topic}, focusing on interoperability and seamless workflows.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_803721482" TEXT="Formula:" type="no">
+									<node text="Elaborate on the process of integrating third-party XML libraries and tools into a custom solution for {topic}, with a focus on interoperability and seamless workflows." ID="ID_1128814488" TEXT="Elaborate on the process of integrating third-party XML libraries and tools into a custom solution for {topic}, with a focus on interoperability and seamless workflows." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_566172840" TEXT="Example:" type="no">
+									<node text="Detail the process of integrating third-party XML libraries and tools into a custom solution for data analytics, focusing on interoperability and seamless workflows." ID="ID_1962666505" TEXT="Detail the process of integrating third-party XML libraries and tools into a custom solution for data analytics, focusing on interoperability and seamless workflows." type="no"/>
+								</node>
+							</node>
+							<node text="7. Enhanced XML Tool with Specific Feature" ID="ID_619175122" TEXT="7. Enhanced XML Tool with Specific Feature" type="no">
+								<node text="Prompt:" ID="ID_1240592485" TEXT="Prompt:" type="no">
+									<node text="“Build an XML [specific tool] that incorporates [specific feature] to improve [specific process] for [specific audience] and includes [specific technology] to enhance security and reliability.”" ID="ID_1273469481" TEXT="“Build an XML [specific tool] that incorporates [specific feature] to improve [specific process] for [specific audience] and includes [specific technology] to enhance security and reliability.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_1853042577" TEXT="Formula:" type="no">
+									<node text="Build a tool for {topic} that incorporates a specific feature to improve a specific process for a specific audience, including a specific technology to enhance security and reliability." ID="ID_1531433475" TEXT="Build a tool for {topic} that incorporates a specific feature to improve a specific process for a specific audience, including a specific technology to enhance security and reliability." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_126857790" TEXT="Example:" type="no">
+									<node text="Construct an XML database tool that incorporates digital signatures to improve data integrity for government agencies, using encryption algorithms for enhanced security and reliability." ID="ID_1775098026" TEXT="Construct an XML database tool that incorporates digital signatures to improve data integrity for government agencies, using encryption algorithms for enhanced security and reliability." type="no"/>
+								</node>
+							</node>
+							<node text="8. XML-Based Reports and Dashboards Generator" ID="ID_703137286" TEXT="8. XML-Based Reports and Dashboards Generator" type="no">
+								<node text="Prompt:" ID="ID_543909835" TEXT="Prompt:" type="no">
+									<node text="“Discuss the development of a custom tool for generating XML-based reports and dashboards related to {topic} using {programming_language_or_framework}, including support for data visualization, charting, and filtering.”" ID="ID_1760177742" TEXT="“Discuss the development of a custom tool for generating XML-based reports and dashboards related to {topic} using {programming_language_or_framework}, including support for data visualization, charting, and filtering.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_76146670" TEXT="Formula:" type="no">
+									<node text="Delve into the development of a tool for generating XML-based reports and dashboards related to {topic}, covering {programming_language_or_framework}, and including support for data visualization, charting, and filtering." ID="ID_533820863" TEXT="Delve into the development of a tool for generating XML-based reports and dashboards related to {topic}, covering {programming_language_or_framework}, and including support for data visualization, charting, and filtering." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_843745333" TEXT="Example:" type="no">
+									<node text="Explore the creation of a custom XML-based reports and dashboard generator for financial analysis using JavaScript, incorporating features for data visualization, charting, and filtering." ID="ID_1471389770" TEXT="Explore the creation of a custom XML-based reports and dashboard generator for financial analysis using JavaScript, incorporating features for data visualization, charting, and filtering." type="no"/>
+								</node>
+							</node>
+							<node text="9. XML-Based Web Services and APIs Tool" ID="ID_1024667693" TEXT="9. XML-Based Web Services and APIs Tool" type="no">
+								<node text="Prompt:" ID="ID_128276989" TEXT="Prompt:" type="no">
+									<node text="“Describe the process of creating a custom tool for XML-based web services and APIs related to {topic} using {programming_language_or_framework}, covering techniques for SOAP, REST, and XML-RPC protocols.”" ID="ID_1647340970" TEXT="“Describe the process of creating a custom tool for XML-based web services and APIs related to {topic} using {programming_language_or_framework}, covering techniques for SOAP, REST, and XML-RPC protocols.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_84140456" TEXT="Formula:" type="no">
+									<node text="Detail the process of creating a tool for XML-based web services and APIs related to {topic}, covering {programming_language_or_framework}, and including techniques for SOAP, REST, and XML-RPC protocols." ID="ID_392280467" TEXT="Detail the process of creating a tool for XML-based web services and APIs related to {topic}, covering {programming_language_or_framework}, and including techniques for SOAP, REST, and XML-RPC protocols." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_515559763" TEXT="Example:" type="no">
+									<node text="Explain the process of creating a custom tool for XML-based web services and APIs for e-commerce using PHP, covering techniques for SOAP, REST, and XML-RPC protocols." ID="ID_767707235" TEXT="Explain the process of creating a custom tool for XML-based web services and APIs for e-commerce using PHP, covering techniques for SOAP, REST, and XML-RPC protocols." type="no"/>
+								</node>
+							</node>
+							<node text="10. XML Tool for Data Processing and Retrieval Enhancement" ID="ID_548529433" TEXT="10. XML Tool for Data Processing and Retrieval Enhancement" type="no">
+								<node text="Prompt:" ID="ID_1314457877" TEXT="Prompt:" type="no">
+									<node text="“Develop an XML [specific tool] that enhances [specific feature] in [specific software] for [specific audience] by using [specific technology] to improve data processing and retrieval.”" ID="ID_1565901805" TEXT="“Develop an XML [specific tool] that enhances [specific feature] in [specific software] for [specific audience] by using [specific technology] to improve data processing and retrieval.”" type="no"/>
+								</node>
+								<node text="Formula:" ID="ID_382546753" TEXT="Formula:" type="no">
+									<node text="Develop an XML tool that enhances a specific feature in specific software for a specific audience, using a specific technology to improve data processing and retrieval." ID="ID_763927538" TEXT="Develop an XML tool that enhances a specific feature in specific software for a specific audience, using a specific technology to improve data processing and retrieval." type="no"/>
+								</node>
+								<node text="Example:" ID="ID_1015391627" TEXT="Example:" type="no">
+									<node text="Develop an XML database tool that enhances XQuery optimization in database management systems for database administrators, using advanced XUpdate technology." ID="ID_1973611544" TEXT="Develop an XML database tool that enhances XQuery optimization in database management systems for database administrators, using advanced XUpdate technology." type="no"/>
+								</node>
+							</node>
+						</node>
+					</node>
+					<node text="Google" ID="ID_184007802" LINK="https://cloud.google.com/use-cases/free-ai-tools" TEXT="Google" type="no" link="https://cloud.google.com/use-cases/free-ai-tools">
+						<node text="Gemini" ID="ID_1739048473" TEXT="Gemini" type="no"/>
+						<node text="Gemma" ID="ID_1420104072" TEXT="Gemma" type="no"/>
+						<node text="Cloud Free Tier" ID="ID_1376870873" TEXT="Cloud Free Tier" type="no"/>
+					</node>
+				</node>
+				<node text="AI MODELS" ID="ID_660609197" TEXT="AI MODELS" type="md_markdown" params="5">
+					<node text="LM STUDIO GGUF" ID="ID_1548357514" LINK="/home/hugo/.cache/lm-studio/models" TEXT="LM STUDIO GGUF" type="no" link="/home/hugo/.cache/lm-studio/models">
+						<node text="/home/hugo/.cache/lm-studio/models" ID="ID_1623357195" TEXT="/home/hugo/.cache/lm-studio/models" type="no"/>
+					</node>
+					<node text="OLLAMA" ID="ID_1975676223" LINK="/home/hugo/.ollama/models/" TEXT="OLLAMA" type="no" link="/home/hugo/.ollama/models/">
+						<node text="/home/hugo/.ollama/models/" ID="ID_611141839" TEXT="/home/hugo/.ollama/models/" type="no"/>
+					</node>
+					<node text="HUGGINGFACE" ID="ID_1844665931" LINK="/home/hugo/.cache/huggingface/hub" TEXT="HUGGINGFACE" type="no" link="/home/hugo/.cache/huggingface/hub">
+						<node text="/home/hugo/.cache/huggingface/hub" ID="ID_649783382" TEXT="/home/hugo/.cache/huggingface/hub" type="no"/>
+					</node>
+					<node text="SENTENCE TRANSFORMERS" ID="ID_1009193595" LINK="https://www.sbert.net/docs/pretrained_models.html" TEXT="SENTENCE TRANSFORMERS" type="no" link="https://www.sbert.net/docs/pretrained_models.html"/>
+				</node>
+				<node text="GIT" ID="ID_1584817567" TEXT="GIT" type="md_markdown" params="5">
+					<node text="GitHub" ID="ID_241310983" TEXT="GitHub" type="no"/>
+					<node text="HuggingFace" ID="ID_1360314061" TEXT="HuggingFace" type="no"/>
+					<node text="Google" ID="ID_1373747239" LINK="https://cloud.google.com/free/docs/free-cloud-features" TEXT="Google" type="no" link="https://cloud.google.com/free/docs/free-cloud-features"/>
+				</node>
+				<node text="SEGURIDAD" ID="ID_897159541" TEXT="SEGURIDAD" type="md_markdown" params="5">
+					<node text="* CloudFlare" ID="ID_1326351455" TEXT="* CloudFlare" type="no"/>
+					<node text="* Google Hosting" ID="ID_1088847909" TEXT="* Google Hosting" type="no"/>
+				</node>
+			</node>
+			<node text="DESPLIEGUE EN PRODUCCIÓN" ID="ID_806339687" TEXT="DESPLIEGUE EN PRODUCCIÓN" type="md_markdown" params="3">
+				<node text="PRIVADO" ID="ID_1641854462" TEXT="PRIVADO" type="md_markdown" params="5"/>
+				<node text="SASS CLOUD (DOCKER)" ID="ID_1127453738" TEXT="SASS CLOUD (DOCKER)" type="md_markdown" params="5"/>
+			</node>
+			<node text="OPEN SOURCE SEL" ID="ID_1367850849" TEXT="OPEN SOURCE SEL" type="no"/>
+		</node>
+	</node>
+</doc>

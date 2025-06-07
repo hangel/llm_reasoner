@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Graph Viewer (Three.js) with Node Table and Labels</title>
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            /* Background color will be set from JSON */
+        }
+        canvas {
+            display: block; /* Remove extra space below canvas */
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: #333; /* Default text color, might need adjustment based on bg */
+            z-index: 100; /* Ensure info text is visible */
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+        /* Simple loading indicator */
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        /* Added CSS for the node table */
+        #node-table-container {
+            position: fixed;
+            top: 60px; /* Adjust based on controls height */
+            left: 10px;
+            max-height: calc(100vh - 70px); /* Adjust max height to prevent overflow */
+            overflow-y: auto; /* Add scroll if table is too long */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 100; /* Ensure it's above other elements */
+            font-size: 0.9em;
+        }
+
+        #node-table {
+            border-collapse: collapse; /* Remove space between borders */
+            width: auto; /* Adjust table width based on content */
+        }
+
+        #node-table th,
+        #node-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #node-table th {
+            background-color: #f2f2f2;
+        }
+
+        #node-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9; /* Zebra striping */
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="canvas-container" style="width: 100vw; height: 100vh;"></div>
+
+    <div id="controls-container" style="position: absolute; top: 0; left: 0; width: 100%; background-color: rgba(255, 255, 255, 0.8); padding: 10px; box-sizing: border-box; z-index: 10;">
+        <input type="file" id="fileInput" accept=".json">
+        <button id="loadButton">Load Graph JSON</button>
+        <span id="message-area" style="margin-left: 20px; color: red;"></span>
+        <span id="info" style="margin-left: auto; font-size: 0.9em;"></span> </div>
+
+     <div id="node-table-container" style="display: none;"> <table id="node-table">
+            <thead>
+                <tr>
+                    <th>Node</th>
+                    <th>Group</th>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>Z</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <div id="loading" style="display: none;">Loading...</div>
+
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { TextSprite } from 'three/addons/objects/TextSprite.js'; // <-- Uncommented TextSprite import
+
+        // --- Scene Setup ---
+        let scene, camera, renderer, controls;
+        const container = document.getElementById('canvas-container');
+        const messageArea = document.getElementById('message-area');
+        const infoSpan = document.getElementById('info'); // Get the info span
+        const loadingIndicator = document.getElementById('loading'); // Get loading indicator
+        const nodeTableBody = document.querySelector('#node-table tbody'); // Get the table body element
+        const nodeTableContainer = document.getElementById('node-table-container'); // Get the table container
+
+
+        let nodes = [];
+        let edges = [];
+        let nodeMeshes = {}; // Map node ID to Three.js Mesh
+        let edgeLines = {};  // Map edge ID to Three.js Line
+        let nodeLabels = {}; // Map node ID to TextSprite (if using labels)
+        let draggableObjects = []; // Objects that can be dragged
+
+        // --- Raycasting for interaction ---
+        const raycaster = new THREE.Raycaster();
+        const pointer = new THREE.Vector2();
+        let selectedObject = null;
+        let isDragging = false;
+        const plane = new THREE.Plane();
+        const intersection = new THREE.Vector3();
+        const offset = new THREE.Vector3();
+
+        // --- Default Graph Data ---
+        // This structure should match the expected JSON file format
+        const defaultGraphData = {
+            nodes: [
+                { id: 'node1', label: 'Node 1', group: 'groupA', color: '#ff0000' },
+                { id: 'node2', label: 'Node 2', group: 'groupA', color: '#ff0000' },
+                { id: 'node3', label: 'Node 3', group: 'groupB', color: '#0000ff' },
+                { id: 'node4', label: 'Node 4', group: 'groupB', color: '#0000ff' }
+                /* ... (Your original JSON nodes here) ... */
+            ],
+            edges: [
+                { id: 'edge1', source: 'node1', target: 'node2', type: 'typeX', color: '#888888' },
+                { id: 'edge2', source: 'node2', target: 'node3', type: 'typeY', color: '#00ff00' },
+                { id: 'edge3', source: 'node3', target: 'node4', type: 'typeX', color: '#888888' }
+                 /* ... (Your original JSON edges here) ... */
+            ],
+            groups: [
+                 { id: 'groupA', label: 'Group A', color: '#ffaaaa' },
+                 { id: 'groupB', label: 'Group B', color: '#aaaaff' }
+                 /* ... (Your original JSON groups here) ... */
+            ],
+            edgeTypes: [
+                 { id: 'typeX', label: 'Type X', color: '#888888' },
+                 { id: 'typeY', label: 'Type Y', color: '#00ff00' }
+                 /* ... (Your original JSON edgeTypes here) ... */
+            ],
+            settings: {
+                backgroundColor: '#ffffff', // White background
+                nodeSize: 1,
+                edgeWidth: 0.1,
+                labelSize: 0.5
+                 /* ... (Your original JSON settings here) ... */
+            }
+        };
+
+
+        // --- Initialization ---
+        function init() {
+            // Scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(defaultGraphData.settings.backgroundColor || '#ffffff'); // Set background from settings or default
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            camera.position.z = 50; // Starting position
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            // Controls (OrbitControls for navigation)
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true; // Smooth movement
+            controls.dampingFactor = 0.25;
+            controls.screenSpacePanning = false;
+            controls.maxDistance = 500;
+            controls.minDistance = 1;
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(1, 1, 1).normalize();
+            scene.add(directionalLight);
+
+            // Event Listeners
+            window.addEventListener('resize', onWindowResize);
+            container.addEventListener('pointerdown', onPointerDown);
+            container.addEventListener('pointermove', onPointerMove);
+            container.addEventListener('pointerup', onPointerUp);
+            container.addEventListener('touchstart', onPointerDown, { passive: false });
+            container.addEventListener('touchmove', onPointerMove, { passive: false });
+            container.addEventListener('touchend', onPointerUp, { passive: false });
+
+
+            // Handle file input
+            const fileInput = document.getElementById('fileInput');
+            const loadButton = document.getElementById('loadButton');
+
+            loadButton.addEventListener('click', () => {
+                fileInput.click(); // Trigger file input click
+            });
+
+            fileInput.addEventListener('change', handleFileSelect);
+
+            // Initial graph build with default data
+            buildGraph(defaultGraphData);
+            animate(); // Start the animation loop
+        }
+
+        // --- Event Handlers ---
+        function onWindowResize() {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        }
+
+         function updatePointerCoords(event, pointer) {
+             const rect = container.getBoundingClientRect();
+             // Calculate pointer position in normalized device coordinates (-1 to +1)
+             pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+             pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+         }
+
+        function onPointerDown(event) {
+             updatePointerCoords(event, pointer);
+
+             raycaster.setFromCamera(pointer, camera);
+
+             const intersects = raycaster.intersectObjects(draggableObjects, false); // Only check draggable objects
+
+             if (intersects.length > 0) {
+                 selectedObject = intersects[0].object;
+                 if (selectedObject.userData.isDraggable) {
+                     controls.enabled = false; // Disable OrbitControls while dragging
+
+                     // Store original color/emissive to restore later
+                     selectedObject.userData.originalEmissive = selectedObject.material.emissive.clone();
+                     // Highlight the selected object - increase emissive color
+                     selectedObject.material.emissive.setHex(0x333333); // Subtle highlight
+
+                     isDragging = true;
+                     container.style.cursor = 'grabbing'; // Indicate dragging
+
+                     // Calculate the plane for dragging
+                     plane.setFromNormalAndCoplanarPoint(camera.getWorldDirection(plane.normal), selectedObject.position);
+
+                     // Calculate offset for dragging
+                     if (raycaster.ray.intersectPlane(plane, intersection)) {
+                         offset.copy(intersection).sub(selectedObject.position);
+                     }
+                 } else {
+                    // Clicked a non-draggable object (e.g., an edge or label if they were selectable)
+                    selectedObject = null; // Deselect if not draggable
+                 }
+             } else {
+                 selectedObject = null; // Clicked nothing draggable
+             }
+        }
+
+        function onPointerMove(event) {
+             updatePointerCoords(event, pointer);
+
+             if (isDragging && selectedObject) {
+                 // If dragging, update the object's position
+                 if (raycaster.ray.intersectPlane(plane, intersection)) {
+                     selectedObject.position.copy(intersection.sub(offset));
+                     // Also update connected edges
+                     updateConnectedEdges(selectedObject);
+                 }
+                 return; // Stop here if dragging
+             }
+
+             // If not dragging, check for hover
+             raycaster.setFromCamera(pointer, camera);
+             const hoverIntersects = raycaster.intersectObjects(draggableObjects, false); // Only check draggable objects
+
+             if (hoverIntersects.length > 0 && hoverIntersects[0].object.userData.isDraggable) {
+                 // If hovering over a draggable object
+                 if (container.style.cursor !== 'grab') {
+                     container.style.cursor = 'grab'; // Change cursor to grab
+                 }
+             } else {
+                 // If not hovering over a draggable object
+                 if (container.style.cursor !== 'default' && container.style.cursor !== 'grabbing') {
+                     container.style.cursor = 'default'; // Change cursor back to default
+                 }
+             }
+        }
+
+        function onPointerUp(event) {
+             if (isDragging && selectedObject) {
+                  // Restore original visual appearance
+                  selectedObject.material.emissive.copy(selectedObject.userData.originalEmissive);
+                  // selectedObject.material.color.copy(selectedObject.userData.originalColor); // Keep color change?
+
+                  // *** Add this line to update the table row after dragging stops ***
+                  updateNodeTableRow(selectedObject.userData.id, selectedObject.position);
+             }
+
+             // Reset state
+             isDragging = false;
+             selectedObject = null;
+             controls.enabled = true;
+
+              // Check hover state again to set correct cursor immediately after release
+              updatePointerCoords(event, pointer); // Need pointer coords at release point
+              raycaster.setFromCamera(pointer, camera);
+              const hoverIntersects = raycaster.intersectObjects(draggableObjects, false);
+              if (hoverIntersects.length > 0 && hoverIntersects[0].object.userData.isDraggable) {
+                  container.style.cursor = 'grab';
+              } else {
+                  container.style.cursor = 'default';
+              }
+        }
+
+
+        // --- Graph Building Functions ---
+
+        function clearGraph() {
+            // Remove all objects from the scene
+            while (scene.children.length > 0) {
+                const object = scene.children[0];
+                scene.remove(object);
+
+                // Dispose of geometries, materials, and textures to free up memory
+                if (object.geometry) {
+                    object.geometry.dispose();
+                }
+                if (object.material) {
+                    // Handle arrays of materials
+                    if (Array.isArray(object.material)) {
+                        object.material.forEach(material => material.dispose());
+                    } else {
+                        object.material.dispose();
+                    }
+                }
+                 // If the object has children, dispose of their resources recursively? (Optional, depending on scene structure)
+                 // object.children.forEach(child => { /* dispose child resources */ });
+            }
+             // Add lights back after clearing everything
+            const ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(1, 1, 1).normalize();
+            scene.add(directionalLight);
+
+
+            // Clear internal data structures
+            nodes = [];
+            edges = [];
+            nodeMeshes = {};
+            edgeLines = {};
+            nodeLabels = {};
+            draggableObjects = []; // Clear draggable objects array
+            messageArea.textContent = ''; // Clear message area
+            infoSpan.textContent = ''; // Clear info span
+
+            // Clear the table body
+            if (nodeTableBody) {
+                nodeTableBody.innerHTML = '';
+            }
+        }
+
+
+        function buildGraph(graphData) {
+            clearGraph(); // Clear previous graph
+
+            loadingIndicator.style.display = 'block'; // Show loading indicator
+            messageArea.textContent = 'Loading graph...';
+            nodeTableContainer.style.display = 'none'; // Hide table during loading
+
+
+            if (!graphData || !graphData.nodes || !graphData.edges) {
+                 messageArea.textContent = 'Error: Invalid graph data structure. Missing nodes or edges array.';
+                 console.error('Invalid graph data:', graphData);
+                 loadingIndicator.style.display = 'none';
+                 nodeTableContainer.style.display = 'none'; // Keep table hidden
+                 // Optionally build a fallback or return
+                 // buildRandomSpheres(50); // Example: build some random spheres if data is bad
+                 // centerCamera(); // Ensure camera is centered on potential fallback
+                 return;
+            }
+
+            nodes = graphData.nodes;
+            edges = graphData.edges;
+            const groups = graphData.groups || []; // Get groups array, default to empty array
+
+            const settings = graphData.settings || {}; // Get settings, default to empty object
+            scene.background = new THREE.Color(settings.backgroundColor || '#ffffff'); // Apply background color
+
+            const nodeSize = settings.nodeSize || 1; // Default node size
+            const edgeWidth = settings.edgeWidth || 0.1; // Default edge width
+            const labelSize = settings.labelSize || 0.5; // Default label size
+
+            // Create a map of group colors
+            const groupColorMap = {};
+            groups.forEach(group => {
+                if (group.id && group.color) {
+                    groupColorMap[group.id] = group.color;
+                }
+            });
+
+
+            // Create Nodes
+            const nodeGeometry = new THREE.SphereGeometry(nodeSize, 32, 32);
+            nodes.forEach(node => {
+                // *** Assign node color from group or node color property ***
+                const nodeColor = groupColorMap[node.group] || node.color || '#cccccc'; // Use group color, then node color, then default gray
+                const nodeMaterial = new THREE.MeshPhongMaterial({ color: new THREE.Color(nodeColor) });
+                const nodeMesh = new THREE.Mesh(nodeGeometry, nodeMaterial);
+
+                // Assign a random position initially (will likely be updated by layout algorithm later)
+                nodeMesh.position.x = (Math.random() - 0.5) * 100;
+                nodeMesh.position.y = (Math.random() - 0.5) * 100;
+                nodeMesh.position.z = (Math.random() - 0.5) * 100;
+
+                nodeMesh.userData = { id: node.id, label: node.label, group: node.group, isDraggable: true, type: 'node' }; // Store node data, including group
+                nodeMeshes[node.id] = nodeMesh;
+                scene.add(nodeMesh);
+                draggableObjects.push(nodeMesh); // Add to draggable objects
+
+                // Create Label Sprite (Optional, requires TextSprite)
+                 // *** Uncommented TextSprite creation ***
+                if (TextSprite) {
+                    const labelSprite = new TextSprite({
+                        text: node.label || node.id, // Already uses node.label or id
+                        material: {
+                            color: '#000000', // Black text
+                            transparent: true,
+                        },
+                        fontSize: labelSize,
+                        // adjustAlignment: 'center', // Adjust if needed
+                    });
+                    labelSprite.position.copy(nodeMesh.position);
+                    labelSprite.position.y += nodeSize * 1.5; // Position label above the node
+                    nodeLabels[node.id] = labelSprite;
+                    scene.add(labelSprite);
+                }
+            });
+
+            // Create Edges
+            edges.forEach(edge => {
+                const sourceNode = nodeMeshes[edge.source];
+                const targetNode = nodeMeshes[edge.target];
+
+                if (sourceNode && targetNode) {
+                    const points = [sourceNode.position, targetNode.position];
+                    const edgeGeometry = new THREE.BufferGeometry().setFromPoints(points);
+                    const edgeMaterial = new THREE.LineBasicMaterial({ color: new THREE.Color(edge.color || '#888888'), linewidth: edgeWidth }); // linewidth might not work consistently
+
+                    const edgeLine = new THREE.Line(edgeGeometry, edgeMaterial);
+                    edgeLine.userData = { id: edge.id, source: edge.source, target: edge.target, type: 'edge' }; // Store edge data
+                    edgeLines[edge.id] = edgeLine;
+                    scene.add(edgeLine);
+                } else {
+                    console.warn(`Missing source or target node for edge: ${edge.id}`);
+                }
+            });
+
+            // Populate the table with node data
+            populateNodeTable(nodes);
+
+            // Calculate bounds and center camera
+            centerCamera();
+
+            loadingIndicator.style.display = 'none'; // Hide loading indicator
+            messageArea.textContent = `Graph loaded with ${nodes.length} nodes and ${edges.length} edges.`;
+            updateInfo(); // Update info span
+            nodeTableContainer.style.display = 'block'; // Show table after loading
+        }
+
+         // Function to create random spheres as a fallback
+         function buildRandomSpheres(count) {
+             clearGraph(); // Clear anything existing
+
+             const geometry = new THREE.SphereGeometry(1, 32, 32);
+             for (let i = 0; i < count; i++) {
+                 const material = new THREE.MeshPhongMaterial({ color: Math.random() * 0xffffff });
+                 const sphere = new THREE.Mesh(geometry, material);
+                 sphere.position.x = (Math.random() - 0.5) * 200;
+                 sphere.position.y = (Math.random() - 0.5) * 200;
+                 sphere.position.z = (Math.random() - 0.5) * 200;
+                 scene.add(sphere);
+             }
+             messageArea.textContent = `Built ${count} random spheres as a fallback.`;
+         }
+
+
+        // Function to update edges connected to a moved node
+        function updateConnectedEdges(nodeMesh) {
+            const nodeId = nodeMesh.userData.id;
+            edges.forEach(edge => {
+                if (edge.source === nodeId || edge.target === nodeId) {
+                    const edgeLine = edgeLines[edge.id];
+                    if (edgeLine) {
+                        const sourceNode = nodeMeshes[edge.source];
+                        const targetNode = nodeMeshes[edge.target];
+                        const points = [sourceNode.position, targetNode.position];
+                        edgeLine.geometry.setFromPoints(points); // Update the line geometry
+                    }
+                }
+            });
+             // *** Uncommented label position update ***
+             if (nodeLabels[nodeId]) {
+                 nodeLabels[nodeId].position.copy(nodeMesh.position);
+                 nodeLabels[nodeId].position.y += (nodeMesh.geometry.parameters.radius || 1) * 1.5;
+             }
+        }
+
+        // Function to calculate bounds and center camera
+        function centerCamera() {
+            if (nodes.length === 0) {
+                camera.position.set(0, 0, 50); // Default position if no nodes
+                controls.target.set(0, 0, 0);
+                controls.update();
+                return;
+            }
+
+            const box = new THREE.Box3().setFromObject(scene);
+            const center = new THREE.Vector3();
+            const size = new THREE.Vector3();
+            box.getCenter(center);
+            box.getSize(size);
+
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const fov = camera.fov * (Math.PI / 180);
+            let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+             cameraZ *= 1.5; // Add some padding
+
+            camera.position.copy(center);
+            camera.position.z += cameraZ; // Position camera along Z axis relative to center
+
+            controls.target.copy(center); // Point controls at the center
+            controls.update();
+        }
+
+         // Function to handle file selection
+         function handleFileSelect(event) {
+             const file = event.target.files[0];
+             if (!file) {
+                 messageArea.textContent = 'No file selected.';
+                 return;
+             }
+
+             if (file.type !== 'application/json') {
+                 messageArea.textContent = 'Invalid file type. Please select a JSON file.';
+                 return;
+             }
+
+             loadingIndicator.style.display = 'block';
+             messageArea.textContent = `Reading file: ${file.name}...`;
+             nodeTableContainer.style.display = 'none'; // Hide table during loading
+
+
+             const reader = new FileReader();
+             reader.onload = (e) => {
+                 try {
+                     const graphData = JSON.parse(e.target.result);
+                     messageArea.textContent = `File parsed: ${file.name}. Building graph...`;
+                     buildGraph(graphData);
+                 } catch (error) {
+                     messageArea.textContent = `Error parsing JSON file: ${error.message}`;
+                     console.error('Error parsing JSON:', error);
+                     loadingIndicator.style.display = 'none';
+                     nodeTableContainer.style.display = 'none'; // Keep table hidden
+                 }
+             };
+             reader.onerror = (error) => {
+                 messageArea.textContent = `Error reading file: ${error}`;
+                 console.error('Error reading file:', error);
+                 loadingIndicator.style.display = 'none';
+                 nodeTableContainer.style.display = 'none'; // Keep table hidden
+             };
+
+             reader.readAsText(file); // Read the file as text
+         }
+
+        // Function to update the info span (e.g., node/edge counts)
+        function updateInfo() {
+            infoSpan.textContent = `Nodes: ${nodes.length}, Edges: ${edges.length}`;
+        }
+
+         // Add function to populate the node table
+        function populateNodeTable(nodes) {
+            if (!nodeTableBody) return;
+
+            nodeTableBody.innerHTML = ''; // Clear existing rows
+
+            nodes.forEach(node => {
+                const row = nodeTableBody.insertRow();
+                row.id = `node-row-${node.id}`; // Give the row an ID for easy updating
+
+                const nodeCell = row.insertCell();
+                nodeCell.textContent = node.label || node.id; // Use label or id
+
+                const groupCell = row.insertCell();
+                groupCell.textContent = node.group || ''; // Display group
+
+                const xCell = row.insertCell();
+                xCell.className = 'pos-x'; // Add class for easy access
+                xCell.textContent = 'N/A'; // Will be updated with actual position later or on drag
+
+                const yCell = row.insertCell();
+                yCell.className = 'pos-y';
+                yCell.textContent = 'N/A';
+
+                const zCell = row.insertCell();
+                zCell.className = 'pos-z';
+                zCell.textContent = 'N/A';
+
+                 // Update positions initially based on the random positions assigned during mesh creation
+                 const nodeMesh = nodeMeshes[node.id];
+                 if (nodeMesh) {
+                      updateNodeTableRow(node.id, nodeMesh.position);
+                 }
+            });
+        }
+
+        // Add function to update a single node row in the table
+        function updateNodeTableRow(nodeId, position) {
+            const row = document.getElementById(`node-row-${nodeId}`);
+            if (row) {
+                // Find the position cells by class name
+                const xCell = row.querySelector('.pos-x');
+                const yCell = row.querySelector('.pos-y');
+                const zCell = row.querySelector('.pos-z');
+
+                if (xCell) xCell.textContent = position.x.toFixed(2); // Format to 2 decimal places
+                if (yCell) yCell.textContent = position.y.toFixed(2);
+                if (zCell) zCell.textContent = position.z.toFixed(2);
+            }
+        }
+
+
+        // Function to create TextSprite labels (requires TextSprite import)
+        // This function is not currently used in buildGraph based on the provided snippet,
+        // but is included here as it was part of the original thought process.
+        /*
+        function createTextSprite(text, parameters = {}) {
+            const {
+                fontSize = 1,
+                textColor = '#000000',
+                fontFamily = 'Arial',
+                fontWeight = 'normal',
+                backgroundColor = null, // or a color string like '#ffffff'
+                padding = 0.1,
+                borderRadius = 0,
+                borderWidth = 0,
+                borderColor = '#000000',
+            } = parameters;
+
+             const canvas = document.createElement('canvas');
+             const context = canvas.getContext('2d');
+             const font = `${fontWeight} ${fontSize * 100}px ${fontFamily}`; // Scale font size for canvas
+
+             context.font = font;
+             const metrics = context.measureText(text);
+             const textWidth = metrics.width;
+             const textHeight = fontSize * 100; // Approximate height
+
+             canvas.width = textWidth + padding * 2 * 100;
+             canvas.height = textHeight + padding * 2 * 100;
+
+             context.font = font; // Re-set font after resizing canvas
+             context.textAlign = 'center';
+             context.textBaseline = 'middle';
+
+             if (backgroundColor) {
+                 context.fillStyle = backgroundColor;
+                 // Draw rounded rectangle background
+                 context.beginPath();
+                 context.moveTo(borderRadius, 0);
+                 context.lineTo(canvas.width - borderRadius, 0);
+                 context.quadraticCurveTo(canvas.width, 0, canvas.width, borderRadius);
+                 context.lineTo(canvas.width, canvas.height - borderRadius);
+                 context.quadraticCurveTo(canvas.width, canvas.height, canvas.width - borderRadius, canvas.height);
+                 context.lineTo(borderRadius, canvas.height);
+                 context.quadraticCurveTo(0, canvas.height, 0, canvas.height - borderRadius);
+                 context.lineTo(0, borderRadius);
+                 context.quadraticCurveTo(0, 0, borderRadius, 0);
+                 context.closePath();
+                 context.fill();
+             }
+
+             if (borderWidth > 0) {
+                 context.strokeStyle = borderColor;
+                 context.lineWidth = borderWidth * 100; // Scale border width
+                  // Adjust path for border if needed, or draw on top
+                  context.stroke();
+             }
+
+
+             context.fillStyle = textColor;
+             context.fillText(text, canvas.width / 2, canvas.height / 2);
+
+
+             const texture = new THREE.CanvasTexture(canvas);
+             texture.minFilter = THREE.LinearFilter; // Improve text clarity
+             texture.magFilter = THREE.LinearFilter;
+
+
+             const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+             const sprite = new THREE.Sprite(spriteMaterial);
+
+             // Adjust sprite size based on canvas dimensions and desired world size
+             const aspectRatio = canvas.width / canvas.height;
+             sprite.scale.set(fontSize * aspectRatio, fontSize, 1);
+
+
+             return sprite;
+        }
+        */
+
+
+        // --- Animation Loop ===
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // Update controls (important for damping)
+            renderer.render(scene, camera);
+        }
+
+        // --- Start the application ---\
+        init();
+
+    </script>
+</body>
+</html>

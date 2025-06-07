@@ -1,0 +1,39 @@
+graph LR
+   A[START] --> B[OPEN FILE];
+   B --> L1[FILE NOT FOUND];
+   L1 -->  A1[INITIALIZE FILE];
+   A1 --> B;
+   B --> B1[FILE READY];
+   B1 --> C[DISPLAY MENU];
+   C --> D[ACCEPT OPTION];
+   O1 --> E[VALID OPTION];
+   O1 --> O[INVALID OPTION];
+   D --> O1[EVALUATE OPTION];
+   E --> F[CREATE EMPLOYEE];
+   F--> G[INVALID KEY: Create Employee];
+   G --> F;
+   E --> I[READ EMPLOYEE];
+   I--> J[INVALID KEY: Read Employee] ;
+   J --> I[READ EMPLOYEE];
+   E --> K[UPDATE EMPLOYEE];
+   K --> L[INVALID KEY: Update Employee] ;
+   L --> K[UPDATE EMPLOYEE];
+   E --> M[DELETE EMPLOYEE];
+   M --> N[INVALID KEY: Delete Employee] ;
+   N --> M[DELETE EMPLOYEE];
+   O --> C[DISPLAY MENU];
+   E --> Q[EXIT PROGRAM];
+   Q --> R[STOP RUN];
+
+    subgraph get-input
+     C; D; O; O1;
+    end
+
+    subgraph main-menu
+     F; I; K; M; Q;
+    end
+
+    subgraph fix-open
+     A1; L1; 
+    end
+

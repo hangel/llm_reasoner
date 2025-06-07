@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Graph Viewer (Three.js)</title>
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            /* Background color will be set from JSON */
+        }
+        canvas {
+            display: block; /* Remove extra space below canvas */
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: #333; /* Default text color, might need adjustment based on bg */
+            z-index: 100; /* Ensure info text is visible */
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+        /* Simple loading indicator */
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            color: #555;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="info">Click and drag nodes</div>
+    <div id="container"></div>
+    <div id="loading">Loading Graph...</div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        // Import necessary Three.js modules
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { LineMaterial } from 'three/addons/lines/LineMaterial.js'; // Needed for LineGeometry width
+        import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
+        import { Line2 } from 'three/addons/lines/Line2.js'; // Renders LineGeometry
+
+        // === Graph Data (from JSON) ===
+        const graphData = {
+          "nodes": [
+            { "id": "A", "label": "Client Portal", "group": "client", "position": [0, 0, 0] },
+            { "id": "B", "label": "Service Requests", "group": "client", "position": [2, 0, 0] },
+            { "id": "C", "label": "Documentation Access", "group": "client", "position": [2, 1, 0] },
+            { "id": "D", "label": "Project Tracking", "group": "client", "position": [2, 2, 0] },
+            { "id": "E", "label": "Knowledge Management System", "group": "core", "position": [4, 0, 0] },
+            { "id": "F", "label": "Legacy Code Analysis Engine", "group": "core", "position": [4, 1, 0] },
+            { "id": "G", "label": "AI Documentation Generator", "group": "core", "position": [4, 2, 0] },
+            { "id": "H", "label": "Code Transpilation Service", "group": "core", "position": [4, 3, 0] },
+            { "id": "I", "label": "Integration Middleware", "group": "core", "position": [6, 0, 0] },
+            { "id": "J", "label": "Project Management", "group": "core", "position": [6, 1, 0] },
+            { "id": "K", "label": "Client Data Lake", "group": "data", "position": [8, 0, 0] },
+            { "id": "L", "label": "Performance Analytics", "group": "data", "position": [10, 0, 0] },
+            { "id": "M", "label": "Resource Optimization", "group": "data", "position": [10, 1, 0] },
+            { "id": "N", "label": "ROI Calculation Engine", "group": "data", "position": [10, 2, 0] },
+            { "id": "O", "label": "zSeries/iSeries Connectors", "group": "legacy", "position": [6, 3, 0] },
+            { "id": "P", "label": "Secure Transport Layer", "group": "legacy", "position": [8, 3, 0] },
+            { "id": "Q", "label": "Legacy Data Extraction", "group": "legacy", "position": [10, 3, 0] },
+            { "id": "R", "label": "Region-Specific Data Storage", "group": "international", "position": [8, -2, 0] },
+            { "id": "S", "label": "Compliance Management", "group": "international", "position": [10, -2, 0] },
+            { "id": "T", "label": "Multi-entity Resource Allocation", "group": "international", "position": [12, 0, 0] },
+            { "id": "U", "label": "Cross-border Payment Processing", "group": "international", "position": [12, 2, 0] },
+            { "id": "V", "label": "Entity-specific Reporting", "group": "international", "position": [12, -2, 0] },
+            { "id": "W", "label": "US Operations - Delaware/Wyoming", "group": "regional", "position": [14, 0, 0] },
+            { "id": "X", "label": "EU Operations - Ireland", "group": "regional", "position": [14, 1, 0] },
+            { "id": "Y", "label": "UK Operations", "group": "regional", "position": [14, 2, 0] },
+            { "id": "Z", "label": "Multi-currency Billing", "group": "regional", "position": [14, -1, 0] }
+          ],
+          "edges": [
+            { "source": "A", "target": "B", "type": "directed" }, { "source": "A", "target": "C", "type": "directed" },
+            { "source": "A", "target": "D", "type": "directed" }, { "source": "B", "target": "E", "type": "directed" },
+            { "source": "B", "target": "F", "type": "directed" }, { "source": "B", "target": "J", "type": "directed" },
+            { "source": "F", "target": "G", "type": "directed" }, { "source": "F", "target": "H", "type": "directed" },
+            { "source": "E", "target": "I", "type": "directed" }, { "source": "G", "target": "K", "type": "directed" },
+            { "source": "H", "target": "K", "type": "directed" }, { "source": "I", "target": "O", "type": "directed" },
+            { "source": "O", "target": "P", "type": "directed" }, { "source": "P", "target": "Q", "type": "directed" },
+            { "source": "Q", "target": "K", "type": "directed" }, { "source": "K", "target": "L", "type": "directed" },
+            { "source": "L", "target": "M", "type": "directed" }, { "source": "L", "target": "N", "type": "directed" },
+            { "source": "M", "target": "J", "type": "directed" }, { "source": "N", "target": "A", "type": "directed" },
+            { "source": "K", "target": "R", "type": "directed" }, { "source": "R", "target": "S", "type": "directed" },
+            { "source": "J", "target": "T", "type": "directed" }, { "source": "T", "target": "W", "type": "directed" },
+            { "source": "T", "target": "X", "type": "directed" }, { "source": "T", "target": "Y", "type": "directed" },
+            { "source": "W", "target": "U", "type": "directed" }, { "source": "X", "target": "U", "type": "directed" },
+            { "source": "Y", "target": "U", "type": "directed" }, { "source": "U", "target": "Z", "type": "directed" },
+            { "source": "Z", "target": "A", "type": "directed" }, { "source": "S", "target": "V", "type": "directed" },
+            { "source": "V", "target": "A", "type": "directed" },
+            { "source": "R", "target": "W", "type": "data_residency", "label": "US data in US region" },
+            { "source": "R", "target": "X", "type": "data_residency", "label": "EU data in EU region" },
+            { "source": "R", "target": "Y", "type": "data_residency", "label": "UK data in UK region" },
+            { "source": "J", "target": "W", "type": "entity_op" }, { "source": "J", "target": "X", "type": "entity_op" },
+            { "source": "J", "target": "Y", "type": "entity_op" }
+          ],
+          "groups": [
+            { "id": "client", "color": "#5470c6", "name": "Client Interfaces" }, { "id": "core", "color": "#91cc75", "name": "Core Platform" },
+            { "id": "data", "color": "#fac858", "name": "Data Services" }, { "id": "legacy", "color": "#ee6666", "name": "Legacy Systems Connection" },
+            { "id": "international", "color": "#73c0de", "name": "International Infrastructure" }, { "id": "regional", "color": "#3ba272", "name": "Regional Operations" }
+          ],
+          "edgeTypes": [
+            { "id": "directed", "color": "#666666", "width": 1, "arrow": true }, // Darker grey
+            { "id": "data_residency", "color": "#0099cc", "width": 1.5, "style": "dashed", "arrow": false }, // Slightly thicker dashed
+            { "id": "entity_op", "color": "#ff9900", "width": 1, "arrow": true }
+          ],
+          "settings": {
+            "backgroundColor": "#f8f8f8", // Slightly off-white background
+            "nodeSize": 0.8, // Default node radius
+            "nodeLabelSize": 14, // Font size in pixels for node labels
+            "edgeLabelSize": 10, // Font size for edge labels (if added)
+            "defaultZoom": 1.0 // Initial camera zoom factor (applied via position)
+          }
+        };
+
+        // === Global Variables ===
+        let scene, camera, renderer, controls;
+        let raycaster, pointer, plane, offset, intersection; // For dragging logic
+        let selectedObject = null; // The object currently being dragged
+        let isDragging = false;    // Flag to track drag state
+        const draggableObjects = []; // Array to hold objects that can be dragged
+        const nodeMap = new Map(); // Map node ID to Three.js object
+        const labelMap = new Map(); // Map node ID to label sprite
+        const edgeObjects = []; // Store edge objects for potential updates
+        const container = document.getElementById('container');
+        const loadingIndicator = document.getElementById('loading');
+
+        // Process graph data lookups
+        const groupMap = new Map(graphData.groups.map(g => [g.id, g]));
+        const edgeTypeMap = new Map(graphData.edgeTypes.map(et => [et.id, et]));
+
+        // === Initialization ===
+        function init() {
+            // --- Scene Setup ---
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(graphData.settings.backgroundColor || 0xeeeeee);
+            // Adjust fog based on graph size later if needed
+            // scene.fog = new THREE.Fog(scene.background, 20, 100);
+
+            // --- Camera Setup ---
+            const aspect = window.innerWidth / window.innerHeight;
+            camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 2000); // Increased far plane
+            // Calculate initial camera position based on graph bounds
+            const { center, size } = calculateGraphBounds(graphData.nodes);
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const cameraDist = maxDim * 1.5 / Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+            camera.position.copy(center).add(new THREE.Vector3(0, maxDim * 0.5, Math.max(cameraDist, 20))); // Position camera back and slightly up
+            camera.lookAt(center);
+
+            // --- Renderer Setup ---
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // Enable alpha for potential transparency
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            // Shadows might be less relevant for abstract graphs, disable for performance
+            // renderer.shadowMap.enabled = true;
+            // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            container.appendChild(renderer.domElement);
+
+            // --- Lights ---
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Slightly brighter ambient
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // Softer directional
+            directionalLight.position.set(0.5, 1, 1).normalize(); // Adjust light direction
+            scene.add(directionalLight);
+
+            // --- Controls ---
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+            controls.screenSpacePanning = false;
+            controls.minDistance = 2;
+            controls.maxDistance = maxDim * 5; // Adjust max distance based on graph size
+            controls.target.copy(center); // Target the center of the graph
+            controls.maxPolarAngle = Math.PI; // Allow full rotation
+            controls.update();
+
+            // --- Raycasting and Dragging Setup ---
+            raycaster = new THREE.Raycaster();
+            // Increase precision for small nodes
+            raycaster.params.Points.threshold = 0.5;
+            raycaster.params.Line.threshold = 0.5;
+            pointer = new THREE.Vector2();
+            plane = new THREE.Plane();
+            offset = new THREE.Vector3();
+            intersection = new THREE.Vector3();
+
+            // --- Create Graph Elements ---
+            createNodes();
+            createEdges();
+
+            // --- Event Listeners ---
+            renderer.domElement.addEventListener('pointerdown', onPointerDown);
+            renderer.domElement.addEventListener('pointermove', onPointerMove);
+            renderer.domElement.addEventListener('pointerup', onPointerUp);
+            renderer.domElement.addEventListener('pointercancel', onPointerUp); // Handle cancellation
+            window.addEventListener('resize', onWindowResize);
+
+            // Hide loading indicator and start animation loop
+            loadingIndicator.style.display = 'none';
+            animate();
+        }
+
+        // === Helper Functions ===
+
+        /**
+         * Calculates the bounding box center and size of the graph nodes.
+         * @param {Array} nodes - The array of node data.
+         * @returns {Object} - An object containing the center (Vector3) and size (Vector3).
+         */
+        function calculateGraphBounds(nodes) {
+            const box = new THREE.Box3();
+            nodes.forEach(nodeData => {
+                if (nodeData.position) {
+                    box.expandByPoint(new THREE.Vector3(...nodeData.position));
+                }
+            });
+            const center = new THREE.Vector3();
+            const size = new THREE.Vector3();
+            box.getCenter(center);
+            box.getSize(size);
+            // Handle case with single node or all nodes at the same position
+            if (size.lengthSq() === 0) {
+                size.set(1, 1, 1);
+            }
+            return { center, size };
+        }
+
+
+        /**
+         * Creates a text label as a Sprite.
+         * @param {string} text - The text content of the label.
+         * @param {number} fontSize - The font size in pixels.
+         * @param {string} color - The text color.
+         * @returns {THREE.Sprite} - The created sprite label.
+         */
+        function createLabelSprite(text, fontSize = 14, color = '#000000') {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            const fontFace = 'Inter, sans-serif';
+            context.font = `${fontSize}px ${fontFace}`;
+
+            // Measure text width for canvas sizing
+            const metrics = context.measureText(text);
+            const textWidth = metrics.width;
+            const canvasWidth = THREE.MathUtils.ceilPowerOfTwo(textWidth + fontSize); // Add padding, make power of 2 for potential performance gain
+            const canvasHeight = THREE.MathUtils.ceilPowerOfTwo(fontSize * 1.5); // Make power of 2
+
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+
+            // Redraw text on resized canvas
+            context.font = `${fontSize}px ${fontFace}`;
+            context.fillStyle = color;
+            context.textAlign = 'center';
+            context.textBaseline = 'middle';
+            context.fillText(text, canvasWidth / 2, canvasHeight / 2);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.needsUpdate = true;
+
+            const material = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false }); // depthTest false to draw on top
+            const sprite = new THREE.Sprite(material);
+
+            // Scale the sprite based on canvas dimensions to maintain aspect ratio
+            sprite.scale.set(canvasWidth * 0.03, canvasHeight * 0.03, 1.0); // Adjust scale factor as needed
+
+            return sprite;
+        }
+
+        /**
+         * Creates the node objects (spheres and labels) from graphData.
+         */
+        function createNodes() {
+            const nodeSize = graphData.settings.nodeSize || 1.0;
+            const geometry = new THREE.SphereGeometry(nodeSize, 32, 16); // Use nodeSize from settings
+
+            graphData.nodes.forEach(nodeData => {
+                const groupInfo = groupMap.get(nodeData.group) || { color: '#cccccc' }; // Default color if group not found
+                const material = new THREE.MeshStandardMaterial({
+                    color: groupInfo.color,
+                    roughness: 0.6,
+                    metalness: 0.1
+                });
+
+                const sphere = new THREE.Mesh(geometry, material);
+                if (nodeData.position) {
+                    sphere.position.set(...nodeData.position);
+                } else {
+                    console.warn(`Node ${nodeData.id} missing position.`);
+                    // Assign a default position or implement layout algorithm if needed
+                    sphere.position.set(Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5);
+                }
+
+                // Add custom data
+                sphere.userData.id = nodeData.id;
+                sphere.userData.label = nodeData.label;
+                sphere.userData.isDraggable = true;
+                sphere.userData.originalColor = material.color.clone();
+                sphere.userData.originalEmissive = material.emissive.clone();
+                sphere.userData.nodeInfo = nodeData; // Store original data
+
+                scene.add(sphere);
+                draggableObjects.push(sphere);
+                nodeMap.set(nodeData.id, sphere); // Store mapping from ID to object
+
+                // Create and add label
+                const labelSprite = createLabelSprite(nodeData.label, graphData.settings.nodeLabelSize, '#111111'); // Darker label color
+                labelSprite.position.set(sphere.position.x, sphere.position.y + nodeSize * 1.5, sphere.position.z); // Position above the sphere
+                labelSprite.userData.isLabel = true; // Flag to ignore in raycasting for dragging
+                sphere.userData.labelSprite = labelSprite; // Link label to sphere
+                scene.add(labelSprite);
+                labelMap.set(nodeData.id, labelSprite);
+            });
+        }
+
+        /**
+         * Creates the edge objects (lines/arrows) from graphData.
+         */
+        function createEdges() {
+            graphData.edges.forEach(edgeData => {
+                const sourceNode = nodeMap.get(edgeData.source);
+                const targetNode = nodeMap.get(edgeData.target);
+                const edgeType = edgeTypeMap.get(edgeData.type) || { color: '#888888', width: 1, arrow: false, style: 'solid' }; // Default edge style
+
+                if (!sourceNode || !targetNode) {
+                    console.warn(`Edge source or target not found for edge:`, edgeData);
+                    return;
+                }
+
+                const sourcePos = sourceNode.position;
+                const targetPos = targetNode.position;
+                const direction = new THREE.Vector3().subVectors(targetPos, sourcePos);
+                const length = direction.length();
+                direction.normalize();
+
+                if (edgeType.arrow) {
+                    // Use ArrowHelper for directed edges
+                    const arrowColor = new THREE.Color(edgeType.color);
+                    // Adjust head length/width relative to node size and edge length
+                    const headLength = Math.min(length * 0.2, graphData.settings.nodeSize * 2);
+                    const headWidth = headLength * 0.6;
+
+                    // Create arrow slightly shorter so head ends at target node surface
+                    const arrowLength = length - graphData.settings.nodeSize;
+
+                    if (arrowLength > 0.1) { // Only draw arrow if nodes are not overlapping significantly
+                        const arrowHelper = new THREE.ArrowHelper(direction, sourcePos, arrowLength, arrowColor.getHex(), headLength, headWidth);
+                        scene.add(arrowHelper);
+                        edgeObjects.push({ type: 'arrow', helper: arrowHelper, source: sourceNode, target: targetNode });
+                    } else {
+                         console.warn(`Skipping arrow for overlapping nodes: ${edgeData.source} -> ${edgeData.target}`);
+                    }
+
+                } else {
+                     // Use Line2 for non-arrow edges (supports width and dashing)
+                    const points = [sourcePos.x, sourcePos.y, sourcePos.z, targetPos.x, targetPos.y, targetPos.z];
+                    const geometry = new LineGeometry();
+                    geometry.setPositions(points);
+
+                    const material = new LineMaterial({
+                        color: new THREE.Color(edgeType.color).getHex(),
+                        linewidth: (edgeType.width || 1) * 0.003, // Line width needs scaling factor
+                        dashed: edgeType.style === 'dashed',
+                        dashSize: 0.2, // Size of dashes
+                        gapSize: 0.1,  // Size of gaps
+                        resolution: new THREE.Vector2(window.innerWidth, window.innerHeight) // Required for LineMaterial
+                    });
+
+                    const line = new Line2(geometry, material);
+                    line.computeLineDistances(); // Necessary for dashing
+                    scene.add(line);
+                    edgeObjects.push({ type: 'line', line: line, source: sourceNode, target: targetNode });
+                }
+            });
+        }
+
+        /**
+         * Updates the positions of edges and labels when a node is dragged.
+         * @param {THREE.Mesh} node - The node that was moved.
+         */
+        function updateConnectedEdges(node) {
+            const nodeId = node.userData.id;
+            const nodePos = node.position;
+
+            // Update label position
+            const label = labelMap.get(nodeId);
+            if (label) {
+                label.position.set(nodePos.x, nodePos.y + (graphData.settings.nodeSize || 1.0) * 1.5, nodePos.z);
+            }
+
+            // Update connected edges
+            edgeObjects.forEach(edge => {
+                if (edge.source.userData.id === nodeId || edge.target.userData.id === nodeId) {
+                    const sourcePos = edge.source.position;
+                    const targetPos = edge.target.position;
+
+                    if (edge.type === 'arrow') {
+                        const direction = new THREE.Vector3().subVectors(targetPos, sourcePos);
+                        const length = direction.length();
+                        direction.normalize();
+                        const arrowLength = Math.max(0.1, length - graphData.settings.nodeSize); // Ensure non-negative length
+                        const headLength = Math.min(length * 0.2, graphData.settings.nodeSize * 2);
+                        const headWidth = headLength * 0.6;
+
+                        edge.helper.position.copy(sourcePos);
+                        edge.helper.setDirection(direction);
+                        edge.helper.setLength(arrowLength, headLength, headWidth);
+
+                    } else if (edge.type === 'line') {
+                        const points = [sourcePos.x, sourcePos.y, sourcePos.z, targetPos.x, targetPos.y, targetPos.z];
+                        edge.line.geometry.setPositions(points);
+                        edge.line.computeLineDistances(); // Recompute for dashing
+                    }
+                }
+            });
+        }
+
+
+        // === Event Handlers ===
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            // Update line material resolution on resize
+             edgeObjects.forEach(edge => {
+                if (edge.type === 'line') {
+                    edge.line.material.resolution.set(window.innerWidth, window.innerHeight);
+                }
+            });
+        }
+
+        function updatePointerCoords(event, vec) {
+            vec.x = (event.clientX / window.innerWidth) * 2 - 1;
+            vec.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+
+        function onPointerDown(event) {
+            if (isDragging) return;
+            updatePointerCoords(event, pointer);
+            raycaster.setFromCamera(pointer, camera);
+
+            // Intersect only with draggable sphere objects (ignore labels, lines, arrows)
+            const intersects = raycaster.intersectObjects(draggableObjects, false);
+
+            if (intersects.length > 0) {
+                // Check if the first intersected object is actually draggable (not occluded by something closer)
+                const firstIntersect = intersects[0];
+                 if (firstIntersect.object.userData.isDraggable) {
+                    isDragging = true;
+                    selectedObject = firstIntersect.object;
+                    const intersectionPoint = firstIntersect.point;
+
+                    // Create drag plane
+                    camera.getWorldDirection(plane.normal);
+                    plane.setFromNormalAndCoplanarPoint(plane.normal, intersectionPoint);
+
+                    // Calculate offset
+                    offset.copy(intersectionPoint).sub(selectedObject.position);
+
+                    // Disable controls & visual feedback
+                    controls.enabled = false;
+                    selectedObject.material.emissive.setHex(0x555555); // More noticeable glow
+                    container.style.cursor = 'grabbing';
+                 }
+
+            } else {
+                container.style.cursor = 'grab'; // Default cursor if clicking empty space
+            }
+        }
+
+        function onPointerMove(event) {
+            updatePointerCoords(event, pointer); // Update pointer regardless of drag state for hover effects
+
+            if (!isDragging || !selectedObject) {
+                 // --- Hover Effect (Optional) ---
+                 raycaster.setFromCamera(pointer, camera);
+                 const hoverIntersects = raycaster.intersectObjects(draggableObjects, false);
+                 let cursorSet = false;
+                 draggableObjects.forEach(obj => {
+                     // Reset hover effect if not dragging
+                     if (obj !== selectedObject) {
+                        // obj.material.emissive.copy(obj.userData.originalEmissive); // Reset glow if implementing hover glow
+                     }
+                 });
+
+                 if (hoverIntersects.length > 0 && hoverIntersects[0].object.userData.isDraggable) {
+                     const hoveredObj = hoverIntersects[0].object;
+                     // if (hoveredObj !== selectedObject) { // Apply hover effect only if not selected
+                     //    hoveredObj.material.emissive.setHex(0x222222);
+                     // }
+                     container.style.cursor = 'grab';
+                     cursorSet = true;
+                 }
+
+                 if (!cursorSet && !isDragging) { // Reset cursor if not hovering over anything draggable
+                    container.style.cursor = 'default';
+                 }
+                return; // Exit if not dragging
+            }
+
+            // --- Update Drag Position ---
+            raycaster.setFromCamera(pointer, camera);
+            if (raycaster.ray.intersectPlane(plane, intersection)) {
+                selectedObject.position.copy(intersection.sub(offset));
+                // Update connected edges and label position dynamically
+                updateConnectedEdges(selectedObject);
+            }
+        }
+
+        function onPointerUp(event) {
+            if (isDragging && selectedObject) {
+                 // Restore original visual appearance
+                 selectedObject.material.emissive.copy(selectedObject.userData.originalEmissive);
+                 // selectedObject.material.color.copy(selectedObject.userData.originalColor); // Keep color change?
+            }
+
+            // Reset state
+            isDragging = false;
+            selectedObject = null;
+            controls.enabled = true;
+
+             // Check hover state again to set correct cursor immediately after release
+             updatePointerCoords(event, pointer); // Need pointer coords at release point
+             raycaster.setFromCamera(pointer, camera);
+             const hoverIntersects = raycaster.intersectObjects(draggableObjects, false);
+             if (hoverIntersects.length > 0 && hoverIntersects[0].object.userData.isDraggable) {
+                 container.style.cursor = 'grab';
+             } else {
+                 container.style.cursor = 'default';
+             }
+        }
+
+
+        // === Animation Loop ===
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // Update controls (important for damping)
+            renderer.render(scene, camera);
+        }
+
+        // --- Start the application ---
+        init();
+
+    </script>
+</body>
+</html>
+
