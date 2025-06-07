@@ -1,0 +1,14 @@
+# Ensure all nested git repos are ignored
+find . -type d -name ".git" -not -path "./.git" -exec dirname {} \; >> .gitignore
+
+# Remove duplicates and sort .gitignore
+sort -u .gitignore -o .gitignore
+
+# Standard git workflow
+git init
+git add .
+git commit -m "Initial commit, skipping nested git repos"
+git remote add origin https://github.com/hangel   # Replace <REMOTE-URL> with your GitHub repo URL
+git branch -M main
+git push -u origin main
+º
